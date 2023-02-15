@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <h1>Full Stack Web Development Course</h1>
-      <button>Enroll for free</button>
+      <button>Enroll for sfree</button>
       <CourseC></CourseC>
       </header>
     </div>
