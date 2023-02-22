@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.enroll__for__free__button{
+    background: linear-gradient(to right, #FE8B3B, #F95185, #DD54A2, #8756EC);
+    border-radius: 30px;
+    border: none;
+    color: white;
+    padding: 8px 20px ;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    width: 100%;
+  }
+
+  .header__container__div{
+    margin: 5px 30px;
+  }
+  .brand__name{
+    font-size: 25px;
+    font-weight: 700;
+    color:hsla(236, 77%, 26%, 1);
+    font-family: 'Raleway', sans-serif;
+  }
