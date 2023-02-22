@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.home_screen_firstPart {
+    /* background: yellow; */
+    padding: 0px 25px;
+    align-items: center;
+}
+.button__width{
+    margin-top: 50px;
+    width: 80%;
+}
+.home__screen__firstPart__text {
+    font-family: 'Jost', sans-serif;
+    font-size: 60px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color:hsla(236, 77%, 26%, 1);
+}
+.full__stack__developer__text{
+    background: linear-gradient(45deg,#ffa41c,#ff4f84,#7058ff,#2c81ed,#b0eb33);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.coding__kid__image{
+    width: 100%;
+}
+.homeScreen__courseOverview__list{
+    text-align: left;
+    font-size: 25px;
+    line-height: 148%;
+    margin-top: 20px;
+    color: #878ab9;
+    font-family: 'Jost', sans-serif;
+}
