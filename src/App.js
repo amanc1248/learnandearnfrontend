@@ -1,14 +1,13 @@
 import './App.css';
-import { CourseC } from './screens/CourseScreen/Course.c';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { HeaderC } from './components/header/header.c';
+import { HomeScreenC } from './screens/CourseScreen/HomeScreen/HomeScreen.c';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <h1>Full Stack Web Development Course</h1>
-      <button>Enroll for sfree</button>
-      <CourseC></CourseC>
-      </header>
+      <HeaderC></HeaderC>
+      {/* <HomeScreenC></HomeScreenC> */}
     </div>
   );
 }
