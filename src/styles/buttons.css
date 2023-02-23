@@ -10,6 +10,7 @@
     font-family: 'Jost', sans-serif;
     /* width: 100%; */
     cursor: pointer;
+    text-align: center;
   }
   .enroll__for__free__button:hover{
     background: linear-gradient(to right, #df0d4f58, #54afdd, #8756EC, #8ffe3b);
