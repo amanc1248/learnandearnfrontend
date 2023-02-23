@@ -1,14 +1,17 @@
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import { HeaderC } from './components/header/header.c';
-import { HomeScreenC } from './screens/CourseScreen/HomeScreen/HomeScreen.c';
+import "./App.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HomeScreen } from "./screens/HomeScreen";
+import { CourseContentScreen } from "./screens/CourseContentScreen/index";
 function App() {
   return (
-    <div className="App">
-      <HeaderC></HeaderC>
-      {/* <HomeScreenC></HomeScreenC> */}
-    </div>
+    <Router>
+        <Routes>
+          <Route path="/" element={<HomeScreen/>}></Route>
+          <Route path="/fullstack-web-development" element = {<CourseContentScreen/>}></Route>
+        </Routes>
+    </Router>
   );
 }
 
