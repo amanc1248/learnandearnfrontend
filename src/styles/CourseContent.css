@@ -12,8 +12,8 @@
 .course__section__title__div {
     cursor: pointer;
     background-color: #F7F9FA;
-    padding: 30px 10px;
-    font-size: 22px;
+    padding: 20px 10px;
+    font-size: 16px;
     font-family: 'Jost', sans-serif;
     font-weight: 600;
     justify-content: space-between;
@@ -22,8 +22,8 @@
 }
 
 .course__section__topic__div {
-    padding: 20px;
-    font-size: 17px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 .course__section__topic__div:hover {
@@ -39,12 +39,16 @@
     align-items: center;
 }
 
+.course__content__div {
+    position: fixed;
+}
+
 .course__content__title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
-.course__content__list__div{
-        height: 100vh;
+.course__content__list__div {
+    height: 110vh;
     overflow-y: auto;
 }

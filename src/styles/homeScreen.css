@@ -11,7 +11,7 @@
 }
 .home__screen__firstPart__text {
     font-family: 'Jost', sans-serif;
-    font-size: 60px;
+    font-size: 45px;
     text-align: left;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -28,7 +28,7 @@
 }
 .homeScreen__courseOverview__list{
     text-align: left;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 148%;
     margin-top: 20px;
     color: #878ab9;
