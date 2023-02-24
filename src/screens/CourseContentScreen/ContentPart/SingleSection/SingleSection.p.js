@@ -1,11 +1,6 @@
 import "../../../../styles/CourseContent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-  icon,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 export const SingleSectionP = ({
   sectionData,
@@ -19,7 +14,11 @@ export const SingleSectionP = ({
         onClick={toggleShowSectionTopics}
       >
         <div>{sectionData.sectionTitle}</div>
-        {showSectionTopics ? <FontAwesomeIcon icon={solid("angle-up")} style={{fontSize:"15px"}} /> :<FontAwesomeIcon icon={solid("angle-down")} style={{fontSize:"15px"}} /> }
+        {showSectionTopics ? (
+          <FontAwesomeIcon icon={faAngleUp} />
+        ) : (
+          <FontAwesomeIcon icon={faAngleDown} />
+        )}
       </div>
       {showSectionTopics && (
         <div className="course__section__topics__div">

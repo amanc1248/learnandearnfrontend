@@ -30,3 +30,21 @@
     background-color: #d1d7dc;
     cursor: pointer;
 }
+
+.course__content__title__div {
+    padding: 15px 10px;
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course__content__title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.course__content__list__div{
+        height: 100vh;
+    overflow-y: auto;
+}
