@@ -2,6 +2,7 @@ export const courseData = [
   {
     sectionTitle: "Welcome to Full-Stack Engineer Path",
     sectionValue: "Welcome to Full-Stack Engineer Path",
+    sectionNumber:1,
     sectionId: "Welcome-to-full-stack-engineer-path",
     sectionDescription:
       "Welcome to the Full-Stack Engineer Career Path! Get an overview of the journey ahead of you, save some helpful resources, and join our community. Then dive into the field of web development and the exciting opportunities ahead.",
@@ -12,6 +13,7 @@ export const courseData = [
         section_topic_id: "Introduction:Overview-of-web-development",
         type: "video",
         videoId: "Introduction:Overview-of-web-development-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "The Internet And Web Development",
@@ -20,6 +22,7 @@ export const courseData = [
         section_topic_id: "The-Internet-And-Web-Development-Description",
         type: "video",
         videoId: "The-Internet-And-Web-Development-Description-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Introduction to Software Engineering",
@@ -28,6 +31,7 @@ export const courseData = [
         section_topic_id: "Introduction-to-Software-Engineering",
         type: "video",
         videoId: "Introduction-to-Software-Engineering-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Overview of Web Development",
@@ -36,12 +40,14 @@ export const courseData = [
         sub_topic_id: "Overview-of-Web-Development",
         type: "video",
         videoId: "Overview-of-Web-Development-videoId",
+        videoLength:12,
       },
     ],
   },
   {
     sectionTitle: "Fundamentals of HTML",
     sectionValue: "Fundamentals of HTML",
+    sectionNumber:2,
     sectionId: "Fundamentals-of-HTML",
     sectionDescription:
       "HTML provides the structure for all web pages you visit. Learn the elements that you'll use to piece together this structure and best semantic practices associated with building out a web page.",
@@ -52,6 +58,7 @@ export const courseData = [
         section_topic_id: "Introduction:-Fundamentals-of-HTML",
         type: "video",
         videoId: "Introduction:-Fundamentals-of-HTML-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn HTML: Elements",
@@ -59,6 +66,7 @@ export const courseData = [
         section_topic_id: "Learn-HTML:-Elements",
         type: "video",
         videoId: "Learn HTML: Elements-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn HTML: Structure",
@@ -66,6 +74,7 @@ export const courseData = [
         section_topic_id: "Learn-HTML:-Structure",
         type: "video",
         videoId: "Learn-HTML:-Structure-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn HTML: Tables",
@@ -73,6 +82,7 @@ export const courseData = [
         section_topic_id: "Learn-HTML:-Tables",
         type: "video",
         videoId: "Learn-HTML:-Tables-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Semantic HTML",
@@ -80,6 +90,7 @@ export const courseData = [
         section_topic_id: "Semantic HTML",
         type: "video",
         videoId: "Semantic-HTML-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Fundamentals of HTML",
@@ -87,12 +98,14 @@ export const courseData = [
         section_topic_id: "Review:-Fundamentals-of-HTML",
         type: "video",
         videoId: "Review:-Fundamentals-of-HTML-videoId",
+        videoLength:12,
       },
     ],
   },
   {
     sectionTitle: "Fundamentals of CSS",
     sectionValue: "Fundamentals of CSS",
+    sectionNumber:3,
     sectionId: "Fundamentals-of-CSS",
     sectionDescription:
       "Add some flair to your sites with Cascading Style Sheets (CSS). You'll learn the fundamentals, which include: how to create rulesets, styling, position, layouts, and more to make your sites stand out.",
@@ -103,6 +116,7 @@ export const courseData = [
         section_topic_id: "Introduction:-Fundamentals-of-CSS",
         type: "video",
         videoId: "Introduction:-Fundamentals-of-CSS-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn CSS: Selectors and Visual Rules",
@@ -110,6 +124,7 @@ export const courseData = [
         section_topic_id: "Learn-CSS:-Selectors-and-Visual-Rules",
         type: "video",
         videoId: "Learn-CSS:-Selectors-and-Visual-Rules",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn CSS: The Box Model",
@@ -117,6 +132,7 @@ export const courseData = [
         section_topic_id: "Learn-CSS:-The-Box-Model",
         type: "video",
         videoId: "Learn-CSS:-The-Box-Model-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn CSS: Display and Positioning",
@@ -124,6 +140,7 @@ export const courseData = [
         section_topic_id: "Learn-CSS:-Display-and-Positioning",
         type: "video",
         videoId: "Learn-CSS:-Display-and-Positioning-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Fundamentals of CSS",
@@ -131,12 +148,14 @@ export const courseData = [
         section_topic_id: "Review:-Fundamentals-of-CSS",
         type: "video",
         videoId: "Review:-Fundamentals-of-CSS-videoId",
+        videoLength:12,
       },
     ],
   },
   {
     sectionTitle: "Developing Websites Locally",
     sectionValue: "Developing Websites Locally",
+    sectionNumber:4,
     sectionId: "Developing-Websites-Locally",
     sectionDescription:
       "Part of becoming a developer means you'll need the skills to create websites on your own computer. Use tools like text editors and Chrome Devtools to work out how to build websites locally.",
@@ -147,6 +166,7 @@ export const courseData = [
         section_topic_id: "Introduction:-Developing-Websites-Locally",
         type: "video",
         videoId: "Introduction:-Developing-Websites-Locally-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Getting Started with Text Editors",
@@ -154,6 +174,7 @@ export const courseData = [
         section_topic_id: "Getting-Started-with-Text-Editors",
         type: "video",
         videoId: "Getting-Started-with-Text-Editors-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Intro to Chrome Devtools",
@@ -161,6 +182,7 @@ export const courseData = [
         section_topic_id: "Intro to Chrome Devtools",
         type: "video",
         videoId: "Intro to Chrome Devtools-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Developing Websites Locally",
@@ -168,12 +190,14 @@ export const courseData = [
         section_topic_id: "Review: Developing Websites Locally",
         type: "video",
         videoId: "Review:-Developing-Websites-Locally-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Deploying Websites",
     sectionValue: "Deploying Websites",
+    sectionNumber:5,
     sectionId: "Developing-Websites-Locally",
     sectionDescription:
       "Once you have your site, you'll want to share it — which means you'll need to host and deploy it. Use the command line and GitHub pages to make this deployment process seamless.",
@@ -184,6 +208,7 @@ export const courseData = [
         section_topic_id: "Introduction:-Developing-Websites",
         type: "video",
         videoId: "Introduction:-Developing-Websites-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Web Hosting",
@@ -191,6 +216,7 @@ export const courseData = [
         section_topic_id: "Web Hosting",
         type: "video",
         videoId: "Web Hosting-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Deploy a site with Github Pages",
@@ -198,6 +224,7 @@ export const courseData = [
         section_topic_id: "Deploy a site with Github Pages",
         type: "video",
         videoId: "Deploy a site with Github Pages-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Command Line for Building Websites",
@@ -205,6 +232,7 @@ export const courseData = [
         section_topic_id: "Command Line for Building Websites",
         type: "video",
         videoId: "Command Line for Building Websites-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Deploying Websites",
@@ -212,12 +240,14 @@ export const courseData = [
         section_topic_id: "Review: Deploying Websites",
         type: "video",
         videoId: "Review: Deploying Websites-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Improved Styling with CSS",
     sectionValue: "Improved Styling with CSS",
+    sectionNumber:6,
     sectionId: "Improved Styling with CSS-Id",
     sectionDescription:
       "Learn how to incorporate colors, typography, links, buttons, and more to take your CSS to the next level. Then take your skills and incorporate wireframing to provide a vision for your site.",
@@ -228,6 +258,7 @@ export const courseData = [
         section_topic_id: "Introduction: Improved Styling with CSS-id",
         type: "video",
         videoId: "Introduction: Improved Styling with CSS-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn CSS: Colors",
@@ -235,6 +266,7 @@ export const courseData = [
         section_topic_id: "Learn CSS: Colors-id",
         type: "video",
         videoId: "Learn CSS: Colors-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn CSS: Typography",
@@ -242,6 +274,7 @@ export const courseData = [
         section_topic_id: "Learn CSS: Typography",
         type: "video",
         videoId: "Learn CSS: Typography-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Links and Buttons",
@@ -249,6 +282,7 @@ export const courseData = [
         section_topic_id: "Learn Links and Buttons",
         type: "video",
         videoId: "Learn Links and Buttons-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Secondary Navigation",
@@ -256,24 +290,28 @@ export const courseData = [
         section_topic_id: "Learn Secondary Navigation",
         type: "video",
         videoId: "Learn Secondary Navigation-videoId",
+        videoLength:12,
       },{
         section_topic_title: "Wireframing",
         section_topic_description: "Learn about wireframing - a quick way to sketch out website architecture.",
         section_topic_id: "Wireframing",
         type: "video",
         videoId: "Wireframing-videoId",
+        videoLength:12,
       },{
         section_topic_title:"Review: Improved Styling with CSS",
         section_topic_description: "Review what was covered in the Improved Styling with CSS Unit.",
         section_topic_id:"Review: Improved Styling with CSS",
         type: "video",
         videoId:"Review: Improved Styling with CSS-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Making a Website Responsive",
     sectionValue: "Making a Website Responsive",
+    sectionNumber:7,
     sectionId: "Making a Website Responsive-Id",
     sectionDescription:
       "Sites show up on all different types of devices, like: desktops, cellphones, laptops, etc. Incorporate responsive design to create a site that adapts to your users' different screen sizes.",
@@ -284,6 +322,7 @@ export const courseData = [
         section_topic_id: "Introduction: Making a website responsive-id",
         type: "video",
         videoId: "Introduction: Making a website responsive-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Responsive Design: Grids and Spacing",
@@ -291,6 +330,7 @@ export const courseData = [
         section_topic_id: "Learn Responsive Design: Grids and Spacing-id",
         type: "video",
         videoId: "Learn Responsive Design: Grids and Spacing-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn with Flexbox",
@@ -298,6 +338,7 @@ export const courseData = [
         section_topic_id: "Learn with Flexbox",
         type: "video",
         videoId: "Learn with Flexbox-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn CSS: Grid",
@@ -305,6 +346,7 @@ export const courseData = [
         section_topic_id: "Learn CSS: Grid",
         type: "video",
         videoId: "Learn CSS: Grid-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Responsive Design",
@@ -312,24 +354,28 @@ export const courseData = [
         section_topic_id: "Learn Responsive Design",
         type: "video",
         videoId: "Learn Responsive Design-videoId",
+        videoLength:12,
       },{
         section_topic_title: "Learn CSS: Documentation & Debugging",
         section_topic_description: "Learn how to look up things that you don’t know in official documentation so that you can solve problems independently!",
         section_topic_id: "Learn CSS: Documentation & Debugging",
         type: "video",
         videoId: "Learn CSS: Documentation & Debugging-videoId",
+        videoLength:12,
       },{
         section_topic_title:"Review: Making a website Responsive",
         section_topic_description: "Review what was covered in the Making a Website Responsive Unit.",
         section_topic_id:"Review: Making a website Responsive",
         type: "video",
         videoId:"Review: Making a website Responsive-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "JavaScript Syntax, Part I",
     sectionValue: "JavaScript Syntax, Part I",
+    sectionNumber:8,
     sectionId: "JavaScript Syntax, Part I-Id",
     sectionDescription:
       "JavaScript enpowers you to add logic to your website and create a truely interactive site. Start with the basics of variables, data types, conditionals, functions, and scope.",
@@ -340,6 +386,7 @@ export const courseData = [
         section_topic_id: "Introduction: Javascript Syntax, Part 1-id",
         type: "video",
         videoId: "Introduction: Javascript Syntax, Part 1-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Introduction to Javascript",
@@ -347,6 +394,7 @@ export const courseData = [
         section_topic_id: "Introduction to Javascript-id",
         type: "video",
         videoId: "Introduction to Javascript-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Introduction",
@@ -354,6 +402,7 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Introduction",
         type: "video",
         videoId: "Learn Javascript Syntax: Introduction-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Conditionals",
@@ -361,6 +410,7 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Conditionals",
         type: "video",
         videoId: "Learn Javascript Syntax: Conditionals-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Funcations",
@@ -368,24 +418,28 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Funcations",
         type: "video",
         videoId: "Learn Javascript Syntax: Funcations-videoId",
+        videoLength:12,
       },{
         section_topic_title: "Learn Javascript Syntax: Scope",
         section_topic_description: "Learn about global and block level scope in JavaScript.",
         section_topic_id: "Learn Javascript Syntax: Scope",
         type: "video",
         videoId: "Learn Javascript Syntax: Scope-videoId",
+        videoLength:12,
       },{
         section_topic_title:"Practice Javascript Syntax: Variables, Datatypes, variables, functions",
         section_topic_description: "Practice using the JavaScript syntax that you’ve just learned.",
         section_topic_id:"Practice Javascript Syntax: Variables, Datatypes, variables, functions",
         type: "video",
         videoId:"Practice Javascript Syntax: Variables, Datatypes, variables, functions-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "JavaScript Syntax, Part II",
     sectionValue: "JavaScript Syntax, Part II",
+    sectionNumber:9,
     sectionId: "JavaScript Syntax, Part II-Id",
     sectionDescription:
       "Build off your knowledge of JavaScript to implement even more functionality. Learn to utilize arrays, loops, objects, interators, errors, and debugging.",
@@ -396,6 +450,7 @@ export const courseData = [
         section_topic_id: "Introduction: Javascript Syntax, Part || -id",
         type: "video",
         videoId: "Introduction: Javascript Syntax, Part || -videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Arrays",
@@ -403,6 +458,7 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Arrays-id",
         type: "video",
         videoId: "Learn Javascript Syntax: Arrays-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Loops",
@@ -410,6 +466,7 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Loops",
         type: "video",
         videoId: "Learn Javascript Syntax: Loops-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Objects",
@@ -417,6 +474,7 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Objects",
         type: "video",
         videoId: "Learn Javascript Syntax: Objects-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Iterators",
@@ -424,24 +482,28 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Iterators",
         type: "video",
         videoId: "Learn Javascript Syntax: Iterators-videoId",
+        videoLength:12,
       },{
         section_topic_title: "Learn Javascript Syntax: Errors and Debugging",
         section_topic_description: "Learn how to address errors in this course all about JavaScript errors!",
         section_topic_id: "Learn Javascript Syntax: Errors and Debugging",
         type: "video",
         videoId: "Learn Javascript Syntax: Errors and Debugging-videoId",
+        videoLength:12,
       },{
         section_topic_title:"Practice Javascript Syntax: Arrays, loops, objects, iterators",
         section_topic_description: "Practice what you've learned with JavaScript Syntax.",
         section_topic_id:"Practice Javascript Syntax: Arrays, loops, objects, iterators",
         type: "video",
         videoId:"Practice Javascript Syntax: Arrays, loops, objects, iterators-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "JavaScript Testing",
     sectionValue: "JavaScript Testing",
+    sectionNumber:10,
     sectionId: "JavaScript Testing-Id",
     sectionDescription:
       "Testing ensures that your app performs as intended. Learn how to create Mocha tests and the Test Driven Development (TDD) methodology that demonstrates how testing can be applied.",
@@ -452,6 +514,7 @@ export const courseData = [
         section_topic_id: "Introduction: Javascript Testing -id",
         type: "video",
         videoId: "Introduction: Javascript Testing -videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Why Tests",
@@ -459,6 +522,7 @@ export const courseData = [
         section_topic_id: "Why Tests-id",
         type: "video",
         videoId: "Why Tests-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Write Good Tests with Mocha",
@@ -466,6 +530,7 @@ export const courseData = [
         section_topic_id: "Write Good Tests with Mocha",
         type: "video",
         videoId: "Write Good Tests with Mocha-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn TDD with Mocha",
@@ -473,6 +538,7 @@ export const courseData = [
         section_topic_id: "Learn TDD with Mocha",
         type: "video",
         videoId: "Learn TDD with Mocha-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Advanced Testing Concepts",
@@ -480,18 +546,21 @@ export const courseData = [
         section_topic_id: "Advanced Testing Concepts",
         type: "video",
         videoId: "Advanced Testing Concepts-videoId",
+        videoLength:12,
       },{
         section_topic_title: "Review Javascript Testing",
         section_topic_description: "Review what was covered in the JavaScript Testing Unit.",
         section_topic_id: "Review Javascript Testing",
         type: "video",
         videoId: "Review Javascript Testing-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Async JavaScript and HTTP Requests",
     sectionValue: "Async JavaScript and HTTP Requests",
+    sectionNumber:11,
     sectionId: "Async JavaScript and HTTP Requests-Id",
     sectionDescription:
       "Learn what asynchronous code is and how it allows you to use JavaScript to smoothly handle actions that might otherwise block your app and make your users wait.",
@@ -502,6 +571,7 @@ export const courseData = [
         section_topic_id: "Introduction: Async Javascript and HTTP Requests -id",
         type: "video",
         videoId: "Introduction: Async Javascript and HTTP Requests -videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Basics of Asynchronous Javascript",
@@ -509,6 +579,7 @@ export const courseData = [
         section_topic_id: "Basics of Asynchronous Javascript-id",
         type: "video",
         videoId: "Basics of Asynchronous Javascript-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Promises",
@@ -516,6 +587,7 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Promises",
         type: "video",
         videoId: "Learn Javascript Syntax: Promises-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Javascript Syntax: Async-Await",
@@ -523,6 +595,7 @@ export const courseData = [
         section_topic_id: "Learn Javascript Syntax: Async-Await",
         type: "video",
         videoId: "Learn Javascript Syntax: Async-Await-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "APIs and HTTP Requests",
@@ -530,12 +603,14 @@ export const courseData = [
         section_topic_id: "APIs and HTTP Requests",
         type: "video",
         videoId: "APIs and HTTP Requests-videoId",
+        videoLength:12,
       },{
         section_topic_title: "Learn Javascript Syntax: Requests",
         section_topic_description: "Learn how to use asynchronous JavaScript techniques to make requests to APIs.",
         section_topic_id: "Learn Javascript Syntax: Requests",
         type: "video",
         videoId: "Learn Javascript Syntax: Requests-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Async Javascript and HTTP Requests",
@@ -543,12 +618,14 @@ export const courseData = [
         section_topic_id: "Review: Async Javascript and HTTP Requests",
         type: "video",
         videoId: "Review: Async Javascript and HTTP Requests-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Web Apps",
     sectionValue: "Web Apps",
+    sectionNumber:12,
     sectionId: "Web Apps-Id",
     sectionDescription:
       "Confused about web pages, websites, and web apps? Take this unit to differentiate between these different terminologies and what a Single Page Application (SPA) is.",
@@ -559,6 +636,7 @@ export const courseData = [
         section_topic_id: "Introduction: Web Apps-id",
         type: "video",
         videoId: "Introduction: Web Apps-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "What is a Web App?",
@@ -566,6 +644,7 @@ export const courseData = [
         section_topic_id: "What is a Web App?-id",
         type: "video",
         videoId: "What is a Web App?-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Web Apps",
@@ -573,12 +652,14 @@ export const courseData = [
         section_topic_id: "Review: Web Apps",
         type: "video",
         videoId: "Review: Web Apps-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "React, Part I",
     sectionValue: "React, Part I",
+    sectionNumber:13,
     sectionId: "React, Part I-Id",
     sectionDescription:
       "Be introduced to React, a popular JavaScript library, to build out the front-end of your apps. This library will build upon your JavaScript knowledge and teach you core React syntax.",
@@ -589,6 +670,7 @@ export const courseData = [
         section_topic_id: "Introduction: React, Part |-id",
         type: "video",
         videoId: "Introduction: React, Part |-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Javascript Refresher",
@@ -596,6 +678,7 @@ export const courseData = [
         section_topic_id: "Javascript Refresher-id",
         type: "video",
         videoId: "Javascript Refresher-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "The Virtual DOM",
@@ -603,6 +686,7 @@ export const courseData = [
         section_topic_id: "The Virtual DOM",
         type: "video",
         videoId: "The Virtual DOM-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "JSX",
@@ -610,6 +694,7 @@ export const courseData = [
         section_topic_id: "JSX",
         type: "video",
         videoId: "JSX-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "React Components",
@@ -617,6 +702,7 @@ export const courseData = [
         section_topic_id: "React Components",
         type: "video",
         videoId: "React Components-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: React, Part-|",
@@ -624,12 +710,14 @@ export const courseData = [
         section_topic_id: "Review: React, Part-|",
         type: "video",
         videoId: "Review: React, Part-|-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "React, Part II",
     sectionValue: "React, Part II",
+    sectionNumber:14,
     sectionId: "React, Part II-Id",
     sectionDescription:
       "Continue with React to learn how different components interact with each other using props, state, hooks, and use React Router, as well as testing with Jest and Enzyme.",
@@ -640,6 +728,7 @@ export const courseData = [
         section_topic_id: "Introduction: React, Part ||-id",
         type: "video",
         videoId: "Introduction: React, Part ||-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Components Interacting",
@@ -647,6 +736,7 @@ export const courseData = [
         section_topic_id: "Components Interacting-id",
         type: "video",
         videoId: "Components Interacting-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Stateless Components from stateless components",
@@ -654,6 +744,7 @@ export const courseData = [
         section_topic_id: "Stateless Components from stateless components",
         type: "video",
         videoId: "Stateless Components from stateless components-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Lifecycle methods",
@@ -661,6 +752,7 @@ export const courseData = [
         section_topic_id: "Lifecycle methods",
         type: "video",
         videoId: "Lifecycle methods-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Deploy a React Application with Netlify",
@@ -668,6 +760,7 @@ export const courseData = [
         section_topic_id: "Deploy a React Application with Netlify",
         type: "video",
         videoId: "Deploy a React Application with Netlify-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Function Components and Hooks",
@@ -675,6 +768,7 @@ export const courseData = [
         section_topic_id: "Function Components and Hooks",
         type: "video",
         videoId: "Function Components and Hooks-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Intermediate React",
@@ -682,6 +776,7 @@ export const courseData = [
         section_topic_id: "Intermediate React",
         type: "video",
         videoId: "Intermediate React-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "React Router",
@@ -689,6 +784,7 @@ export const courseData = [
         section_topic_id: "React Router",
         type: "video",
         videoId: "React Router-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn React testing with Jest",
@@ -696,6 +792,7 @@ export const courseData = [
         section_topic_id: "Learn React testing with Jest",
         type: "video",
         videoId: "Learn React testing with Jest-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: React Part ||",
@@ -703,12 +800,14 @@ export const courseData = [
         section_topic_id: "Review: React Part ||",
         type: "video",
         videoId: "Review: React Part ||-videoId",
+        videoLength:12,
       },
     ],
   },
   {
     sectionTitle: "Redux",
     sectionValue: "Redux",
+    sectionNumber:15,
     sectionId: "Redux-Id",
     sectionDescription:
       "Redux is a popular state management library that pairs well with React to create scalable front-end apps that enable you to use a centralized store to pass on data to your components.",
@@ -719,6 +818,7 @@ export const courseData = [
         section_topic_id: "Introduction: Redux-id",
         type: "video",
         videoId: "Introduction: Redux-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Core concepts in Redux",
@@ -726,6 +826,7 @@ export const courseData = [
         section_topic_id: "Core concepts in Redux-id",
         type: "video",
         videoId: "Core concepts in Redux-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Core Redux API",
@@ -733,6 +834,7 @@ export const courseData = [
         section_topic_id: "Core Redux API",
         type: "video",
         videoId: "Core Redux API-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Connect to React with React Redux",
@@ -740,6 +842,7 @@ export const courseData = [
         section_topic_id: "Connect to React with React Redux",
         type: "video",
         videoId: "Connect to React with React Redux-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Refractoring with Redux Toolkit",
@@ -747,6 +850,7 @@ export const courseData = [
         section_topic_id: "Refractoring with Redux Toolkit",
         type: "video",
         videoId: "Refractoring with Redux Toolkit-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Async Actions with Middleware and Thunks",
@@ -754,6 +858,7 @@ export const courseData = [
         section_topic_id: "Async Actions with Middleware and Thunks",
         type: "video",
         videoId: "Async Actions with Middleware and Thunks-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Redux",
@@ -761,12 +866,14 @@ export const courseData = [
         section_topic_id: "Review: Redux",
         type: "video",
         videoId: "Review: Redux-videoId",
+        videoLength:12,
       },
     ],
   },
   {
     sectionTitle: "Git and Github, Part ||",
     sectionValue: "Git and Github, Part ||",
+    sectionNumber:16,
     sectionId: "Git and Github, Part ||-Id",
     sectionDescription:
       "Further your knowledge of Git and GitHub to streamline your processes for working collaboratively with others through forking, branching, merging conflicts, and making pull requests.",
@@ -777,6 +884,7 @@ export const courseData = [
         section_topic_id: "Introduction: Git and Github, Part ||-id",
         type: "video",
         videoId: "Introduction: Git and Github, Part ||-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Core concepts in Redux",
@@ -784,6 +892,7 @@ export const courseData = [
         section_topic_id: "Core concepts in Redux-id",
         type: "video",
         videoId: "Core concepts in Redux-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Git Branching",
@@ -791,6 +900,7 @@ export const courseData = [
         section_topic_id: "Git Branching",
         type: "video",
         videoId: "Git Branching-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Git Teamwork",
@@ -798,6 +908,7 @@ export const courseData = [
         section_topic_id: "Git Teamwork",
         type: "video",
         videoId: "Git Teamwork-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Best practices for Github Repositories",
@@ -805,6 +916,7 @@ export const courseData = [
         section_topic_id: "Best practices for Github Repositories",
         type: "video",
         videoId: "Best practices for Github Repositories-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Git and Github, part ||",
@@ -812,12 +924,14 @@ export const courseData = [
         section_topic_id: "Review: Git and Github, part ||",
         type: "video",
         videoId: "Review: Git and Github, part ||-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Introduction to Back-End",
     sectionValue: "Introduction to Back-End",
+    sectionNumber:17,
     sectionId: "Introduction to Back-End-Id",
     sectionDescription:
       "Dive into the world of back-end development using your knowledge of Javascript to work in Node.js. You'll implement modules and utilize the Node Package Manager (npm).",
@@ -828,6 +942,7 @@ export const courseData = [
         section_topic_id: "Introduction: Basics of Back-End Development-id",
         type: "video",
         videoId: "Introduction: Basics of Back-End Development-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "What is a Back-End?",
@@ -835,6 +950,7 @@ export const courseData = [
         section_topic_id: "What is a Back-End?-id",
         type: "video",
         videoId: "What is a Back-End?-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Back-end Javascript with NodeJs",
@@ -842,6 +958,7 @@ export const courseData = [
         section_topic_id: "Back-end Javascript with NodeJs",
         type: "video",
         videoId: "Back-end Javascript with NodeJs-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Modular Development With NodeJS",
@@ -849,6 +966,7 @@ export const courseData = [
         section_topic_id: "Modular Development With NodeJS",
         type: "video",
         videoId: "Modular Development With NodeJS-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Basics of Back-End Development",
@@ -856,12 +974,14 @@ export const courseData = [
         section_topic_id: "Review: Basics of Back-End Development",
         type: "video",
         videoId: "Review: Basics of Back-End Development-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Build a Back-end with Express.js",
     sectionValue: "Build a Back-end with Express.js",
+    sectionNumber:18,
     sectionId: "Build a Back-end with Express.js-Id",
     sectionDescription:
       "Express.js is a popular Node application framework that enables you to quickly build out core back-end functionality straight out of the box.",
@@ -872,6 +992,7 @@ export const courseData = [
         section_topic_id: "Introduction: Build a Back-End with Express.js-id",
         type: "video",
         videoId: "Introduction: Build a Back-End with Express.js-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Introduction to Express.js",
@@ -879,6 +1000,7 @@ export const courseData = [
         section_topic_id: "Introduction to Express.js-id",
         type: "video",
         videoId: "Introduction to Express.js-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Express: Routes",
@@ -886,6 +1008,7 @@ export const courseData = [
         section_topic_id: "Learn Express: Routes",
         type: "video",
         videoId: "Learn Express: Routes-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Learn Express: Middleware",
@@ -893,6 +1016,7 @@ export const courseData = [
         section_topic_id: "Learn Express: Middleware",
         type: "video",
         videoId: "Learn Express: Middleware-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Build a Back-End with Express.js",
@@ -900,12 +1024,14 @@ export const courseData = [
         section_topic_id: "Review: Build a Back-End with Express.js",
         type: "video",
         videoId: "Review: Build a Back-End with Express.js-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "User Authentication & Authorization",
     sectionValue: "User Authentication & Authorization",
+    sectionNumber:19,
     sectionId: "User Authentication & Authorization-Id",
     sectionDescription:
       "Authentication means verifying that your users are who they say they are and authorization determines what permissions they have. Learn how to Implement these key features.",
@@ -916,6 +1042,7 @@ export const courseData = [
         section_topic_id: "Introduction: User Authentication and Authorization-id",
         type: "video",
         videoId: "Introduction: User Authentication and Authorization-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Authentication, Authorization, and Encryption",
@@ -923,6 +1050,7 @@ export const courseData = [
         section_topic_id: "Authentication, Authorization, and Encryption-id",
         type: "video",
         videoId: "Authentication, Authorization, and Encryption-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Session Authentication in Express.js",
@@ -930,6 +1058,7 @@ export const courseData = [
         section_topic_id: "Session Authentication in Express.js",
         type: "video",
         videoId: "Session Authentication in Express.js-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Password Authentication",
@@ -937,6 +1066,7 @@ export const courseData = [
         section_topic_id: "Password Authentication",
         type: "video",
         videoId: "Password Authentication-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "OAuth 2.0",
@@ -944,6 +1074,7 @@ export const courseData = [
         section_topic_id: "OAuth 2.0",
         type: "video",
         videoId: "OAuth 2.0-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review User Authentication And Authorization",
@@ -951,12 +1082,14 @@ export const courseData = [
         section_topic_id: "Review User Authentication And Authorization",
         type: "video",
         videoId: "Review User Authentication And Authorization-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Back-End and Feature Testing",
     sectionValue: "Back-End and Feature Testing",
+    sectionNumber:20,
     sectionId: "Back-End and Feature Testing-Id",
     sectionDescription:
       "Testing on the back-end is also very important. See how test-driven development (TDD) is used to test features as well as the server in this unit.",
@@ -967,6 +1100,7 @@ export const courseData = [
         section_topic_id: "Introduction: Backend and feature testing-id",
         type: "video",
         videoId: "Introduction: Backend and feature testing-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Feature Testing with TDD",
@@ -974,6 +1108,7 @@ export const courseData = [
         section_topic_id: "Feature Testing with TDD-id",
         type: "video",
         videoId: "Feature Testing with TDD-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Server Testing with TDD",
@@ -981,6 +1116,7 @@ export const courseData = [
         section_topic_id: "Server Testing with TDD",
         type: "video",
         videoId: "Server Testing with TDD-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Backend and feature Testing.",
@@ -988,12 +1124,14 @@ export const courseData = [
         section_topic_id: "Review: Backend and feature Testing.",
         type: "video",
         videoId: "Review: Backend and feature Testing.-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Connecting Front-End to Back-End",
     sectionValue: "Connecting Front-End to Back-End",
+    sectionNumber:21,
     sectionId: "Connecting Front-End to Back-End-Id",
     sectionDescription:
       "You've learned front-end and back-end development, now learn how to combine the two to build out a full-stack app. You'll also learn how to structure your apps using MVC architecture.",
@@ -1004,6 +1142,7 @@ export const courseData = [
         section_topic_id: "Introduction: Connecting Front-End to Back-End-id",
         type: "video",
         videoId: "Introduction: Connecting Front-End to Back-End-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Connecting Front-End to Back-End",
@@ -1011,6 +1150,7 @@ export const courseData = [
         section_topic_id: "Connecting Front-End to Back-End-id",
         type: "video",
         videoId: "Connecting Front-End to Back-End-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "How to Structure your Apps?",
@@ -1018,6 +1158,7 @@ export const courseData = [
         section_topic_id: "How to Structure your Apps?",
         type: "video",
         videoId: "How to Structure your Apps?-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Connecting Front-End to Back-End",
@@ -1025,12 +1166,14 @@ export const courseData = [
         section_topic_id: "Review: Connecting Front-End to Back-End",
         type: "video",
         videoId: "Review: Connecting Front-End to Back-End-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Web Security Fundamentals",
     sectionValue: "Web Security Fundamentals",
+    sectionNumber:22,
     sectionId: "Web Security Fundamentals-Id",
     sectionDescription:
       "Web security is becoming increasingly important. Learn the fundamentals of what web security is and prevention techniques for common threats.",
@@ -1041,6 +1184,7 @@ export const courseData = [
         section_topic_id: "Introduction: Web Security Fundamentals-id",
         type: "video",
         videoId: "Introduction: Web Security Fundamentals-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Web Security",
@@ -1048,6 +1192,7 @@ export const courseData = [
         section_topic_id: "Web Security-id",
         type: "video",
         videoId: "Web Security-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Web Security Fundamentals",
@@ -1055,12 +1200,14 @@ export const courseData = [
         section_topic_id: "Review: Web Security Fundamentals-id",
         type: "video",
         videoId: "Review: Web Security Fundamentals-videoId",
+        videoLength:12,
       }
     ],
   },
   {
     sectionTitle: "Data Security",
     sectionValue: "Data Security",
+    sectionNumber:23,
     sectionId: "Data Security-Id",
     sectionDescription:
       "Data should only be shared with its intended recipients. Learn to secure your data using Transport Layer Security (TLS), Role-Based Access Control (RBAC), and more!",
@@ -1071,6 +1218,7 @@ export const courseData = [
         section_topic_id: "Introduction: Data Security-id",
         type: "video",
         videoId: "Introduction: Data Security-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Transport Layer Security(TLS)",
@@ -1078,6 +1226,7 @@ export const courseData = [
         section_topic_id: "Transport Layer Security(TLS)-id",
         type: "video",
         videoId: "Transport Layer Security(TLS)-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Role-Based Access Control (RBAC)",
@@ -1085,6 +1234,7 @@ export const courseData = [
         section_topic_id: "Role-Based Access Control (RBAC)-id",
         type: "video",
         videoId: "Role-Based Access Control (RBAC)-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Authentication and Authorization in Postgres",
@@ -1092,6 +1242,7 @@ export const courseData = [
         section_topic_id: "Authentication and Authorization in Postgres-id",
         type: "video",
         videoId: "Authentication and Authorization in Postgres-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Managing Environment Variables, API Keys, and Files",
@@ -1099,6 +1250,7 @@ export const courseData = [
         section_topic_id: "Managing Environment Variables, API Keys, and Files-id",
         type: "video",
         videoId: "Managing Environment Variables, API Keys, and Files-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Data Security",
@@ -1106,12 +1258,14 @@ export const courseData = [
         section_topic_id: "Review: Data Security-id",
         type: "video",
         videoId: "Review: Data Security-videoId",
+        videoLength:12,
       },
     ],
   },
   {
     sectionTitle: "Common Attacks on Web Applications",
     sectionValue: "Common Attacks on Web Applications",
+    sectionNumber:24,
     sectionId: "Common Attacks on Web Applications-Id",
     sectionDescription:
       "There are common patterns that are used to attack web apps. Learn how to prevent the most common attacks like cross-site scripting (XSS), SQL injections, and more.",
@@ -1122,6 +1276,7 @@ export const courseData = [
         section_topic_id: "Introduction: Common Attacks on Web Applications-id",
         type: "video",
         videoId: "Introduction: Common Attacks on Web Applications-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Prevent Cross-Site Scripting (XSS) Attacks",
@@ -1129,6 +1284,7 @@ export const courseData = [
         section_topic_id: "Prevent Cross-Site Scripting (XSS) Attacks-id",
         type: "video",
         videoId: "Prevent Cross-Site Scripting (XSS) Attacks-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Preventing Cross-Site Request Forgery (CSRF) Attacks.",
@@ -1136,6 +1292,7 @@ export const courseData = [
         section_topic_id: "Preventing Cross-Site Request Forgery (CSRF) Attacks.-id",
         type: "video",
         videoId: "Preventing Cross-Site Request Forgery (CSRF) Attacks.-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Preventing SQL Injection Attacks.",
@@ -1143,6 +1300,7 @@ export const courseData = [
         section_topic_id: "Preventing SQL Injection Attacks.-id",
         type: "video",
         videoId: "Preventing SQL Injection Attacks.-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Defensive Coding in Javascript",
@@ -1150,6 +1308,7 @@ export const courseData = [
         section_topic_id: "Defensive Coding in Javascript-id",
         type: "video",
         videoId: "Defensive Coding in Javascript-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Remediation and Incident Response",
@@ -1157,6 +1316,7 @@ export const courseData = [
         section_topic_id: "Remediation and Incident Response-id",
         type: "video",
         videoId: "Remediation and Incident Response-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Off-platform Project: ACME Bank",
@@ -1164,6 +1324,7 @@ export const courseData = [
         section_topic_id: "Off-platform Project: ACME Bank-id",
         type: "video",
         videoId: "Off-platform Project: ACME Bank-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Common Attacks on Web Application",
@@ -1171,12 +1332,14 @@ export const courseData = [
         section_topic_id: "Review: Common Attacks on Web Application-id",
         type: "video",
         videoId: "Review: Common Attacks on Web Application-videoId",
+        videoLength:12,
       },
     ],
   },
   {
     sectionTitle: "Fundamentals of Operating Systems",
     sectionValue: "Fundamentals of Operating Systems",
+    sectionNumber:25,
     sectionId: "Fundamentals of Operating Systems-Id",
     sectionDescription:
       "Operating systems play a key role in how browsers, apps, and user interactions play out. Learn about core operating system functionality to get an under-the-hood look at the OS.",
@@ -1187,6 +1350,7 @@ export const courseData = [
         section_topic_id: "Introduction: Fundamentals of Operating Systems.-id",
         type: "video",
         videoId: "Introduction: Fundamentals of Operating Systems.-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Operating System Basics.",
@@ -1194,6 +1358,7 @@ export const courseData = [
         section_topic_id: "Operating System Basics.-id",
         type: "video",
         videoId: "Operating System Basics.-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Processes and Threads.",
@@ -1201,6 +1366,7 @@ export const courseData = [
         section_topic_id: "Processes and Threads.-id",
         type: "video",
         videoId: "Processes and Threads.-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Process Scheduling",
@@ -1208,6 +1374,7 @@ export const courseData = [
         section_topic_id: "Process Scheduling-id",
         type: "video",
         videoId: "Process Scheduling-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Synchronization + Deadlock",
@@ -1215,6 +1382,7 @@ export const courseData = [
         section_topic_id: "Synchronization + Deadlock-id",
         type: "video",
         videoId: "Synchronization + Deadlock-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Memory Management",
@@ -1222,6 +1390,7 @@ export const courseData = [
         section_topic_id: "Memory Management-id",
         type: "video",
         videoId: "Memory Management-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "File Systems.",
@@ -1229,6 +1398,7 @@ export const courseData = [
         section_topic_id: "File Systems.-id",
         type: "video",
         videoId: "File Systems.-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "I/O Systems",
@@ -1236,6 +1406,7 @@ export const courseData = [
         section_topic_id: "I/O Systems-id",
         type: "video",
         videoId: "I/O Systems-videoId",
+        videoLength:12,
       },
       {
         section_topic_title: "Review: Fundamentals of Operating System",
@@ -1243,6 +1414,7 @@ export const courseData = [
         section_topic_id: "Review: Fundamentals of Operating System-id",
         type: "video",
         videoId: "Review: Fundamentals of Operating System-videoId",
+        videoLength:12,
       },
     ],
   },

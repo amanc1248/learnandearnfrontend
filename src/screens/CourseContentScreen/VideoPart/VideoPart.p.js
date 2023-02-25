@@ -2,14 +2,16 @@ import "../../../styles/CourseContent.css";
 import { VideoDescriptionC } from "./VideoDescription/VideoDescription.c";
 export const VideoPartP = () => {
   return (
-    <div>
-      <video className="video__div" controls>
+    <div className="col-lg-9">
+      {/* <video className="video__div" controls>
         <source
-          src="https://www.youtube.com/watch?v=NlfHbwQ8M3o"
+          src="https://player.vimeo.com/video/802170404?h=c4ac34b4b3"
           type="video/mp4"
         />
+        
         Your browser does not support the video tag.
-      </video>
+      </video> */}
+      <iframe className="video__div" src="https://player.vimeo.com/video/802170404?h=c4ac34b4b3" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       <VideoDescriptionC></VideoDescriptionC>
     </div>
   );

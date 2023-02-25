@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.course__content__header__div{
+    /* display: flex;
+     */
+     /* display: flex; */
+     background-color:#1C1D1F;
+     color: white;
+     /* height: 50px; */
+     align-items: center;
+     justify-content: flex-start;
+    font-family: 'Jost', sans-serif;
+    padding: 10px 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 300;
+    /* position: fixed;
+    width: 100%; */
+}
+.course__content__header__first__part{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.course__content__header__second__part{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course__logo{
+    height: 30px;
+    border-right: 1px solid gray;
+padding-right: 20px;
+}
+.course__name__div{
+    text-align: left;
+}
+
+.share__course__div{
+    display: flex;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.share__course__more__div{
+    border: 1px solid #fff;
+    padding: 5px 20px;
+}
