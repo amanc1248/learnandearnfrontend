@@ -5,7 +5,7 @@ export const HomeScreenP = ({
   showHideRegistrationModal,
 }) => {
   return (
-    <div className="row home_screen_firstPart">
+    <div className="row home_screen_firstPart g-0">
       <div className="col-lg-6 col-12">
         <div className="home__screen__firstPart__text">
           Be a professional, job ready{" "}
