@@ -1,13 +1,14 @@
 import "../../../../styles/CourseContent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { SingleSectionC } from "./SingleSection.c";
 import { SingleTopicC } from "./SingleTopic/SingleTopic.c";
 
 export const SingleSectionP = ({
   sectionData,
   showSectionTopics,
   toggleShowSectionTopics,
+  changeVideoURL,
+  videoURL
 }) => {
   return (
     <div className="course__section__div">
@@ -36,6 +37,8 @@ export const SingleSectionP = ({
                 index={index}
                 key={sectionTopic.section_topic_id}
                 singleTopic={sectionTopic}
+                changeVideoURL={changeVideoURL}
+                videoURL={videoURL}
               ></SingleTopicC>
             );
           })}

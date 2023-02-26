@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SingleSectionP } from "./SingleSection.p";
 
-export const SingleSectionC = ({ sectionData }) => {
+export const SingleSectionC = ({ sectionData , changeVideoURL, videoURL}) => {
 
     //use states 
   const [showSectionTopics, setShowSectionTopics] = useState(false);
@@ -15,6 +15,8 @@ const toggleShowSectionTopics = ()=>{
       sectionData={sectionData}
       showSectionTopics={showSectionTopics}
       toggleShowSectionTopics={toggleShowSectionTopics}
+      changeVideoURL={changeVideoURL}
+      videoURL={videoURL}
     ></SingleSectionP>
   );
 };

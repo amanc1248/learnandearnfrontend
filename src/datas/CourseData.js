@@ -12,7 +12,7 @@ export const courseData = [
         section_topic_description: "Introduction: Overview of Web Development",
         section_topic_id: "Introduction:Overview-of-web-development",
         type: "video",
-        videoId: "Introduction:Overview-of-web-development-videoId",
+        videoId: "https://player.vimeo.com/video/802171967?h=806509b5ca",
         videoLength:12,
       },
       {
@@ -21,7 +21,7 @@ export const courseData = [
           "Learn about the history of the internet and get an overview of the tools developers use to create websites.",
         section_topic_id: "The-Internet-And-Web-Development-Description",
         type: "video",
-        videoId: "The-Internet-And-Web-Development-Description-videoId",
+        videoId: "https://player.vimeo.com/video/802171627?h=1662f1c4d6",
         videoLength:12,
       },
       {
@@ -30,7 +30,7 @@ export const courseData = [
           "Understand the basics of programming, software engineering, and the difference between front-end and back-end (and full-stack!)",
         section_topic_id: "Introduction-to-Software-Engineering",
         type: "video",
-        videoId: "Introduction-to-Software-Engineering-videoId",
+        videoId: "https://player.vimeo.com/video/802171967?h=806509b5ca",
         videoLength:12,
       },
       {
@@ -39,7 +39,7 @@ export const courseData = [
           "Review what you've learned in the Overview of Web Development Unit.",
         sub_topic_id: "Overview-of-Web-Development",
         type: "video",
-        videoId: "Overview-of-Web-Development-videoId",
+        videoId: "https://player.vimeo.com/video/802171627?h=1662f1c4d6",
         videoLength:12,
       },
     ],

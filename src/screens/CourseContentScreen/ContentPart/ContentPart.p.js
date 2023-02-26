@@ -3,7 +3,7 @@ import { SingleSectionC } from "./SingleSection/SingleSection.c";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect } from "react";
-export const ContentPartP = () => {
+export const ContentPartP = ({changeVideoURL, videoURL}) => {
   useEffect(() => {
     const courseContentDiv = document.querySelector(".course__content__div");
     const handleScroll = () => {
@@ -22,7 +22,6 @@ export const ContentPartP = () => {
   }, []);
 
   const scrollToTop = (ref) => {
-    console.log("scrollToTop", ref)
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
@@ -37,7 +36,7 @@ export const ContentPartP = () => {
               const ref = React.createRef();
             return (
               <div key={course.sectionId} onClick={() => scrollToTop(ref)} ref={ref} >
-                <SingleSectionC sectionData={course} />
+                <SingleSectionC sectionData={course} changeVideoURL={changeVideoURL} videoURL={videoURL}/>
               </div>
             );
           })}

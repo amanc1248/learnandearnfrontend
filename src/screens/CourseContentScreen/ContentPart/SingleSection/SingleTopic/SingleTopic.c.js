@@ -1,5 +1,13 @@
-import { SingleTopicP } from "./SingleTopic.p"
+import { SingleTopicP } from "./SingleTopic.p";
 
-export const SingleTopicC = ({singleTopic,index})=>{
-    return <SingleTopicP singleTopic={singleTopic} index={index}></SingleTopicP>
-}
+export const SingleTopicC = ({ singleTopic, index, changeVideoURL, videoURL }) => {
+
+  return (
+    <SingleTopicP
+      singleTopic={singleTopic}
+      index={index}
+      changeVideoURL={changeVideoURL}
+      videoURL={videoURL}
+    ></SingleTopicP>
+  );
+};

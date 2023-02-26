@@ -1,5 +1,5 @@
 import { VideoPartP } from "./VideoPart.p"
 
-export const VideoPartC = ()=>{
-    return <VideoPartP></VideoPartP>
+export const VideoPartC = ({videoURL})=>{
+    return <VideoPartP videoURL={videoURL}></VideoPartP>
 }

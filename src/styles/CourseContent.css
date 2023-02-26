@@ -25,6 +25,9 @@
     padding: 10px;
     font-size: 14px;
 }
+.course__section__single__topic__div__active{
+    background-color: #d1d7dc;
+}
 
 .course__section__single__topic__div:hover {
     background-color: #d1d7dc;
