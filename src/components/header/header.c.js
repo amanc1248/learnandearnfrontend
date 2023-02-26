@@ -1,7 +1,13 @@
-import { HeaderP } from "./header.p"
+import { HeaderP } from "./header.p";
 
-export const HeaderC = ()=>{
-    return(
-        <HeaderP></HeaderP>
-    )
-}
+export const HeaderC = ({
+  showRegistrationModal,
+  showHideRegistrationModal,
+}) => {
+  return (
+    <HeaderP
+      showRegistrationModal={showRegistrationModal}
+      showHideRegistrationModal={showHideRegistrationModal}
+    ></HeaderP>
+  );
+};

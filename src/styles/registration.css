@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.registration_title__div{
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color:black;
+    padding: 10px 20px;
+}
+
+.courseOverview__single__list{
+    list-style: none;
+    padding: 2.5px 0;
+    font-size: 17px;
+}
+.user__details__input__div{
+    padding: 10px 20px;
+}
+.user__details__input{
+    height: 100px;
+}
+.user__input__div{
+    font-family: 'Jost', sans-serif;
+    height: 50px;
+    height: 54px;
+    border-radius: 12px;
+    padding: 5px 10px;
+    width: 100%;
+    border: 2px solid #cacaca;
+}
+.checkbox__privacyPolicy{
+    margin-right: 10px;
+}
+.privacy__policy__div{
+    padding: 10px 40px;
+    font-family: 'Jost', sans-serif;
+    color: #718096;
+}
+.cancel__submit__buttons{
+    display: flex;
+    padding: 10px 60px;
+    /* width: 50%; */
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: right; */
+}
+.cancel__button__div{
+    color: #718096;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 20px ;
+    border-radius: 40px;
+}
+.cancel__button__div:hover{
+    background-color: #cacaca;
+}
+.submit__button__div{
+    color: #718096;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    border-radius: 40px;
+    background: linear-gradient(45deg,#ffa41c,#ff4f84,#7058ff,#2c81ed,#b0eb33);
+    padding: 8px 40px ;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+.submit__button__div:required{
+    border: 1px solid red;
+}

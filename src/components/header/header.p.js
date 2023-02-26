@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "../../styles/header.css"
- export const  HeaderP= () =>{
+ export const  HeaderP= ({showHideRegistrationModal}) =>{
   return (
     <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
       <Container fluid className="p-0 header__container__div">
@@ -12,7 +12,7 @@ import "../../styles/header.css"
           <Nav className="me-auto">
           </Nav>
           <Nav className='ml-auto'>
-            <button className='enroll__for__free__button'>Enroll For Free</button>
+            <button className='enroll__for__free__button' onClick={()=>{showHideRegistrationModal(true)}}>Enroll For Free</button>
           </Nav>
         </Navbar.Collapse>
       </Container>
