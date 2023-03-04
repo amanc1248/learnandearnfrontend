@@ -1,27 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.registration_title__div{
+.homeScreen__courseOverview__list {
+    padding: 0 15px;
+}
+
+.registration_title__div {
     font-family: 'Jost', sans-serif;
     font-size: 30px;
     text-align: left;
     font-weight: 600;
     letter-spacing: 0.5px;
-    color:black;
+    color: black;
     padding: 10px 20px;
 }
 
-.courseOverview__single__list{
+.courseOverview__single__list {
     list-style: none;
     padding: 2.5px 0;
     font-size: 17px;
 }
-.user__details__input__div{
+
+.user__details__input__div {
     padding: 10px 20px;
 }
-.user__details__input{
+
+.user__details__input__otp {
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+.user__details__input {
     height: 100px;
 }
-.user__input__div{
+
+.user__input__div {
     font-family: 'Jost', sans-serif;
     height: 50px;
     height: 54px;
@@ -30,15 +43,20 @@
     width: 100%;
     border: 2px solid #cacaca;
 }
-.checkbox__privacyPolicy{
+
+.checkbox__privacyPolicy {
     margin-right: 10px;
+    height: 20px;
+    width: 20px;
 }
-.privacy__policy__div{
+
+.privacy__policy__div {
     padding: 10px 40px;
     font-family: 'Jost', sans-serif;
     color: #718096;
 }
-.cancel__submit__buttons{
+
+.cancel__submit__buttons {
     display: flex;
     padding: 10px 60px;
     /* width: 50%; */
@@ -46,32 +64,108 @@
     align-items: center;
     /* justify-content: right; */
 }
-.cancel__button__div{
+
+.cancel__button__div {
     color: #718096;
     font-size: 20px;
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     text-align: center;
     cursor: pointer;
-    padding: 8px 20px ;
+    padding: 8px 20px;
     border-radius: 40px;
 }
-.cancel__button__div:hover{
+
+.cancel__button__div:hover {
     background-color: #cacaca;
 }
-.submit__button__div{
+
+.submit__button__div {
     color: #718096;
     font-size: 20px;
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     border-radius: 40px;
-    background: linear-gradient(45deg,#ffa41c,#ff4f84,#7058ff,#2c81ed,#b0eb33);
-    padding: 8px 40px ;
+    background: linear-gradient(45deg, #ffa41c, #ff4f84, #7058ff, #2c81ed, #b0eb33);
+    padding: 8px 40px;
     color: white;
     text-align: center;
     cursor: pointer;
     border: none;
 }
-.submit__button__div:required{
+
+.submit__button__div:required {
     border: 1px solid red;
+}
+
+.sending__otp__class {
+    background: linear-gradient(45deg, #d93025, #fbbc05, #34a853, #4285f4, #c4312e);
+    animation: gradient-background 2s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient-background {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.registration__status__div {
+    padding: 0px 50px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+
+}
+
+.registration__status__div__success {
+    color: green;
+}
+
+.registration__status__div__error {
+    color: red;
+}
+
+.password__health__div{
+    margin: 0 25px;
+    font-style: italic;
+    height: 3px;
+    border-radius: 20px;
+}
+.password__health__div__text {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    margin: 0 25px;
+
+}
+
+.password__health__div__weak {
+    background-color: rgba(255, 0, 0, 0.597);
+}
+
+.password__health__div__weak__text {
+    color: rgba(255, 0, 0, 0.597)
+}
+
+.password__health__div__medium__text {
+    color: rgba(0, 0, 255, 0.597)
+}
+
+.password__health__div__strong__text {
+    color: rgba(0, 128, 0, 0.572)
+}
+
+.password__health__div__medium {
+    background-color: rgba(0, 0, 255, 0.597);
+}
+
+.password__health__div__strong {
+    background-color: rgba(0, 128, 0, 0.572);
 }

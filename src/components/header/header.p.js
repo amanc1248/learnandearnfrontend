@@ -6,7 +6,7 @@ import "../../styles/header.css"
   return (
     <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
       <Container fluid className="p-0 header__container__div">
-        <Navbar.Brand href="#home" className='brand__name'>SOFTWARE ENGINEER</Navbar.Brand>
+        <Navbar.Brand href="#home" className='brand__name'>CODE VALLEY</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

@@ -1,9 +1,18 @@
 import Modal from "react-bootstrap/Modal";
 import "../../styles/registration.css";
 import "../../styles/homeScreen.css";
+import { Step1C } from "./step1/step1.c";
+import { Step2C } from "./step2/step2.c";
+import { Step3C } from "./step3/step3.c";
 export const RegistrationScreenP = ({
   showRegistrationModal,
   showHideRegistrationModal,
+  activeStep,
+  changeActiveStep,
+  registrationStatus,
+  changeRegistrationStatus,
+  registrationFormDetails,
+  setRegistrationFormDetails,
 }) => {
   return (
     <div>
@@ -17,97 +26,68 @@ export const RegistrationScreenP = ({
           showHideRegistrationModal(false);
         }}
       >
-        <form action="">
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">
-              <div className="registration_title__div">
-                Complete this form to
-                <span className="full__stack__developer__text">
-                  {" "}
-                  enroll for free
-                </span>
-              </div>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div className="homeScreen__courseOverview__list">
-              <ul>
-                <li className="courseOverview__single__list">
-                  ✅1-on-1 coding classes tailored to your kid's skill-level and
-                  interests.
-                </li>
-                <li className="courseOverview__single__list">
-                  ✅Expert teachers that kids love.
-                </li>
-                <li className="courseOverview__single__list">
-                  ✅Learn to code real-world projects like games, apps and
-                  animations.
-                </li>
-              </ul>
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            <div className="registration_title__div">
+              Complete this form to
+              <span className="full__stack__developer__text">
+                {" "}
+                enroll for free
+              </span>
             </div>
-            <div className="user__details__input__div">
-              <div className="user__details__input__div user__details__fullName">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="user__input__div"
-                  required
-                  id="fullName"
-                  name="fullName"
-                />
-              </div>
-              <div className="user__details__input__div user__details__email">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="user__input__div"
-                  required
-                  id="email"
-                  name="email"
-                />
-              </div>
-              <div className="user__details__input__div user__details__phoneNumbner">
-                <input
-                  type="number"
-                  placeholder="Phone Number"
-                  className="user__input__div"
-                  required
-                  id="phoneNumber"
-                  name="phoneNumber"
-                />
-              </div>
-            </div>
-            <div className="privacy__policy__div">
-              <input
-                type="checkbox"
-                name="privacyPolicy"
-                id="privacyPolicy"
-                className="checkbox__privacyPolicy"
-                required
-              />
-              I have read and agreed to the privacy policy
-            </div>
-          </Modal.Body>
-          <hr />
-          <div className="cancel__submit__buttons__div row">
-            <div className="col-lg-6 col-12 empty__div"></div>
-            <div className="col-lg-6 col-12 cancel__submit__buttons">
-              <div
-                className="cancel__button__div"
-                onClick={() => {
-                  showHideRegistrationModal(false);
-                }}
-              >
-                Cancel
-              </div>
-              <input
-                className="submit__button__div"
-                type="submit"
-                value="Submit"
-              />
-            </div>
+          </Modal.Title>
+        </Modal.Header>
+        <div className="homeScreen__courseOverview__list">
+          <ul>
+            <li className="courseOverview__single__list">
+              ✅1-on-1 coding classes tailored to your kid's skill-level and
+              interests.
+            </li>
+            <li className="courseOverview__single__list">
+              ✅Expert teachers that kids love.
+            </li>
+            <li className="courseOverview__single__list">
+              ✅Learn to code real-world projects like games, apps and
+              animations.
+            </li>
+          </ul>
+        </div>
+        {registrationStatus.text && (
+          <div
+            className={`registration__status__div ${
+              registrationStatus.error && "registration__status__div__error"
+            } ${
+              !registrationStatus.error && "registration__status__div__success"
+            }`}
+          >
+            {registrationStatus.text}
           </div>
-        </form>
+        )}
+        {activeStep === 1 && (
+          <Step1C
+            showHideRegistrationModal={showHideRegistrationModal}
+            changeActiveStep={changeActiveStep}
+            changeRegistrationStatus={changeRegistrationStatus}
+            registrationFormDetails={registrationFormDetails}
+            setRegistrationFormDetails={setRegistrationFormDetails}
+          ></Step1C>
+        )}
+        {activeStep === 2 && (
+          <Step2C
+            changeRegistrationStatus={changeRegistrationStatus}
+            changeActiveStep={changeActiveStep}
+            registrationFormDetails={registrationFormDetails}
+            setRegistrationFormDetails={setRegistrationFormDetails}
+          ></Step2C>
+        )}
+        {activeStep === 3 && (
+          <Step3C
+            showHideRegistrationModal={showHideRegistrationModal}
+            registrationFormDetails={registrationFormDetails}
+            setRegistrationFormDetails={setRegistrationFormDetails}
+            changeRegistrationStatus={changeRegistrationStatus}
+          ></Step3C>
+        )}
       </Modal>
     </div>
   );
