@@ -51,6 +51,10 @@ export const Step3P = ({
         )}
         <div className={`password__health__div ${passwordHealth}`}></div>
       </div>
+      <div className="user__details__input__div user__details__fullName privacy__policy__div">
+        <input type="checkbox" name="privacyPolicy" id="privacyPolicy" className="checkbox__privacyPolicy" required/>
+        I have read and agreed to the privacy policy
+      </div>
       <hr />
       <div className="cancel__submit__buttons__div row">
         <div className="col-lg-6 col-12 empty__div"></div>

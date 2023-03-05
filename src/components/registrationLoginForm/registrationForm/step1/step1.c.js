@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { sendOTP } from "../../../actions/registration.actions";
+import { sendOTP } from "../../../../actions/registration.actions";
 import { Step1P } from "./step1.p";
 
 export const Step1C = ({
@@ -8,6 +8,7 @@ export const Step1C = ({
   changeRegistrationStatus,
   registrationFormDetails,
   setRegistrationFormDetails,
+  showHideRegistrationLoginModal,
 }) => {
   // use states
   const [sendingOTP, setSendingOTP] = useState(false);
@@ -54,6 +55,7 @@ export const Step1C = ({
       handleFullNameChange={handleFullNameChange}
       handleEmailChange={handleEmailChange}
       sendingOTP={sendingOTP}
+      showHideRegistrationLoginModal={showHideRegistrationLoginModal}
     ></Step1P>
   );
 };

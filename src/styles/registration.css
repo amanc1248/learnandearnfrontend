@@ -133,12 +133,13 @@
     color: red;
 }
 
-.password__health__div{
+.password__health__div {
     margin: 0 25px;
     font-style: italic;
     height: 3px;
     border-radius: 20px;
 }
+
 .password__health__div__text {
     font-family: 'Jost', sans-serif;
     font-size: 12px;
@@ -168,4 +169,16 @@
 
 .password__health__div__strong {
     background-color: rgba(0, 128, 0, 0.572);
+}
+
+.already__login__register__div {
+    margin: 0px 45px;
+    background-color: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+}
+.already__login__register__button{
+    text-decoration: underline;
+    color:rgba(0, 0, 255, 0.597);
+    cursor: pointer;
 }

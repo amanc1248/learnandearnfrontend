@@ -1,10 +1,10 @@
 import Modal from "react-bootstrap/Modal";
-import "../../styles/registration.css";
-import "../../styles/homeScreen.css";
+import "../../../styles/registration.css";
+import "../../../styles/homeScreen.css";
 import { Step1C } from "./step1/step1.c";
 import { Step2C } from "./step2/step2.c";
 import { Step3C } from "./step3/step3.c";
-export const RegistrationScreenP = ({
+export const RegistrationFormP = ({
   showRegistrationModal,
   showHideRegistrationModal,
   activeStep,
@@ -13,6 +13,8 @@ export const RegistrationScreenP = ({
   changeRegistrationStatus,
   registrationFormDetails,
   setRegistrationFormDetails,
+  showHideLoginForm,
+  showHideRegistrationLoginModal,
 }) => {
   return (
     <div>
@@ -24,6 +26,7 @@ export const RegistrationScreenP = ({
         className="registration__modal"
         onHide={() => {
           showHideRegistrationModal(false);
+          showHideRegistrationLoginModal(false);
         }}
       >
         <Modal.Header closeButton>
@@ -52,6 +55,16 @@ export const RegistrationScreenP = ({
             </li>
           </ul>
         </div>
+        <div className="already__login__register__div">
+          Already have an account?{" "}
+          <span
+          className="already__login__register__button"
+            onClick={() => {
+              showHideRegistrationModal(false);
+              showHideLoginForm(true);
+            }}
+          >Login Here</span>
+        </div>
         {registrationStatus.text && (
           <div
             className={`registration__status__div ${
@@ -70,6 +83,7 @@ export const RegistrationScreenP = ({
             changeRegistrationStatus={changeRegistrationStatus}
             registrationFormDetails={registrationFormDetails}
             setRegistrationFormDetails={setRegistrationFormDetails}
+            showHideRegistrationLoginModal={showHideRegistrationLoginModal}
           ></Step1C>
         )}
         {activeStep === 2 && (

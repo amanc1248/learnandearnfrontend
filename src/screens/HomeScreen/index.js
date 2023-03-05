@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { HeaderC } from "../../components/header/header.c";
-import { RegistrationScreenC } from "../RegistrationScreen/RegistrationScreen.c";
+import { RegistrationLoginFormComponent } from "../../components/registrationLoginForm/registrationLoginForm.c";
 import { HomeScreenC } from "./HomeScreen.c";
 
 export const HomeScreen = () => {
     // use states
-    const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+    const [showRegistrationLoginModal, setShowRegistrationLoginModal] = useState(false);
 
     // functions
-    const showHideRegistrationModal = (value) => {
-      setShowRegistrationModal(value);
+    const showHideRegistrationLoginModal = (value) => {
+      setShowRegistrationLoginModal(value);
     };
   return (
     <>
-      <HeaderC showRegistrationModal={showRegistrationModal} showHideRegistrationModal={showHideRegistrationModal}></HeaderC>
-      <HomeScreenC showRegistrationModal={showRegistrationModal} showHideRegistrationModal={showHideRegistrationModal}></HomeScreenC>
-      {showRegistrationModal && <RegistrationScreenC showRegistrationModal={showRegistrationModal} showHideRegistrationModal={showHideRegistrationModal}></RegistrationScreenC>}
+      <HeaderC showRegistrationModal={showRegistrationLoginModal} showHideRegistrationModal={showHideRegistrationLoginModal}></HeaderC>
+      <HomeScreenC showRegistrationModal={showRegistrationLoginModal} showHideRegistrationModal={showHideRegistrationLoginModal}></HomeScreenC>
+      {showRegistrationLoginModal && <RegistrationLoginFormComponent showRegistrationLoginModal={showRegistrationLoginModal} showHideRegistrationLoginModal={showHideRegistrationLoginModal}></RegistrationLoginFormComponent>}
     </>
   );
 };

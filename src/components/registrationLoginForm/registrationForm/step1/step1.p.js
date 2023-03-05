@@ -1,5 +1,5 @@
-import "../../../styles/registration.css";
-import "../../../styles/homeScreen.css";
+import "../../../../styles/registration.css";
+import "../../../../styles/homeScreen.css";
 export const Step1P = ({
   showHideRegistrationModal,
   onHandleSubmit,
@@ -7,6 +7,7 @@ export const Step1P = ({
   handleFullNameChange,
   handleEmailChange,
   sendingOTP,
+  showHideRegistrationLoginModal,
 }) => {
   return (
     <form onSubmit={onHandleSubmit}>
@@ -48,6 +49,7 @@ export const Step1P = ({
             className="cancel__button__div"
             onClick={() => {
               showHideRegistrationModal(false);
+              showHideRegistrationLoginModal(false);
             }}
           >
             Cancel

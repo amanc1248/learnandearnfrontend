@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createUser } from "../../../actions/registration.actions";
+import { createUser } from "../../../../actions/registration.actions";
 import { Step3P } from "./step3.p";
 
 export const Step3C = ({
@@ -33,9 +33,7 @@ const [registerButtonEnabled,setRegisterButtonEnabled] =useState(true);
   };
 
   const handleConfirmPasswordChange = (value) => {
-    if(value === password){
-      setRegisterButtonEnabled(false)
-    }
+      setRegisterButtonEnabled(!(value === password))
   };
 
   const checkPasswordHealth = (password)=>{

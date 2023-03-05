@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { verifyOTP } from "../../../actions/registration.actions";
+import React, { useState } from "react";  
+import { verifyOTP } from "../../../../actions/registration.actions";
 import { Step2P } from "./step2.p";
 
 export const Step2C = ({
@@ -9,7 +9,6 @@ export const Step2C = ({
 }) => {
   // use states
   const [otp, setOTP] = useState("");
-  const [verifying, setVerifying] = useState(false);
 
   // functions
   const onHandleBack = (e) => {

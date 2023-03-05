@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { RegistrationScreenP } from "./RegistrationScreen.p";
+import { RegistrationFormP } from "./RegistrationForm.p";
 
-export const RegistrationScreenC = ({
+export const RegistrationFormC = ({
   showRegistrationModal,
   showHideRegistrationModal,
+  showHideLoginForm,
+  showHideRegistrationLoginModal,
 }) => {
   // useStates
   const [registrationFormDetails, setRegistrationFormDetails] = useState({
@@ -24,7 +26,7 @@ export const RegistrationScreenC = ({
     setRegistrationStatus(status);
   };
   return (
-    <RegistrationScreenP
+    <RegistrationFormP
       showRegistrationModal={showRegistrationModal}
       showHideRegistrationModal={showHideRegistrationModal}
       activeStep={activeStep}
@@ -33,6 +35,8 @@ export const RegistrationScreenC = ({
       changeRegistrationStatus={changeRegistrationStatus}
       registrationFormDetails={registrationFormDetails}
       setRegistrationFormDetails={setRegistrationFormDetails}
-    ></RegistrationScreenP>
+      showHideLoginForm={showHideLoginForm}
+      showHideRegistrationLoginModal={showHideRegistrationLoginModal}
+    ></RegistrationFormP>
   );
 };
