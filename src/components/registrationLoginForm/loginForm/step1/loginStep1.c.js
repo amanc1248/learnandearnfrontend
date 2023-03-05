@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { login } from "../../../../actions/login.actions";
+import { saveToLocalStorage } from "../../../../utils/localStorage.utils";
 import { LoginStep1P } from "./loginStep1.p";
 
 export const LoginStep1C = ({
@@ -13,7 +15,17 @@ export const LoginStep1C = ({
   const [logginIn, setLogginIn] = useState(false);
 
   // functions
-  const onHandleSubmit = () => {};
+  const onHandleSubmit = (e) => {
+    e.preventDefault()
+    setLogginIn(true);
+    login(loginFormDetails).then((response)=>{
+      console.log(response);
+      saveToLocalStorage({key:"userToken", value:response.data })
+      setLogginIn(false);
+    }).catch((error)=>{
+      console.log(error);
+    })
+  };
   const handleEmailChange = (value) => {
     setLoginFormDetails({
         ...loginFormDetails,
@@ -26,7 +38,6 @@ export const LoginStep1C = ({
         password: value,
     })
   };
-
   return <LoginStep1P
   loginFormDetails={loginFormDetails}
   logginIn={logginIn}
