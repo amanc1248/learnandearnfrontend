@@ -6,6 +6,8 @@ export const LoginStep1P = ({
   showHideRegistrationModal,
   showHideRegistrationLoginModal,
   loggingIn,
+  showHideForgotPasswordForm,
+  showHideLoginForm,
 }) => {
   return (
     <form onSubmit={onHandleSubmit}>
@@ -39,6 +41,19 @@ export const LoginStep1P = ({
           />
         </div>
       </div>
+      <div className="already__login__register__div">
+          Forgot Password ?{" "}
+          <span
+            className="already__login__register__button"
+            onClick={() => {
+              showHideLoginForm(false)
+              showHideRegistrationModal(false);
+              showHideForgotPasswordForm(true)
+            }}
+          >
+            Reset Your Password
+          </span>
+        </div>
       <hr />
       <div className="cancel__submit__buttons__div row">
         <div className="col-lg-6 col-12 empty__div"></div>

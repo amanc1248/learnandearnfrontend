@@ -17,7 +17,9 @@ export const login = ({ email, password }) => {
       };
       axiosInstance.get("/user/login", config).then((response) => {
         resolve(response);
-      });
+      }).catch((error)=>{
+        reject(error)
+      })
     } catch (error) {
       reject(error);
     }

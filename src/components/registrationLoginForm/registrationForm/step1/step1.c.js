@@ -28,7 +28,7 @@ export const Step1C = ({
       .catch((err) => {
         changeRegistrationStatus({
           error: true,
-          text: "Sorry we messed up from our side. Please try again!",
+          text: "Something went wrong. Please try again!",
         });
         setSendingOTP(false);
       });

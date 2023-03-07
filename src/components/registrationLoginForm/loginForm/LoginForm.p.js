@@ -7,6 +7,9 @@ export const LoginFormP = ({
   showHideLoginForm,
   showHideRegistrationModal,
   showHideRegistrationLoginModal,
+  showHideForgotPasswordForm,
+  handleLoginStatus,
+  loginStatus,
 }) => {
   return (
     <div>
@@ -44,6 +47,7 @@ export const LoginFormP = ({
             </li>
           </ul>
         </div>
+
         <div className="already__login__register__div">
           New here?{" "}
           <span
@@ -56,9 +60,21 @@ export const LoginFormP = ({
             Create new account
           </span>
         </div>
+        {loginStatus.text && (
+          <div
+            className={`registration__status__div ${
+              loginStatus.error && "registration__status__div__error"
+            } ${!loginStatus.error && "registration__status__div__success"}`}
+          >
+            {loginStatus.text}
+          </div>
+        )}
         <LoginStep1C
+          showHideLoginForm={showHideLoginForm}
           showHideRegistrationModal={showHideRegistrationModal}
           showHideRegistrationLoginModal={showHideRegistrationLoginModal}
+          showHideForgotPasswordForm={showHideForgotPasswordForm}
+          handleLoginStatus ={handleLoginStatus}
         ></LoginStep1C>
       </Modal>
     </div>

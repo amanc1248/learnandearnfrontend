@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ForgotPasswordFormC } from "./forgotPasswordForm/ForgotPasswordForm.c";
+import { ForgotPasswordFormP } from "./forgotPasswordForm/ForgotPasswordForm.p";
 import { LoginFormC } from "./loginForm/LoginForm.c";
 import { RegistrationFormC } from "./registrationForm/RegistrationForm.c";
 
@@ -9,6 +11,8 @@ export const RegistrationLoginFormComponent = ({
   // useStates
   const [showRegistrationForm, setShowRegistrationForm] = useState(true);
   const [showLoginForm, setShowLoginForm] = useState();
+  const [showForgotPasswordForm, setShowForgotPasswordForm] = useState();
+
   //   functions
   const showHideRegistrationModal = (value) => {
     setShowRegistrationForm(value);
@@ -16,6 +20,10 @@ export const RegistrationLoginFormComponent = ({
 
   const showHideLoginForm = (value) => {
     setShowLoginForm(value);
+  };
+
+  const showHideForgotPasswordForm = (value) => {
+    setShowForgotPasswordForm(value);
   };
 
   return (
@@ -34,7 +42,18 @@ export const RegistrationLoginFormComponent = ({
           showHideLoginForm={showHideLoginForm}
           showHideRegistrationModal={showHideRegistrationModal}
           showHideRegistrationLoginModal={showHideRegistrationLoginModal}
+          showHideForgotPasswordForm={showHideForgotPasswordForm}
         ></LoginFormC>
+      )}
+
+      {showForgotPasswordForm && (
+        <ForgotPasswordFormC
+          showForgotPasswordForm={showForgotPasswordForm}
+          showHideForgotPasswordForm={showHideForgotPasswordForm}
+          showHideLoginForm={showHideLoginForm}
+          showHideRegistrationModal={showHideRegistrationModal}
+          showHideRegistrationLoginModal={showHideRegistrationLoginModal}
+        ></ForgotPasswordFormC>
       )}
     </>
   );

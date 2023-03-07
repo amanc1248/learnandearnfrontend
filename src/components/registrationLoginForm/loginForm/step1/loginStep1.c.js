@@ -6,6 +6,9 @@ import { LoginStep1P } from "./loginStep1.p";
 export const LoginStep1C = ({
   showHideRegistrationModal,
   showHideRegistrationLoginModal,
+  showHideForgotPasswordForm,
+  showHideLoginForm,
+  handleLoginStatus,
 }) => {
   // useStates
   const [loginFormDetails, setLoginFormDetails] = useState({
@@ -16,35 +19,49 @@ export const LoginStep1C = ({
 
   // functions
   const onHandleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    console.log("iiiii")
     setLogginIn(true);
-    login(loginFormDetails).then((response)=>{
-      console.log(response);
-      saveToLocalStorage({key:"userToken", value:response.data })
-      setLogginIn(false);
-    }).catch((error)=>{
-      console.log(error);
-    })
+    login(loginFormDetails)
+      .then((response) => {
+        console.log(response);
+        saveToLocalStorage({ key: "userToken", value: response.data });
+        handleLoginStatus({
+          error: false,
+          text: "Logged in successfully"
+        })
+        setLogginIn(false);
+      })
+      .catch((error) => {
+        handleLoginStatus({
+          error: true,
+          text: error.response.data
+        })
+      });
   };
   const handleEmailChange = (value) => {
     setLoginFormDetails({
-        ...loginFormDetails,
-        email: value,
-    })
+      ...loginFormDetails,
+      email: value,
+    });
   };
   const handlePasswordChange = (value) => {
     setLoginFormDetails({
-        ...loginFormDetails,
-        password: value,
-    })
+      ...loginFormDetails,
+      password: value,
+    });
   };
-  return <LoginStep1P
-  loginFormDetails={loginFormDetails}
-  logginIn={logginIn}
-  onHandleSubmit={onHandleSubmit}
-  handleEmailChange={handleEmailChange}
-  handlePasswordChange={handlePasswordChange}
-  showHideRegistrationModal={showHideRegistrationModal}
-  showHideRegistrationLoginModal={showHideRegistrationLoginModal}
-  ></LoginStep1P>;
+  return (
+    <LoginStep1P
+      loginFormDetails={loginFormDetails}
+      logginIn={logginIn}
+      onHandleSubmit={onHandleSubmit}
+      handleEmailChange={handleEmailChange}
+      handlePasswordChange={handlePasswordChange}
+      showHideRegistrationModal={showHideRegistrationModal}
+      showHideRegistrationLoginModal={showHideRegistrationLoginModal}
+      showHideForgotPasswordForm={showHideForgotPasswordForm}
+      showHideLoginForm={showHideLoginForm}
+    ></LoginStep1P>
+  );
 };
