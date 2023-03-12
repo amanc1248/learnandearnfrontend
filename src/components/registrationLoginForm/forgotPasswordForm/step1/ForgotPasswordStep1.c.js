@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { sendOTP } from "../../../../actions/registration.actions";
+import { sendOTPForResetingPassword } from "../../../../actions/registration.actions";
 import { ForgotPasswordStep1P } from "./ForgtoPasswordStep1.p";
 export const ForgotPasswordStep1C = ({
   showHideRegistrationModal,
@@ -16,7 +16,7 @@ export const ForgotPasswordStep1C = ({
   const onHandleSubmit = (e) => {
     e.preventDefault();
     setSendingOTP(true);
-    sendOTP({ email })
+    sendOTPForResetingPassword({ email })
       .then((response) => {
         changeForgotPasswordStatus({
           error: false,
@@ -27,7 +27,7 @@ export const ForgotPasswordStep1C = ({
       .catch((error) => {
         changeForgotPasswordStatus({
           error: true,
-          text: "Something went wrong. Please try again!",
+          text: error.response.data,
         });
         setSendingOTP(false);
       });

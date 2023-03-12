@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { sendOTP } from "../../../../actions/registration.actions";
+import { sendOTPForCreatingUser } from "../../../../actions/registration.actions";
 import { Step1P } from "./step1.p";
 
 export const Step1C = ({
@@ -17,7 +17,7 @@ export const Step1C = ({
   const onHandleSubmit = (e) => {
     e.preventDefault();
     setSendingOTP(true);
-    sendOTP({email: registrationFormDetails.email})
+    sendOTPForCreatingUser({email: registrationFormDetails.email})
       .then((response) => {
         changeActiveStep(2);
         changeRegistrationStatus({
@@ -28,7 +28,7 @@ export const Step1C = ({
       .catch((err) => {
         changeRegistrationStatus({
           error: true,
-          text: "Something went wrong. Please try again!",
+          text:err.response.data,
         });
         setSendingOTP(false);
       });

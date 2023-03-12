@@ -2,8 +2,8 @@ import axios from "axios";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
 
-// send otp
-export const sendOTP = ({ email }) => {
+// send otp for creating password
+export const sendOTPForCreatingUser = ({ email }) => {
   return new Promise((resolve, reject) => {
     const config = {
       header: {
@@ -11,7 +11,26 @@ export const sendOTP = ({ email }) => {
       },
     };
     axiosInstance
-      .post("/otp/", { email }, config)
+      .post("/otp/creatUserOTP", { email }, config)
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        reject(error)
+      });
+  });
+};
+
+// send otp for reseting password
+export const sendOTPForResetingPassword = ({ email }) => {
+  return new Promise((resolve, reject) => {
+    const config = {
+      header: {
+        "Content-Type": "application/json",
+      },
+    };
+    axiosInstance
+      .post("/otp/resetPasswordOTP", { email }, config)
       .then((response) => {
         resolve(response);
       })
