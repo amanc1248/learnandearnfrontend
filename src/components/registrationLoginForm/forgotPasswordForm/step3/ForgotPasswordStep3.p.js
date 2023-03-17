@@ -62,7 +62,7 @@ export const ForgotPasswordStep3P = ({
           <input
             className="submit__button__div"
             type="submit"
-            value="Register"
+            value="Reset Password"
           />
         </div>
       </div>

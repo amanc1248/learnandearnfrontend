@@ -18,6 +18,10 @@ const [passwordHealth, setPasswordHealth] = useState();
     e.preventDefault();
     if(password===confirmPassword){
       resetUserPassword({email, password}).then((response)=>{
+        changeForgotPasswordStatus({
+          error: false,
+          text: "Password reset successfully",
+        });
         showHideRegistrationModal(false);
       }).catch((error)=>{
         changeForgotPasswordStatus({
