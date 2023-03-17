@@ -83,7 +83,13 @@ export const ForgotPasswordFormP = ({
             changeForgotPasswordStatus={changeForgotPasswordStatus}
           ></ForgotPasswordStep2C>
         )}
-        {activeStep === 3 && <ForgotPasswordStep3C></ForgotPasswordStep3C>}
+        {activeStep === 3 && (
+          <ForgotPasswordStep3C
+            showHideRegistrationModal={showHideRegistrationModal}
+            email={email}
+            changeForgotPasswordStatus={changeForgotPasswordStatus}
+          ></ForgotPasswordStep3C>
+        )}
       </Modal>
     </div>
   );

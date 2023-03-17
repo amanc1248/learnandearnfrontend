@@ -8,23 +8,31 @@ export const Step3C = ({
   changeRegistrationStatus,
 }) => {
 
+  // data
+  let confirmPassword;
 // use states
 const [password, setPassword] = useState();
 const [passwordHealth, setPasswordHealth] = useState();
-const [registerButtonEnabled,setRegisterButtonEnabled] =useState(true);
 
 // functions
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    const {fullName: name, email} = registrationFormDetails;
-    createUser({name, email, password}).then((response)=>{
-      showHideRegistrationModal(false);
-    }).catch((error)=>{
+    if(password===confirmPassword){
+      const {fullName: name, email} = registrationFormDetails;
+      createUser({name, email, password}).then((response)=>{
+        showHideRegistrationModal(false);
+      }).catch((error)=>{
+        changeRegistrationStatus({
+          error: true,
+          text: error.response.data,
+        });
+      })
+    }else{
       changeRegistrationStatus({
         error: true,
-        text: error.response.data,
+        text: "Password did not match",
       });
-    })
+    }
   };
 
   const handlePasswordChange = (password) => {
@@ -33,7 +41,7 @@ const [registerButtonEnabled,setRegisterButtonEnabled] =useState(true);
   };
 
   const handleConfirmPasswordChange = (value) => {
-      setRegisterButtonEnabled(!(value === password))
+    confirmPassword = value
   };
 
   const checkPasswordHealth = (password)=>{
@@ -69,7 +77,6 @@ const [registerButtonEnabled,setRegisterButtonEnabled] =useState(true);
       handlePasswordChange={handlePasswordChange}
       handleConfirmPasswordChange={handleConfirmPasswordChange}
       passwordHealth={passwordHealth}
-      registerButtonEnabled={registerButtonEnabled}
     ></Step3P>
   );
 };

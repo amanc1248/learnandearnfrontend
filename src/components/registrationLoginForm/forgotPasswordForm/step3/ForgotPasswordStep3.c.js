@@ -1,19 +1,36 @@
-import React, {useState} from 'react';
-import { ForgotPasswordStep2P } from '../step2/ForgotPasswordStep2.p';
-import { ForgotPasswordStep3P } from './ForgotPasswordStep3.p';
-
+import React, { useState } from 'react';
+import { resetUserPassword } from '../../../../actions/users.actions';
+import {ForgotPasswordStep3P} from  "./ForgotPasswordStep3.p"
 export const ForgotPasswordStep3C = ({
-  changeActiveStep,
+  showHideRegistrationModal,
+  email,
   changeForgotPasswordStatus,
-})=>{
-     // useStates
-  const [password, setPassword] = useState();
-  const [passwordHealth, setPasswordHealth] = useState();
-  const [registerButtonEnabled, setRegisterButtonEnabled] = useState(true);
+}) => {
+
+  // data
+  let confirmPassword;
+// use states
+const [password, setPassword] = useState();
+const [passwordHealth, setPasswordHealth] = useState();
+
 // functions
-const onHandleSubmit = (e) => {
+  const onHandleSubmit = (e) => {
     e.preventDefault();
-    changeActiveStep(3);
+    if(password===confirmPassword){
+      resetUserPassword({email, password}).then((response)=>{
+        showHideRegistrationModal(false);
+      }).catch((error)=>{
+        changeForgotPasswordStatus({
+          error: true,
+          text: error.response.data,
+        });
+      })
+    }else{
+      changeForgotPasswordStatus({
+        error: true,
+        text: "Password did not match",
+      });
+    }
   };
 
   const handlePasswordChange = (password) => {
@@ -22,7 +39,7 @@ const onHandleSubmit = (e) => {
   };
 
   const handleConfirmPasswordChange = (value) => {
-      setRegisterButtonEnabled(!(value === password))
+    confirmPassword = value
   };
 
   const checkPasswordHealth = (password)=>{
@@ -51,6 +68,13 @@ const onHandleSubmit = (e) => {
       return "password__health__div__strong";
     }
   }
-
-    return <ForgotPasswordStep3P></ForgotPasswordStep3P>
-}
+  return (
+    <ForgotPasswordStep3P
+      onHandleSubmit={onHandleSubmit}
+      password={password}
+      handlePasswordChange={handlePasswordChange}
+      handleConfirmPasswordChange={handleConfirmPasswordChange}
+      passwordHealth={passwordHealth}
+    ></ForgotPasswordStep3P>
+  );
+};

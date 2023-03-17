@@ -4,7 +4,6 @@ export const Step3P = ({
   handlePasswordChange,
   handleConfirmPasswordChange,
   passwordHealth,
-  registerButtonEnabled,
 }) => {
   return (
     <form onSubmit={onHandleSubmit}>
@@ -64,7 +63,6 @@ export const Step3P = ({
             className="submit__button__div"
             type="submit"
             value="Register"
-            disabled={registerButtonEnabled}
           />
         </div>
       </div>
