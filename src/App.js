@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomeScreen />}></Route>
-        <Route path="/overview" element={<OverviewScreepC />}></Route>
+        <Route path="/overview/:id?" element={<OverviewScreepC />}></Route>
         <Route
           path="/fullstack-web-development"
           element={<CourseContentScreen />}
