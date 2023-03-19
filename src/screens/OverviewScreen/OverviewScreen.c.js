@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import { OverviewScreenP } from "./OverviewScreen.p";
 
 export const OverviewScreepC = () => {
@@ -9,13 +11,17 @@ export const OverviewScreepC = () => {
     { text: "Payment And Plan", id: 2 },
   ];
 
-  // use states
-  const [overviewActiveTab, setOverviewActiveTab] = useState(1);
+  // useParams
+  const { id } = useParams(); 
 
-  //   functions
+  // use states
+  const [overviewActiveTab, setOverviewActiveTab] = useState(id ? Number(id) : 1);
+
+  // functions
   const handleOverviewActiveTab = (value) => {
     setOverviewActiveTab(value);
   };
+
   return (
     <OverviewScreenP
       overviewActiveTab={overviewActiveTab}
