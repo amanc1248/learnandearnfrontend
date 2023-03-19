@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useNavigate}  from 'react-router-dom';
 import { login } from "../../../../actions/login.actions";
 import { saveToLocalStorage } from "../../../../utils/localStorage.utils";
 import { LoginStep1P } from "./loginStep1.p";
@@ -17,20 +18,21 @@ export const LoginStep1C = ({
   });
   const [logginIn, setLogginIn] = useState(false);
 
+  // use navigate
+  const navigate = useNavigate();
   // functions
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    console.log("iiiii")
     setLogginIn(true);
     login(loginFormDetails)
       .then((response) => {
-        console.log(response);
         saveToLocalStorage({ key: "userToken", value: response.data });
         handleLoginStatus({
           error: false,
           text: "Logged in successfully"
         })
         setLogginIn(false);
+        navigate("/overview")
       })
       .catch((error) => {
         handleLoginStatus({
