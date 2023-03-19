@@ -1,0 +1,22 @@
+.account__login {
+    position: relative;
+}
+
+.account__div__popup {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    z-index: 999;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.371);
+    padding: 15px 20px;
+    width: max-content;
+}
+.account__p__individual{
+    display: flex;
+    gap: 15px;
+    padding: 15px 10px;
+}
+.account__p__individual:hover{
+    color:blue ;
+}
