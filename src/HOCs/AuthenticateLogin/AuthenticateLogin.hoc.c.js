@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { checkLogin } from "../../actions/login.actions";
+import { USER_TOKEN } from "../../constants/localstorage.constants";
 import { AuthenticateLoginHOCP } from "./AuthenticateLogin.hoc.p";
 
 export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
@@ -11,7 +12,7 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
 
   // use effects
   useEffect(() => {
-    const token = localStorage.getItem("userToken");
+    const token = localStorage.getItem(USER_TOKEN);
     if (token) {
       setCheckingLoginStatus(true);
       checkLogin({ token })

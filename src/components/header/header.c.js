@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { checkLogin } from "../../actions/login.actions";
+import { USER_TOKEN } from "../../constants/localstorage.constants";
 import { HeaderP } from "./header.p";
 
 export const HeaderC = ({
@@ -14,7 +15,7 @@ const [userDetails, setUserDetails] = useState(null);
 
 // use effects
 useEffect(() => {
-  const token = localStorage.getItem("userToken");
+  const token = localStorage.getItem(USER_TOKEN);
   if(token){
     checkLogin({ token })
     .then((response) => {
