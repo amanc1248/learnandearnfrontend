@@ -22,7 +22,8 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
           setCheckingLoginStatus(false)
         })
         .catch((error) => {
-          console.log(error);
+          setCheckingLoginStatus(false);
+          navigate("/")
         });
     }else{
       navigate("/")
