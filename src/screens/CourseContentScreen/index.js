@@ -1,7 +1,10 @@
+import { AuthenticateLoginHOCC } from "../../HOCs/AuthenticateLogin/AuthenticateLogin.hoc.c"
 import { CourseContentC } from "./CourseContent.c"
 
 export const CourseContentScreen = ()=>{
     return <>
-        <CourseContentC></CourseContentC>
+        <AuthenticateLoginHOCC
+        WrappedComponent={CourseContentC}
+        ></AuthenticateLoginHOCC>
     </>
 }
