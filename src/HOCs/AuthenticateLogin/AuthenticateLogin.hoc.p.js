@@ -1,5 +1,4 @@
 import { LoaderC } from "../../components/loader/loader.c";
-import { RedirectingC } from "../../components/redirecting/redirecting.c";
 
 export const AuthenticateLoginHOCP = ({
   WrappedComponent,
