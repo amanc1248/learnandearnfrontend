@@ -13,7 +13,9 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
   // use effects
   useEffect(() => {
     const token = localStorage.getItem(USER_TOKEN);
+    console.log("The token: ", token);
     if (token) {
+      console.log("i am inside token: ", token)
       setCheckingLoginStatus(true);
       checkLogin({ token })
         .then((response) => {
@@ -26,6 +28,7 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
           navigate("/")
         });
     }else{
+      console.log("I am inside else: ")
       navigate("/")
     }
   }, []);
