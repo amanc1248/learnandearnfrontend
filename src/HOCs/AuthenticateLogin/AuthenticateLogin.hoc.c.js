@@ -10,31 +10,32 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userDetails, setUserDetails] = useState(null);
 
+  // use navigate
+  const navigate = useNavigate();
+
   // use effects
   useEffect(() => {
     const token = localStorage.getItem(USER_TOKEN);
     console.log("The token: ", token);
     if (token) {
-      console.log("i am inside token: ", token)
+      console.log("i am inside token: ", token);
       setCheckingLoginStatus(true);
       checkLogin({ token })
         .then((response) => {
           setUserDetails(response);
           setIsLoggedIn(true);
-          setCheckingLoginStatus(false)
+          setCheckingLoginStatus(false);
         })
         .catch((error) => {
           setCheckingLoginStatus(false);
-          navigate("/")
+          navigate("/");
         });
-    }else{
-      console.log("I am inside else: ")
-      navigate("/")
+    } else {
+      console.log("I am inside else: ");
+      navigate("/");
     }
   }, []);
 
-  // use navigate
-  const navigate = useNavigate();
   return (
     <AuthenticateLoginHOCP
       WrappedComponent={WrappedComponent}
