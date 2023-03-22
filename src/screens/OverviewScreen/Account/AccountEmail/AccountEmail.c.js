@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { UserContext } from "../../../../HOCs/AuthenticateLogin/AuthenticateLogin.hoc.c";
 import { AccountEmailP } from "./AccountEmail.p"
 
 export const AccountEmailC = ()=>{
-    // use states
-    const email = "amanc1248@gmail.com"
-    return <AccountEmailP email={email}></AccountEmailP>
+
+    // use context
+  const userDetails = useContext(UserContext);
+
+    return <AccountEmailP email={userDetails?.email}></AccountEmailP>
 }
