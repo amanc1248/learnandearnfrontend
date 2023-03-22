@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { checkLogin } from "../../actions/login.actions";
 import { USER_TOKEN } from "../../constants/localstorage.constants";
 import { AuthenticateLoginHOCP } from "./AuthenticateLogin.hoc.p";
 
+export const UserContext = createContext()
 export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
   // use states
   const [checkingLoginStatus, setCheckingLoginStatus] = useState(false);
@@ -39,6 +40,7 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
       isLoggedIn={isLoggedIn}
       userDetails={userDetails}
       checkingLoginStatus={checkingLoginStatus}
+      UserContext={UserContext}
     ></AuthenticateLoginHOCP>
   );
 };
