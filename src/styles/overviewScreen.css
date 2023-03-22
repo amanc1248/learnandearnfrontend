@@ -36,3 +36,13 @@
     font-size: 20px;
     font-weight: 500;
 }
+.subtitle__plus__change__button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.email__password__change__button{
+    font-size: 15px;
+    cursor: pointer;
+    color: blue;
+}
