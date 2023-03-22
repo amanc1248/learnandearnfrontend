@@ -2,7 +2,9 @@ import { AuthenticateLoginHOCC } from "../../HOCs/AuthenticateLogin/Authenticate
 import { OverviewScreepC } from "./OverviewScreen.c";
 
 export const OverViewScreen = () => {
-  return <AuthenticateLoginHOCC
-  WrappedComponent={OverviewScreepC}
-  ></AuthenticateLoginHOCC>;
+  return (
+    <AuthenticateLoginHOCC
+      WrappedComponent={OverviewScreepC}
+    ></AuthenticateLoginHOCC>
+  );
 };
