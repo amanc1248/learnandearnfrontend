@@ -62,10 +62,12 @@ export const LoginFormP = ({
           </span>
         </div>
         {loginStatus.text && (
-          <StatusTextComponentC
-            isError={loginStatus.error}
-            statusText={loginStatus.text}
-          ></StatusTextComponentC>
+          <div className="registration__status__text__div">
+            <StatusTextComponentC
+              isError={loginStatus.error}
+              statusText={loginStatus.text}
+            ></StatusTextComponentC>
+          </div>
         )}
         <LoginStep1C
           showHideLoginForm={showHideLoginForm}
