@@ -35,20 +35,6 @@ export const ForgotPasswordStep3P = ({
             }}
           />
         </div>
-        {passwordHealth === "password__health__div__weak" && (
-          <div className="password__health__div__text password__health__div__weak__text">Weak Password</div>
-          )}
-        {passwordHealth === "password__health__div__medium" && (
-          <div className="password__health__div__text password__health__div__medium__text">
-            Moderately Complex
-          </div>
-        )}
-        {passwordHealth === "password__health__div__strong" && (
-          <div className="password__health__div__text password__health__div__strong__text">
-            Strong Password
-          </div>
-        )}
-        <div className={`password__health__div ${passwordHealth}`}></div>
       </div>
       <div className="user__details__input__div user__details__fullName privacy__policy__div">
         <input type="checkbox" name="privacyPolicy" id="privacyPolicy" className="checkbox__privacyPolicy" required/>
