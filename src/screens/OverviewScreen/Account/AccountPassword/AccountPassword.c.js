@@ -1,5 +1,4 @@
-import { createContext, useContext, useState } from "react";
-import { UserContext } from "../../../../HOCs/AuthenticateLogin/AuthenticateLogin.hoc.c";
+import { createContext, useState } from "react";
 import { AccountPasswordP } from "./AccountPassword.p";
 export const ChangePasswordContext = createContext();
 export const AccountPasswordC = () => {
