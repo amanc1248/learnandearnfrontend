@@ -5,13 +5,20 @@ import { AccountEmailP } from "./AccountEmail.p";
 export const AccountEmailC = () => {
   // useState
   const [changeEmail, setChangeEmail] = useState(false);
-  // use context
-  const userDetails = useContext(UserContext);
 
+  // use context
+  const userContextData = useContext(UserContext);
+  const {userDetails} = userContextData
+
+  // functions
+  const handleOnChange = (value) => {
+    setChangeEmail(value);
+  };
   return (
     <AccountEmailP
       email={userDetails?.email}
       changeEmail={changeEmail}
+      handleOnChange={handleOnChange}
     ></AccountEmailP>
   );
 };
