@@ -10,8 +10,8 @@ export const OverviewScreenP = ({
   return (
     <div className="overviewScreen__div">
       <h4>Code Valley</h4>
-      <div className="overview__screen__content__div row g-0">
-        <div className="overview__screen__sidebar col-lg-2 col-md-10 col-12">
+      <div className="overview__screen__content__div row ">
+        <div className="overview__screen__sidebar col-lg-3 col-md-4 col-12">
           <ul className="overview__screen__sidebar__list">
             {overviewList.map((ol, index) => {
               return (
@@ -28,7 +28,7 @@ export const OverviewScreenP = ({
             })}
           </ul>
         </div>
-        <div className="overview__screen__sidebar__content col-lg-9 col-md-6 col-12">
+        <div className="overview__screen__sidebar__content col-lg-9 col-md-8 col-12">
           {overviewActiveTab === 1 && <LearningC></LearningC>}
           {overviewActiveTab === 2 && <AccountC></AccountC>}
           {overviewActiveTab === 3 && <PaymentAndPlanC></PaymentAndPlanC>}
