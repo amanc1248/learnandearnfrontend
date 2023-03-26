@@ -89,3 +89,7 @@
         background-position: 0% 50%;
     }
 }
+.password__creating__instruction{
+    margin: 10px 0;
+    font-size: 14px;
+}
