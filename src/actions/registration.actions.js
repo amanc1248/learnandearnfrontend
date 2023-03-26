@@ -1,4 +1,4 @@
-import axios from "axios";
+import { VERIFY_OTP_ROUTE } from "../constants/routes/otpRoutes.constants";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
 
@@ -54,7 +54,7 @@ export const verifyOTP = ({ otp, email }) => {
     };
 
     axiosInstance
-      .get("/otp/", config)
+      .get(VERIFY_OTP_ROUTE, config)
       .then((response) => {
         resolve(response);
       })
