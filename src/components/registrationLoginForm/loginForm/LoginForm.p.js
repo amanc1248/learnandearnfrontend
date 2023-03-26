@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import { StatusTextComponentC } from "../../statusText/StatusTextComponent.c";
 import { LoginStep1C } from "./step1/loginStep1.c";
 
 export const LoginFormP = ({
@@ -61,20 +62,17 @@ export const LoginFormP = ({
           </span>
         </div>
         {loginStatus.text && (
-          <div
-            className={`registration__status__div ${
-              loginStatus.error && "registration__status__div__error"
-            } ${!loginStatus.error && "registration__status__div__success"}`}
-          >
-            {loginStatus.text}
-          </div>
+          <StatusTextComponentC
+            isError={loginStatus.error}
+            statusText={loginStatus.text}
+          ></StatusTextComponentC>
         )}
         <LoginStep1C
           showHideLoginForm={showHideLoginForm}
           showHideRegistrationModal={showHideRegistrationModal}
           showHideRegistrationLoginModal={showHideRegistrationLoginModal}
           showHideForgotPasswordForm={showHideForgotPasswordForm}
-          handleLoginStatus ={handleLoginStatus}
+          handleLoginStatus={handleLoginStatus}
         ></LoginStep1C>
       </Modal>
     </div>
