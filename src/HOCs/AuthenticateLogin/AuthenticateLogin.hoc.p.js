@@ -13,7 +13,7 @@ export const AuthenticateLoginHOCP = ({
   if (isLoggedIn) {
     return (
       <UserContext.Provider value={userContextData}>
-        <WrappedComponent></WrappedComponent>;
+        <WrappedComponent></WrappedComponent>
       </UserContext.Provider>
     );
   }
