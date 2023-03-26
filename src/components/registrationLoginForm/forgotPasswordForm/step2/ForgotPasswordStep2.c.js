@@ -7,7 +7,7 @@ export const ForgotPasswordStep2C = ({
   email,
 }) => {
   // useStates
-  const [otp, setOtp] = useState();
+  const [otp, setOtp] = useState("");
 
   // functions
   const onHandleSubmit = (e) => {
