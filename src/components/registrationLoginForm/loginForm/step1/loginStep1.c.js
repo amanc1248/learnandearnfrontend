@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {useNavigate}  from 'react-router-dom';
 import { login } from "../../../../actions/login.actions";
-import { USER_TOKEN } from "../../../../constants/localstorage.constants";
+import { USER_TOKEN_CONSTANT } from "../../../../constants/localstorage.constants";
 import { saveToLocalStorage } from "../../../../utils/localStorage.utils";
 import { LoginStep1P } from "./loginStep1.p";
 
@@ -27,7 +27,7 @@ export const LoginStep1C = ({
     setLogginIn(true);
     login(loginFormDetails)
       .then((response) => {
-        saveToLocalStorage({ key: USER_TOKEN, value: response.data });
+        saveToLocalStorage({ key: USER_TOKEN_CONSTANT, value: response.data });
         handleLoginStatus({
           error: false,
           text: "Logged in successfully"
