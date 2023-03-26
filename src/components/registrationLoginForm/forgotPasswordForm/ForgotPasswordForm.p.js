@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import { StatusTextComponentC } from "../../statusText/StatusTextComponent.c";
 import { ForgotPasswordStep1C } from "./step1/ForgotPasswordStep1.c";
 import { ForgotPasswordStep2C } from "./step2/ForgotPasswordStep2.c";
 import { ForgotPasswordStep3C } from "./step3/ForgotPasswordStep3.c";
@@ -55,16 +56,10 @@ export const ForgotPasswordFormP = ({
           </ul>
         </div>
         {forgotPasswordStatus.text && (
-          <div
-            className={`registration__status__div ${
-              forgotPasswordStatus.error && "registration__status__div__error"
-            } ${
-              !forgotPasswordStatus.error &&
-              "registration__status__div__success"
-            }`}
-          >
-            {forgotPasswordStatus.text}
-          </div>
+          <StatusTextComponentC
+            isError={forgotPasswordStatus.error}
+            statusText={forgotPasswordStatus.text}
+          ></StatusTextComponentC>
         )}
         {activeStep === 1 && (
           <ForgotPasswordStep1C
