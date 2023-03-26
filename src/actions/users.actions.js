@@ -1,3 +1,4 @@
+import { CHANGE_USER_EMAIL_ROUTE } from "../constants/routes/userRoutes.constants";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
 
@@ -5,7 +6,7 @@ const axiosInstance = createAxiosInstance();
 export const resetUserPassword = ({ email, password }) => {
     return new Promise((resolve, reject) => {
       const config = {
-        header: {
+        headers: {
           "Content-Type": "application/json",
         },
       };
@@ -19,3 +20,23 @@ export const resetUserPassword = ({ email, password }) => {
         });
     });
   };
+
+  // change email
+  export const changeUserEmail = ({id, email, newEmail, token})=>{
+    return new Promise((resolve, reject)=>{
+      const config ={
+        headers:{
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        }
+      };
+      const data ={
+        id, email, newEmail
+      }
+      axiosInstance.put(CHANGE_USER_EMAIL_ROUTE,data, config).then((response)=>{
+        resolve(response.data);
+      }).catch((error)=>{
+        reject(error);
+      })
+    })
+  }
