@@ -1,7 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { checkLogin } from "../../actions/login.actions";
-import { USER_TOKEN } from "../../constants/localstorage.constants";
+import { USER_TOKEN_CONSTANT } from "../../constants/localstorage.constants";
+import { getFromLocalStorage } from "../../utils/localStorage.utils";
 import { AuthenticateLoginHOCP } from "./AuthenticateLogin.hoc.p";
 
 export const UserContext = createContext()
@@ -11,12 +12,13 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userDetails, setUserDetails] = useState(null);
 
+
   // use navigate
   const navigate = useNavigate();
 
   // use effects
   useEffect(() => {
-    const token = localStorage.getItem(USER_TOKEN);
+    const token = getFromLocalStorage(USER_TOKEN_CONSTANT);
     if (token) {
       setCheckingLoginStatus(true);
       checkLogin({ token })
@@ -34,13 +36,22 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
     }
   }, []);
 
+  // functions
+  const handleUserDetailsChange = (value)=>{
+    console.log(value);
+    setUserDetails(value)
+  }
+
+    // user context data
+    const userContextData = {userDetails, handleUserDetailsChange}
   return (
     <AuthenticateLoginHOCP
       WrappedComponent={WrappedComponent}
       isLoggedIn={isLoggedIn}
-      userDetails={userDetails}
+      userContextData={userContextData}
       checkingLoginStatus={checkingLoginStatus}
       UserContext={UserContext}
+      setUserDetails={setUserDetails}
     ></AuthenticateLoginHOCP>
   );
 };
