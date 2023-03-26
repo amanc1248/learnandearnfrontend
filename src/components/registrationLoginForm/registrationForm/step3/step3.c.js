@@ -13,7 +13,6 @@ export const Step3C = ({
   let confirmPassword;
 // use states
 const [password, setPassword] = useState();
-const [passwordHealth, setPasswordHealth] = useState();
 
 // functions
   const onHandleSubmit = (e) => {
@@ -45,7 +44,6 @@ const [passwordHealth, setPasswordHealth] = useState();
   };
 
   const handlePasswordChange = (password) => {
-    // setPasswordHealth(checkPasswordHealth(password))
     setPassword(password);
   };
 
@@ -59,7 +57,6 @@ const [passwordHealth, setPasswordHealth] = useState();
       password={password}
       handlePasswordChange={handlePasswordChange}
       handleConfirmPasswordChange={handleConfirmPasswordChange}
-      passwordHealth={passwordHealth}
     ></Step3P>
   );
 };
