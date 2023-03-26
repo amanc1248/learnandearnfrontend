@@ -4,6 +4,7 @@ import "../../../styles/homeScreen.css";
 import { Step1C } from "./step1/step1.c";
 import { Step2C } from "./step2/step2.c";
 import { Step3C } from "./step3/step3.c";
+import { StatusTextComponentC } from "../../statusText/StatusTextComponent.c";
 export const RegistrationFormP = ({
   showRegistrationModal,
   showHideRegistrationModal,
@@ -58,22 +59,21 @@ export const RegistrationFormP = ({
         <div className="already__login__register__div">
           Already have an account?{" "}
           <span
-          className="already__login__register__button"
+            className="already__login__register__button"
             onClick={() => {
               showHideRegistrationModal(false);
               showHideLoginForm(true);
             }}
-          >Login Here</span>
+          >
+            Login Here
+          </span>
         </div>
         {registrationStatus.text && (
-          <div
-            className={`registration__status__div ${
-              registrationStatus.error && "registration__status__div__error"
-            } ${
-              !registrationStatus.error && "registration__status__div__success"
-            }`}
-          >
-            {registrationStatus.text}
+          <div className="registration__status__text__div">
+            <StatusTextComponentC
+              isError={registrationStatus.error}
+              statusText={registrationStatus.text}
+            ></StatusTextComponentC>
           </div>
         )}
         {activeStep === 1 && (
