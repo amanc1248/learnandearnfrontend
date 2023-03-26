@@ -1,5 +1,9 @@
-import { ChangePasswordP } from "./ChangePassword.p"
+import { ChangePasswordP } from "./ChangePassword.p";
 
-export const ChangePasswordC = ()=>{
-    return <ChangePasswordP></ChangePasswordP>
-}
+export const ChangePasswordC = ({ handleIsShowPasswordChange }) => {
+  return (
+    <ChangePasswordP
+      handleIsShowPasswordChange={handleIsShowPasswordChange}
+    ></ChangePasswordP>
+  );
+};
