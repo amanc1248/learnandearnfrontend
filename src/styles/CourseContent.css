@@ -17,8 +17,7 @@
     font-family: 'Jost', sans-serif;
     font-weight: 600;
     justify-content: space-between;
-    display: flex;
-    align-items: end;
+    display: flex-end;
 }
 
 .course__section__single__topic__div {

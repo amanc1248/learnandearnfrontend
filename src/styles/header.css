@@ -11,8 +11,7 @@
     font-family: 'Raleway', sans-serif;
     margin-right: 20px;
     cursor: pointer;
-    display: flex;
-    align-items: end;
+    display: flex-end;
     gap: 10px;
   }
   .account__login__icon{
