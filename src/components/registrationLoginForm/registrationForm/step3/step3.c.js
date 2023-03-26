@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createUser } from "../../../../actions/registration.actions";
+import { validatePassword } from '../../../../utils/password.utils';
 import { Step3P } from "./step3.p";
 
 export const Step3C = ({
@@ -18,15 +19,23 @@ const [passwordHealth, setPasswordHealth] = useState();
   const onHandleSubmit = (e) => {
     e.preventDefault();
     if(password===confirmPassword){
-      const {fullName: name, email} = registrationFormDetails;
-      createUser({name, email, password}).then((response)=>{
-        showHideRegistrationModal(false);
-      }).catch((error)=>{
+      const validatePasswordResult = validatePassword(password);
+      if(validatePasswordResult===true){
+        const {fullName: name, email} = registrationFormDetails;
+        createUser({name, email, password}).then((response)=>{
+          showHideRegistrationModal(false);
+        }).catch((error)=>{
+          changeRegistrationStatus({
+            error: true,
+            text: error.response.data,
+          });
+        })
+      }else{
         changeRegistrationStatus({
           error: true,
-          text: error.response.data,
+          text: validatePasswordResult,
         });
-      })
+      }
     }else{
       changeRegistrationStatus({
         error: true,
@@ -36,7 +45,7 @@ const [passwordHealth, setPasswordHealth] = useState();
   };
 
   const handlePasswordChange = (password) => {
-    setPasswordHealth(checkPasswordHealth(password))
+    // setPasswordHealth(checkPasswordHealth(password))
     setPassword(password);
   };
 
@@ -44,32 +53,6 @@ const [passwordHealth, setPasswordHealth] = useState();
     confirmPassword = value
   };
 
-  const checkPasswordHealth = (password)=>{
-    if(!password){return ""}
-    var strength = 0;
-    if (password.match(/[a-z]+/)) {
-      strength += 1;
-    }
-    if (password.match(/[A-Z]+/)) {
-      strength += 1;
-    }
-    if (password.match(/[0-9]+/)) {
-      strength += 1;
-    }
-    if (password.match(/[$@#&!]+/)) {
-      strength += 1;
-    }
-    if (password.length >= 8) {
-      strength += 1;
-    }
-    if (strength < 3) {
-      return "password__health__div__weak";
-    } else if (strength < 5) {
-      return "password__health__div__medium";
-    } else {
-      return "password__health__div__strong";
-    }
-  }
   return (
     <Step3P
       onHandleSubmit={onHandleSubmit}
