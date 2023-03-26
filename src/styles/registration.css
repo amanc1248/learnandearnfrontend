@@ -118,20 +118,6 @@
     }
 }
 
-.registration__status__div {
-    padding: 0px 40px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
-
-}
-
-.registration__status__div__success {
-    color: green;
-}
-
-.registration__status__div__error {
-    color: red;
-}
 
 .password__health__div {
     margin: 0 25px;
@@ -181,4 +167,7 @@
     text-decoration: underline;
     color:rgba(0, 0, 255, 0.597);
     cursor: pointer;
+}
+.registration__status__text__div{
+    padding: 0px 40px;
 }
