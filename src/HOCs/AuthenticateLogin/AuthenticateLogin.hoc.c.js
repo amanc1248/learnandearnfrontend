@@ -38,7 +38,6 @@ export const AuthenticateLoginHOCC = ({ WrappedComponent }) => {
 
   // functions
   const handleUserDetailsChange = (value)=>{
-    console.log(value);
     setUserDetails(value)
   }
 

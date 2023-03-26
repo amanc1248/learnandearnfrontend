@@ -39,12 +39,10 @@ export const ChangePasswordStep1C = () => {
       const isValidPasswordResult = validatePassword(newPassword);
       if(isValidPasswordResult===true){
         const token = getFromLocalStorage(USER_TOKEN_CONSTANT);
-        console.log({email, token, newPassword, currentPassword});
         changeUserPassword({email, token, newPassword, currentPassword}).then((response)=>{
           setChangePasswordStatus({error: false, text: "Password Changed Successfully"});
           handleIsShowPasswordChange(false)
         }).catch((error)=>{
-          console.log(error);
           setChangePasswordStatus({error: true, text: error});
         })
       }else{

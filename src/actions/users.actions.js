@@ -74,7 +74,6 @@ export const changeUserPassword = ({
         resolve(response);
       })
       .catch((error) => {
-        console.log(error.data);
         reject(error.response.data);
       });
   });
