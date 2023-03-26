@@ -56,10 +56,12 @@ export const ForgotPasswordFormP = ({
           </ul>
         </div>
         {forgotPasswordStatus.text && (
-          <StatusTextComponentC
-            isError={forgotPasswordStatus.error}
-            statusText={forgotPasswordStatus.text}
-          ></StatusTextComponentC>
+          <div className="registration__status__text__div">
+            <StatusTextComponentC
+              isError={forgotPasswordStatus.error}
+              statusText={forgotPasswordStatus.text}
+            ></StatusTextComponentC>
+          </div>
         )}
         {activeStep === 1 && (
           <ForgotPasswordStep1C
