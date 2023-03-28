@@ -49,13 +49,11 @@ export const ChangeEmailStep2C = () => {
         });
         setChangingEmail(false);
         const {updatedUser, jwt} =updatedEmail;
-        console.log(updatedUser);
         handleUserDetailsChange(updatedUser);
         saveToLocalStorage({key:USER_TOKEN_CONSTANT, value:jwt});
         showHideChangeEmailDiv(false);
       }
     }catch(error){
-      console.log(error);
       handleChangeEmailStatus({
         error: true,
         text:"Invalid OTP",
