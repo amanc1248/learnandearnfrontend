@@ -16,3 +16,11 @@
     color: blue;
     cursor: pointer;
 }
+.billing__history__table{
+    width: 100%;
+}
+.bill__details__view__button{
+    color: blue;    
+    font-weight: 500;
+    cursor: pointer;
+}

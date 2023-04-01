@@ -1,3 +1,7 @@
+import { YourSubscriptionC } from "./YourSubscriptions.c"
+
 export const PurchaseDetailsP = ()=>{
-    return <div>Purchase Details P</div>
+    return <div className="purchseDetailsP__div">
+        <YourSubscriptionC></YourSubscriptionC>
+    </div>
 }
