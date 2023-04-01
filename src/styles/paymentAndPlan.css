@@ -1,0 +1,18 @@
+.paymentDetails__and__billingHistory__tabs{
+    margin-top: 20px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.pDbHT_single{
+    padding: 10px 20px;
+}
+.selected__pDbHT_single{
+    border-bottom: 4px solid blue;
+    background-color: #F3F3F5;
+    font-weight: 600;
+}
+.pDbHT_single:hover{
+    background-color: #F3F3F5;
+    color: blue;
+    cursor: pointer;
+}
