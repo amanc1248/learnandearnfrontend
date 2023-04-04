@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.payment__component__modal {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.payment__steps__guide {
+    background-color: #10162F;
+    color: white;
+    padding: 40px 70px;
+
+}
+
+.payment__back__button__text {
+    color: #FFD300;
+}
+
+.payment__steps__guide__title {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.payment__steps__guide__list__icon {
+    color: #66C4FF;
+    padding-right: 10px;
+}
+
+.payment__steps__guide__list__single {
+    display: flex;
+    align-items: start;
+    margin: 30px 0;
+}
+
+.payment__steps__guide__list__title {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.payment__steps__guide__list__description {
+    font-weight: 300;
+}
+
+.payment__steps__eligible__forStudents {
+    font-size: 13px;
+}
+
+.payment__making__section {
+    padding: 60px 80px;
+}
+
+.choose__a__plan__title {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.select__paymentPlan__type {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.select__payment__method__title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.select__payment__method__div{
+    display: flex;
+    justify-content: flex-start;
+    gap:30%;
+}
+.radio__button__div{
+    /* text-align: center; */
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.radio__button {
+    width: 25px;
+    height: 25px;
+}
+.paymentTypeText{
+    font-size: 14px;
+}
+.select__bank{
+    width: 100%;
+    height: 50px;
+}
+.firstName__lastName__div{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.payment__input__div{
+    width: 100%;
+    margin: 10px 0;
+}
+.payment__input{
+    width: 100%;
+    height: 50px;
+}
+.payment__input__div__label{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.payment__input__image{
+    display: none;
+}
+.custom__file__upload{
+  border: 1px solid black;
+  height: 50px;
+  width: 100%;
+}
+.payment__input__div__label__image{
+    font-size: 12px;
+    color: gray;
+}
