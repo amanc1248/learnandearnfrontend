@@ -5,6 +5,7 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/component/paymentComponent.css";
 import { BankTransferC } from "./PaymentMethods/BankTransfer/BankTransfer.c";
 import { WalletTransferC } from "./PaymentMethods/WalletTransfer/WalletTransfer.c";
+import { TotalAmountC } from "./TotalAmount.c";
 export const PaymentComponentP = ({
   showPaymentModal,
   handleChangeShowPaymentModal,
@@ -80,7 +81,8 @@ export const PaymentComponentP = ({
         </div>
 
         {/* payment right section */}
-        <div className="col-lg-8 col-md-8 col-12 payment__making__section">
+        <div className="col-lg-8 col-md-8 col-12 ">
+          <div className="payment__making__section">
           <div className="choose__a__plan__title">Choose a plan</div>
           <div className="select__paymentPlan__type__div">
             <select name="" id="" className="select__paymentPlan__type">
@@ -114,6 +116,9 @@ export const PaymentComponentP = ({
             {/* For Bank Transfer */}
             {paymentType==="bankTransfer" && <BankTransferC></BankTransferC>}
             {paymentType==="walletTransfer" && <WalletTransferC></WalletTransferC>}
+          </div>
+
+            <TotalAmountC></TotalAmountC>
         </div>
       </div>
     </Modal>
