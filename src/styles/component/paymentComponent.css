@@ -87,7 +87,7 @@
     font-size: 14px;
 }
 
-.select__bank {
+.select__bank, .select__wallet{
     width: 100%;
     height: 50px;
 }
