@@ -86,10 +86,7 @@ export const PaymentComponentP = ({
           <div className="choose__a__plan__title">Choose a plan</div>
           <div className="select__paymentPlan__type__div">
             <select name="" id="" className="select__paymentPlan__type">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="yearlyPlan">Pro plan, Rs. 10,000 per year</option>
             </select>
           </div>
           <div className="select__payment__method__title">

@@ -8,14 +8,14 @@ export const YourSubscriptionP = ({
   return (
     <div className="yourSubscriptionP__div">
       <div className="your__subscription__list">Your Subscription list</div>
-      <div
+      <button
         className="open__payment__button"
         onClick={() => {
           handleOnClickPaymentButton(true);
         }}
       >
-        Upgrade to pro
-      </div>
+        Upgrade to Pro
+      </button>
       {showPaymentModal && (
         <PaymentComponentC
           showComponent={showPaymentModal}
