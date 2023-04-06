@@ -21,7 +21,7 @@ export const BankTransferP = ({handleOnChangePaymentImage, paymentImage}) => {
           </label>
           <br />
           <input
-            type="number"
+            type="text"
             id="accountNumber"
             className="payment__input"
             required
