@@ -1,4 +1,16 @@
-export const BankTransferP = ({handleOnChangePaymentImage, paymentImage}) => {
+export const BankTransferP = ({
+  handleOnChangePaymentImage,
+  paymentImageOfBankAccount,
+  banksList,
+  fullNameOnBankAccount,
+  setFullNameOnBankAccount,
+  bankName,
+  setBankName,
+  bankAccountNumber,
+  setBankAccountNumber,
+  billingAddressBankTransfer,
+  setBillingAddressBankTransfer,
+}) => {
   return (
     <div className="bank__transfer__p__div">
       <form action="">
@@ -6,13 +18,23 @@ export const BankTransferP = ({handleOnChangePaymentImage, paymentImage}) => {
           <label htmlFor="bank" className="payment__input__div__label">
             Select Bank *
           </label>
-          <select name="selectBank" id="bank" className="select__bank" required>
-            <option value="Sanima Bank">Sanima Bank</option>
-            <option value="Sanima Bank">Sanima Bank</option>
-            <option value="Sanima Bank">Sanima Bank</option>
-            <option value="Sanima Bank">Sanima Bank</option>
-            <option value="Sanima Bank">Sanima Bank</option>
-            <option value="Sanima Bank">Sanima Bank</option>
+          <select
+            name="selectBank"
+            id="bank"
+            className="select__bank"
+            value={bankName}
+            required
+            onChange={(e) => {
+              setBankName(e.target.value);
+            }}
+          >
+            {banksList.map((bank) => {
+              return (
+                <option key={bank.id} value={bank.value}>
+                  {bank.label}
+                </option>
+              );
+            })}
           </select>
         </div>
         <div className="payment__input__div">
@@ -25,39 +47,42 @@ export const BankTransferP = ({handleOnChangePaymentImage, paymentImage}) => {
             id="accountNumber"
             className="payment__input"
             required
+            value={bankAccountNumber}
+            onChange={(e) => {
+              setBankAccountNumber(e.target.value);
+            }}
           />
         </div>
         <div className="firstName__lastName__div">
           <div className="payment__input__div">
-            <label htmlFor="firstName" className="payment__input__div__label">
-              First Name *
+            <label htmlFor="Full Name" className="payment__input__div__label">
+              Full Name *
             </label>
             <br />
             <input
               type="text"
-              id="firstName"
+              id="Full Name"
               className="payment__input"
               required
-            />
-          </div>
-
-          <div className="payment__input__div">
-            <label htmlFor="lastName" className="payment__input__div__label">
-              Last Name *
-            </label>
-            <br />
-            <input
-              type="text"
-              id="lastName"
-              className="payment__input"
-              required
+              value={fullNameOnBankAccount}
+              onChange={(e) => {
+                setFullNameOnBankAccount(e.target.value);
+              }}
             />
           </div>
         </div>
         <div className="payment__input__div">
-          <label htmlFor="paymentImage" className="payment__input__div__label">Payment Image (Upload screenshot of the transaction or photo of payment voucher)*</label>
-          <label htmlFor="paymentImage" className="payment__input__div__label__image custom__file__upload">
-            {paymentImage.name ? paymentImage.name : "No Image Selected"}
+          <label htmlFor="paymentImage" className="payment__input__div__label">
+            Payment Image (Upload screenshot of the transaction or photo of
+            payment voucher)*
+          </label>
+          <label
+            htmlFor="paymentImage"
+            className="payment__input__div__label__image custom__file__upload"
+          >
+            {paymentImageOfBankAccount.name
+              ? paymentImageOfBankAccount.name
+              : "No Image Selected"}
           </label>
           <br />
           <input
@@ -65,21 +90,30 @@ export const BankTransferP = ({handleOnChangePaymentImage, paymentImage}) => {
             id="paymentImage"
             className="payment__input__image"
             required
-            onChange={(e)=>{console.log(e)}}
+            onChange={(e) => {
+              console.log(e);
+            }}
           />
         </div>
         <div className="payment__input__div">
-            <label htmlFor="billingAddress" className="payment__input__div__label">
-              Billing Address *
-            </label>
-            <br />
-            <input
-              type="text"
-              id="billingAddress"
-              className="payment__input"
-              required
-            />
-          </div>
+          <label
+            htmlFor="billingAddress"
+            className="payment__input__div__label"
+          >
+            Billing Address *
+          </label>
+          <br />
+          <input
+            type="text"
+            id="billingAddress"
+            className="payment__input"
+            required
+            value={billingAddressBankTransfer}
+            onChange={(e) => {
+              setBillingAddressBankTransfer(e.target.value);
+            }}
+          />
+        </div>
       </form>
     </div>
   );

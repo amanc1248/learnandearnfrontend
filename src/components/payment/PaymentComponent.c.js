@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import {
   faRoadBarrier,
   faChartLine,
@@ -7,9 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { PaymentComponentP } from "./PaymentComponent.p";
 
+export const PaymentContext = createContext();
 export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
-
-  // datas
+  // data
   const stepsGuidesList = [
     {
       icon: faRoadBarrier,
@@ -37,13 +37,43 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     },
   ];
   const paymentMethods = [
-    {id:"bankTransfer", value: "bankTransfer", label:"Bank Transfer"},
-    {id:"walletTransfer", value: "walletTransfer", label:"Wallet Transfer"},
-  ]
+    { id: "bankTransfer", value: "bankTransfer", label: "Bank Transfer" },
+    { id: "walletTransfer", value: "walletTransfer", label: "Wallet Transfer" },
+  ];
+  const paymentPlans = [
+    {
+      id: "yearlyPlan",
+      label: "Pro Plan, Rs. 10,000 per year",
+      value: "Yearly Plan",
+      amount: 10000,
+    },
+    {
+      id: "sixMonthPlan",
+      label: "Pro Plan, Rs. 5,000, six Months",
+      value: "Six Month Plan",
+      amount: 5000,
+    },
+  ];
 
   // use states
   const [showPaymentModal, setShowPaymentModal] = useState(showComponent);
   const [paymentType, setPaymentType] = useState("bankTransfer");
+
+  // bank transfer states
+  const [bankName, setBankName] = useState("");
+  const [bankAccountNumber, setBankAccountNumber] = useState("");
+  const [fullNameOnBankAccount, setFullNameOnBankAccount] = useState("");
+  const [paymentImageOfBankAccount, setPaymentImagOfBankAccount] = useState("");
+  const [billingAddressBankTransfer, setBillingAddressBankTransfer] =
+    useState("");
+
+  // wallet transfer states
+  const [walletName, setWalletName] = useState("");
+  const [fullNameOnWallet, setFullNameOnWallet] = useState("");
+  const [paymentImageOfWalletTransfer, setPaymentImageOfWalletTransfer] =
+    useState("");
+  const [billingAddressWalletTransfer, setBillingAddressWalletTransfer] =
+    useState("");
 
   // functions
   const handleChangeShowPaymentModal = (value) => {
@@ -54,18 +84,44 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     setShowComponent(false);
   };
 
-  const handleOnChangePaymentType = (value)=>{
-    setPaymentType(value)
-  }
+  const handleOnChangePaymentType = (value) => {
+    setPaymentType(value);
+  };
+
+  // use context
+  const paymentContextData = {
+    paymentType,
+    bankName,
+    setBankName,
+    bankAccountNumber,
+    setBankAccountNumber,
+    fullNameOnBankAccount,
+    setFullNameOnBankAccount,
+    paymentImageOfBankAccount,
+    setPaymentImagOfBankAccount,
+    billingAddressBankTransfer,
+    setBillingAddressBankTransfer,
+    walletName,
+    setWalletName,
+    fullNameOnWallet,
+    setFullNameOnWallet,
+    paymentImageOfWalletTransfer,
+    setPaymentImageOfWalletTransfer,
+    billingAddressWalletTransfer,
+    setBillingAddressWalletTransfer,
+  };
   return (
-    <PaymentComponentP
-      showPaymentModal={showPaymentModal}
-      handleChangeShowPaymentModal={handleChangeShowPaymentModal}
-      handleOnBackClick={handleOnBackClick}
-      stepsGuidesList={stepsGuidesList}
-      handleOnChangePaymentType={handleOnChangePaymentType}
-      paymentType={paymentType}
-      paymentMethods={paymentMethods}
-    ></PaymentComponentP>
+    <PaymentContext.Provider value={paymentContextData}>
+      <PaymentComponentP
+        showPaymentModal={showPaymentModal}
+        handleChangeShowPaymentModal={handleChangeShowPaymentModal}
+        handleOnBackClick={handleOnBackClick}
+        stepsGuidesList={stepsGuidesList}
+        handleOnChangePaymentType={handleOnChangePaymentType}
+        paymentType={paymentType}
+        paymentMethods={paymentMethods}
+        paymentPlans={paymentPlans}
+      ></PaymentComponentP>
+    </PaymentContext.Provider>
   );
 };

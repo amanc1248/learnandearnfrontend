@@ -2,6 +2,7 @@
 
 .payment__component__modal {
     font-family: 'Poppins', sans-serif !important;
+    padding: 0;
 }
 
 .payment__steps__guide {
@@ -13,6 +14,8 @@
 
 .payment__back__button__text {
     color: #FFD300;
+    cursor: pointer;
+    width: max-content;
 }
 
 .payment__steps__guide__title {
@@ -28,7 +31,7 @@
 
 .payment__steps__guide__list__single {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     margin: 30px 0;
 }
 
@@ -47,6 +50,7 @@
 
 .payment__making__section {
     padding: 60px 80px 30px 80px ;
+    background-color: white;
 }
 
 .choose__a__plan__title {

@@ -6,6 +6,7 @@ import "../../styles/component/paymentComponent.css";
 import { BankTransferC } from "./PaymentMethods/BankTransfer/BankTransfer.c";
 import { WalletTransferC } from "./PaymentMethods/WalletTransfer/WalletTransfer.c";
 import { TotalAmountC } from "./TotalAmount.c";
+
 export const PaymentComponentP = ({
   showPaymentModal,
   handleChangeShowPaymentModal,
@@ -14,9 +15,9 @@ export const PaymentComponentP = ({
   handleOnChangePaymentType,
   paymentType,
   paymentMethods,
+  paymentPlans,
 }) => {
   return (
-    // <div className="payment__component__p__div">
     <Modal
       show={showPaymentModal}
       size="lg"
@@ -24,7 +25,7 @@ export const PaymentComponentP = ({
       fullscreen
       centered
       className="payment__component__modal"
-      style={{ background: "white" }}
+      style={{ background: "#10162F", "padding":"0px",}}
     >
       <div className="row g-0">
         {/*payment left section  */}
@@ -86,7 +87,9 @@ export const PaymentComponentP = ({
           <div className="choose__a__plan__title">Choose a plan</div>
           <div className="select__paymentPlan__type__div">
             <select name="" id="" className="select__paymentPlan__type">
-              <option value="yearlyPlan">Pro plan, Rs. 10,000 per year</option>
+              {paymentPlans.map((pP)=>{
+                return <option key={pP.id} value={pP.value}>{pP.label}</option>
+              })}
             </select>
           </div>
           <div className="select__payment__method__title">
