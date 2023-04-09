@@ -10,6 +10,8 @@ export const BankTransferP = ({
   setBankAccountNumber,
   billingAddressBankTransfer,
   setBillingAddressBankTransfer,
+  paymentDateBankTransfer,
+  setPaymentDateBankTransfer,
 }) => {
   return (
     <div className="bank__transfer__p__div">
@@ -67,6 +69,23 @@ export const BankTransferP = ({
               value={fullNameOnBankAccount}
               onChange={(e) => {
                 setFullNameOnBankAccount(e.target.value);
+              }}
+            />
+          </div>
+
+          <div className="payment__input__div">
+            <label htmlFor="Payment Date" className="payment__input__div__label">
+              Payment Date *
+            </label>
+            <br />
+            <input
+              type="date"
+              id="Payment Date"
+              className="payment__input"
+              required
+              value={paymentDateBankTransfer}
+              onChange={(e) => {
+                setPaymentDateBankTransfer(e.target.value);
               }}
             />
           </div>

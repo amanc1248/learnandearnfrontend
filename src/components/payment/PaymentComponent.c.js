@@ -66,6 +66,7 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
   const [paymentImageOfBankAccount, setPaymentImagOfBankAccount] = useState("");
   const [billingAddressBankTransfer, setBillingAddressBankTransfer] =
     useState("");
+  const [paymentDateBankTransfer, setPaymentDateBankTransfer] = useState("");
 
   // wallet transfer states
   const [walletName, setWalletName] = useState("");
@@ -74,6 +75,7 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     useState("");
   const [billingAddressWalletTransfer, setBillingAddressWalletTransfer] =
     useState("");
+  const [paymentDateWalletTransfer, setPaymentDateWalletTransfer] = useState("");
 
   // functions
   const handleChangeShowPaymentModal = (value) => {
@@ -109,6 +111,10 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     setPaymentImageOfWalletTransfer,
     billingAddressWalletTransfer,
     setBillingAddressWalletTransfer,
+    paymentDateBankTransfer,
+    setPaymentDateBankTransfer,
+    paymentDateWalletTransfer,
+    setPaymentDateWalletTransfer,
   };
   return (
     <PaymentContext.Provider value={paymentContextData}>

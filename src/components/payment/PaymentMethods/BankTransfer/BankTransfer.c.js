@@ -30,7 +30,9 @@ export const BankTransferC = () => {
     paymentImageOfBankAccount,
     setPaymentImagOfBankAccount,
     billingAddressBankTransfer,
-    setBillingAddressBankTransfer
+    setBillingAddressBankTransfer,
+    paymentDateBankTransfer,
+    setPaymentDateBankTransfer,
   } = paymentContextData;
 
   // functions
@@ -50,6 +52,8 @@ export const BankTransferC = () => {
       billingAddressBankTransfer={billingAddressBankTransfer}
       setBillingAddressBankTransfer={setBillingAddressBankTransfer}
       paymentImageOfBankAccount={paymentImageOfBankAccount}
+      paymentDateBankTransfer={paymentDateBankTransfer}
+      setPaymentDateBankTransfer={setPaymentDateBankTransfer}
     ></BankTransferP>
   );
 };

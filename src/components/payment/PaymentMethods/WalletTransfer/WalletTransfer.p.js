@@ -10,6 +10,8 @@ export const WalletTransferP = ({
   setPaymentImageOfWalletTransfer,
   billingAddressWalletTransfer,
   setBillingAddressWalletTransfer,
+  paymentDateWalletTransfer,
+  setPaymentDateWalletTransfer,
 }) => {
   return (
     <div className="wallet__transfer__p__div">
@@ -38,22 +40,44 @@ export const WalletTransferP = ({
           </select>
         </div>
 
-        {/* Name on wallet */}
-        <div className="payment__input__div">
-          <label htmlFor="nameOnWallet" className="payment__input__div__label">
-            Full Name on Wallet*
-          </label>
-          <br />
-          <input
-            type="text"
-            id="nameOnWallet"
-            className="payment__input"
-            required
-            value={fullNameOnWallet}
-            onChange={(e) => {
-              setFullNameOnWallet(e.target.value);
-            }}
-          />
+        <div className="firstName__lastName__div">
+          {/* Name on wallet */}
+          <div className="payment__input__div">
+            <label
+              htmlFor="nameOnWallet"
+              className="payment__input__div__label"
+            >
+              Full Name on Wallet*
+            </label>
+            <br />
+            <input
+              type="text"
+              id="nameOnWallet"
+              className="payment__input"
+              required
+              value={fullNameOnWallet}
+              onChange={(e) => {
+                setFullNameOnWallet(e.target.value);
+              }}
+            />
+          </div>
+
+          <div className="payment__input__div">
+            <label htmlFor="Payment Date" className="payment__input__div__label">
+              Payment Date * 
+            </label>
+            <br />
+            <input
+              type="date"
+              id="Payment Date"
+              className="payment__input"
+              required
+              value={paymentDateWalletTransfer}
+              onChange={(e) => {
+                setPaymentDateWalletTransfer(e.target.value);
+              }}
+            />
+            </div>
         </div>
 
         {/* payment image */}

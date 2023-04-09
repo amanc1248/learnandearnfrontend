@@ -22,6 +22,8 @@ export const WalletTransferC = () => {
     setPaymentImageOfWalletTransfer,
     billingAddressWalletTransfer,
     setBillingAddressWalletTransfer,
+    paymentDateWalletTransfer,
+    setPaymentDateWalletTransfer,
   } = paymentContextData;
   return (
     <WalletTransferP
@@ -34,6 +36,8 @@ export const WalletTransferC = () => {
       billingAddressWalletTransfer={billingAddressWalletTransfer}
       setBillingAddressWalletTransfer={setBillingAddressWalletTransfer}
       walletTypes={walletTypes}
+      paymentDateWalletTransfer={paymentDateWalletTransfer}
+      setPaymentDateWalletTransfer={setPaymentDateWalletTransfer}
     ></WalletTransferP>
   );
 };
