@@ -6,6 +6,10 @@ import {
   faCertificate,
 } from "@fortawesome/free-solid-svg-icons";
 import { PaymentComponentP } from "./PaymentComponent.p";
+import { getFromLocalStorage } from "../../utils/localStorage.utils";
+import { USER_TOKEN_CONSTANT } from "../../constants/localstorage.constants";
+import { createPaymentObject } from "../../utils/object.utils";
+import { createPayment } from "../../actions/payment.actions";
 
 export const PaymentContext = createContext();
 export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
@@ -58,9 +62,11 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
   // use states
   const [showPaymentModal, setShowPaymentModal] = useState(showComponent);
   const [paymentType, setPaymentType] = useState("bankTransfer");
+  const [proPaymentPlan, setProPaymentPlan] = useState(paymentPlans[0]);
+  const [paymentAmount, setPaymentAmount] = useState(paymentPlans[0].amount);
 
   // bank transfer states
-  const [bankName, setBankName] = useState("");
+  const [bankName, setBankName] = useState("Sanima Bank");
   const [bankAccountNumber, setBankAccountNumber] = useState("");
   const [fullNameOnBankAccount, setFullNameOnBankAccount] = useState("");
   const [paymentImageOfBankAccount, setPaymentImagOfBankAccount] = useState("");
@@ -69,13 +75,14 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
   const [paymentDateBankTransfer, setPaymentDateBankTransfer] = useState("");
 
   // wallet transfer states
-  const [walletName, setWalletName] = useState("");
+  const [walletName, setWalletName] = useState("E-sewa");
   const [fullNameOnWallet, setFullNameOnWallet] = useState("");
   const [paymentImageOfWalletTransfer, setPaymentImageOfWalletTransfer] =
     useState("");
   const [billingAddressWalletTransfer, setBillingAddressWalletTransfer] =
     useState("");
-  const [paymentDateWalletTransfer, setPaymentDateWalletTransfer] = useState("");
+  const [paymentDateWalletTransfer, setPaymentDateWalletTransfer] =
+    useState("");
 
   // functions
   const handleChangeShowPaymentModal = (value) => {
@@ -90,6 +97,45 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     setPaymentType(value);
   };
 
+  const onChangeProPaymentPlan = (value) => {
+    const paymentPlan = paymentPlans.filter((plan) => plan.id === value)[0];
+    setProPaymentPlan(paymentPlan);
+  };
+
+  const handleOnSubmitPayment = (e) => {
+    e.preventDefault();
+    const userToken = getFromLocalStorage(USER_TOKEN_CONSTANT);
+    if (!userToken) {
+      console.log("No user token");
+      return;
+    }
+    const paymentDetails = {
+      paymentType,
+      bankName,
+      bankAccountNumber,
+      fullNameOnBankAccount,
+      paymentImageOfBankAccount,
+      billingAddressBankTransfer,
+      walletName,
+      fullNameOnWallet,
+      paymentImageOfWalletTransfer,
+      billingAddressWalletTransfer,
+      paymentDateBankTransfer,
+      paymentDateWalletTransfer,
+      paymentAmount,
+      proPaymentPlan,
+      userToken,
+    };
+    const paymentObject = createPaymentObject({ paymentType, paymentDetails });
+    createPayment({ createPaymentObject: paymentObject, token: userToken })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    console.log(paymentObject);
+  };
   // use context
   const paymentContextData = {
     paymentType,
@@ -115,6 +161,10 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     setPaymentDateBankTransfer,
     paymentDateWalletTransfer,
     setPaymentDateWalletTransfer,
+    paymentAmount,
+    setPaymentAmount,
+    proPaymentPlan,
+    setProPaymentPlan,
   };
   return (
     <PaymentContext.Provider value={paymentContextData}>
@@ -127,6 +177,10 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
         paymentType={paymentType}
         paymentMethods={paymentMethods}
         paymentPlans={paymentPlans}
+        proPaymentPlan={proPaymentPlan}
+        setProPaymentPlan={setProPaymentPlan}
+        onChangeProPaymentPlan={onChangeProPaymentPlan}
+        handleOnSubmitPayment={handleOnSubmitPayment}
       ></PaymentComponentP>
     </PaymentContext.Provider>
   );

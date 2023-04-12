@@ -16,6 +16,10 @@ export const PaymentComponentP = ({
   paymentType,
   paymentMethods,
   paymentPlans,
+  proPaymentPlan,
+  setProPaymentPlan,
+  onChangeProPaymentPlan,
+  handleOnSubmitPayment,
 }) => {
   return (
     <Modal
@@ -25,7 +29,7 @@ export const PaymentComponentP = ({
       fullscreen
       centered
       className="payment__component__modal"
-      style={{ background: "#10162F", "padding":"0px",}}
+      style={{ background: "#10162F", padding: "0px" }}
     >
       <div className="row g-0">
         {/*payment left section  */}
@@ -83,42 +87,69 @@ export const PaymentComponentP = ({
 
         {/* payment right section */}
         <div className="col-lg-8 col-md-8 col-12 ">
-          <div className="payment__making__section">
-          <div className="choose__a__plan__title">Choose a plan</div>
-          <div className="select__paymentPlan__type__div">
-            <select name="" id="" className="select__paymentPlan__type">
-              {paymentPlans.map((pP)=>{
-                return <option key={pP.id} value={pP.value}>{pP.label}</option>
-              })}
-            </select>
-          </div>
-          <div className="select__payment__method__title">
-            Select a Payment Method
-          </div>
-          <div className="select__payment__method__div">
-            {paymentMethods && paymentMethods.map((pM)=>{
-              return  <div className="radio__button__div">
-              <input
-                type="radio"
-                id={pM.id}
-                name="paymentMethod"
-                className="radio__button"
-                onChange={()=>{handleOnChangePaymentType(pM.value)}}
-                checked={pM.value===paymentType}
-              />
-              <label htmlFor={pM.id} className="paymentTypeText">
-                {pM.label}
-              </label>
-            </div>
-            })}
-          </div>
+          <form
+            action=""
+            onSubmit={(e) => {
+              handleOnSubmitPayment(e);
+            }}
+          >
+            <div className="payment__making__section">
+              <div className="choose__a__plan__title">Choose a plan</div>
+              <div className="select__paymentPlan__type__div">
+                <select
+                  name=""
+                  id=""
+                  className="select__paymentPlan__type"
+                  onChange={(e) => {
+                    onChangeProPaymentPlan(e.target.value);
+                  }}
+                >
+                  {paymentPlans.map((pP) => {
+                    return (
+                      <option key={pP.id} value={pP.id}>
+                        {pP.label}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+              <div className="select__payment__method__title">
+                Select a Payment Method
+              </div>
+              <div className="select__payment__method__div">
+                {paymentMethods &&
+                  paymentMethods.map((pM) => {
+                    return (
+                      <div className="radio__button__div">
+                        <input
+                          type="radio"
+                          id={pM.id}
+                          name="paymentMethod"
+                          className="radio__button"
+                          onChange={() => {
+                            handleOnChangePaymentType(pM.value);
+                          }}
+                          checked={pM.value === paymentType}
+                        />
+                        <label htmlFor={pM.id} className="paymentTypeText">
+                          {pM.label}
+                        </label>
+                      </div>
+                    );
+                  })}
+              </div>
 
-            {/* For Bank Transfer */}
-            {paymentType==="bankTransfer" && <BankTransferC></BankTransferC>}
-            {paymentType==="walletTransfer" && <WalletTransferC></WalletTransferC>}
-          </div>
+              {/* For Bank Transfer */}
+              {paymentType === "bankTransfer" && (
+                <BankTransferC></BankTransferC>
+              )}
+              {paymentType === "walletTransfer" && (
+                <WalletTransferC></WalletTransferC>
+              )}
+            </div>
 
             <TotalAmountC></TotalAmountC>
+          </form>
         </div>
       </div>
     </Modal>

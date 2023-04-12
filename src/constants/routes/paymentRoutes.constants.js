@@ -1,0 +1,1 @@
+export const CREATE_PAYMENT_ROUTE_CONSTANT = "/payment"

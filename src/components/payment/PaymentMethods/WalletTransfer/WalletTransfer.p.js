@@ -15,7 +15,6 @@ export const WalletTransferP = ({
 }) => {
   return (
     <div className="wallet__transfer__p__div">
-      <form action="">
         <div className="payment__input__div">
           <label htmlFor="wallet" className="payment__input__div__label">
             Select Wallet *
@@ -86,17 +85,17 @@ export const WalletTransferP = ({
             Payment Image (Upload screenshot of the transaction or photo of
             payment voucher)*
           </label>
-          <label
+          {/* <label
             htmlFor="paymentImage"
             className="payment__input__div__label__image custom__file__upload"
           >
             {paymentImage?.name ? paymentImage?.name : "No Image Selected"}
-          </label>
+          </label> */}
           <br />
           <input
             type="file"
             id="paymentImage"
-            className="payment__input__image"
+            // className="payment__input__image"
             required
             onChange={(e) => {
               console.log(e);
@@ -124,7 +123,6 @@ export const WalletTransferP = ({
             }}
           />
         </div>
-      </form>
     </div>
   );
 };

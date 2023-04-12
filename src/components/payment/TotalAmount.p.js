@@ -1,4 +1,7 @@
-export const TotalAmountP = () => {
+export const TotalAmountP = ({
+  proPaymentPlan,
+  handleOnClickPayButton,
+}) => {
   return (
     <div className="total__amount__p__div">
       <div className="review__and__pay__title">Review & Pay</div>
@@ -6,21 +9,21 @@ export const TotalAmountP = () => {
         <div className="total__subTotal__div__left col-lg-4 col-md-4 col-12">
           <div className="total__amount__exact__amount">
             <div className="total__amount__div">Today's Total</div>
-            <div className="exact__amount__div">Rs. 10,000</div>
+            <div className="exact__amount__div">Rs. {proPaymentPlan?.amount}</div>
           </div>
-          <button className="pay__amount__button">Pay Rs. 10,000</button>
+          <input type="submit" className="pay__amount__button" value={`Pay Rs. ${proPaymentPlan?.amount}`}/>
         </div>
         <div className="sub__total__amount__div col-lg-8 col-md-8 col-12">
           <div className="subTotal__list__div">
             <div className="subTotal__individual">
-              <div className="subTotal__title">$10/month SAVE $119</div>
-              <div className="subTotal__amount">$119.99/year</div>
+              <div className="subTotal__title">{proPaymentPlan?.label}</div>
+              <div className="subTotal__amount">Rs. {proPaymentPlan?.amount}</div>
             </div>
             <div className="subTotal__list__divider"></div>
             <div className="subTotal__list__divider"></div>
             <div className="subTotal__final__div">
               <div className="subTotal__final__text">Total starting Apr 12</div>
-              <div className="subTotal__final__amount__div">$119.99 USD</div>
+              <div className="subTotal__final__amount__div">Rs. {proPaymentPlan?.amount}</div>
             </div>
           </div>
         </div>

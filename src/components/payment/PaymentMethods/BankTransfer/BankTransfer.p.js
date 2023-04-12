@@ -15,7 +15,6 @@ export const BankTransferP = ({
 }) => {
   return (
     <div className="bank__transfer__p__div">
-      <form action="">
         <div className="payment__input__div">
           <label htmlFor="bank" className="payment__input__div__label">
             Select Bank *
@@ -95,19 +94,19 @@ export const BankTransferP = ({
             Payment Image (Upload screenshot of the transaction or photo of
             payment voucher)*
           </label>
-          <label
+          {/* <label
             htmlFor="paymentImage"
             className="payment__input__div__label__image custom__file__upload"
           >
             {paymentImageOfBankAccount.name
               ? paymentImageOfBankAccount.name
               : "No Image Selected"}
-          </label>
+          </label> */}
           <br />
           <input
             type="file"
             id="paymentImage"
-            className="payment__input__image"
+            // className="payment__input__image"
             required
             onChange={(e) => {
               console.log(e);
@@ -133,7 +132,6 @@ export const BankTransferP = ({
             }}
           />
         </div>
-      </form>
     </div>
   );
 };
