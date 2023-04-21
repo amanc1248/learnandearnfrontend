@@ -39,6 +39,10 @@ export const BankTransferC = () => {
   const handleOnChangePaymentImage = (value) => {
     setPaymentImagOfBankAccount(value);
   };
+  
+  const handleOnRemoveImage = ()=>{
+    setPaymentImagOfBankAccount("")
+  }
   return (
     <BankTransferP
       handleOnChangePaymentImage={handleOnChangePaymentImage}
@@ -54,6 +58,7 @@ export const BankTransferC = () => {
       paymentImageOfBankAccount={paymentImageOfBankAccount}
       paymentDateBankTransfer={paymentDateBankTransfer}
       setPaymentDateBankTransfer={setPaymentDateBankTransfer}
+      handleOnRemoveImage={handleOnRemoveImage}
     ></BankTransferP>
   );
 };

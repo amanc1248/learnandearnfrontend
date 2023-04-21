@@ -12,6 +12,7 @@ export const BankTransferP = ({
   setBillingAddressBankTransfer,
   paymentDateBankTransfer,
   setPaymentDateBankTransfer,
+  handleOnRemoveImage,
 }) => {
   return (
     <div className="bank__transfer__p__div">
@@ -103,15 +104,19 @@ export const BankTransferP = ({
               : "No Image Selected"}
           </label> */}
           <br />
-          <input
+          {!paymentImageOfBankAccount &&<input
             type="file"
             id="paymentImage"
-            // className="payment__input__image"
             required
             onChange={(e) => {
-              console.log(e);
+              handleOnChangePaymentImage(e.target.files[0])
             }}
-          />
+          />}
+          {paymentImageOfBankAccount && <div className="payment__image__remove__image__div">
+          <input type="text" className="payment__input__image__name" disabled value={paymentImageOfBankAccount.name} />
+          <button className="remove__image__button" style={{color:"red", fontWeight:"600"}} onClick={handleOnRemoveImage}>Remove</button>
+          </div>}
+
         </div>
         <div className="payment__input__div">
           <label

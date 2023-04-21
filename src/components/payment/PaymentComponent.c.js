@@ -104,6 +104,8 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
 
   const handleOnSubmitPayment = (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append('file', paymentType==="bankTransfer"?paymentImageOfBankAccount: paymentImageOfWalletTransfer);
     const userToken = getFromLocalStorage(USER_TOKEN_CONSTANT);
     if (!userToken) {
       console.log("No user token");
@@ -114,11 +116,10 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
       bankName,
       bankAccountNumber,
       fullNameOnBankAccount,
-      paymentImageOfBankAccount,
       billingAddressBankTransfer,
       walletName,
       fullNameOnWallet,
-      paymentImageOfWalletTransfer,
+      paymentImage:formData,
       billingAddressWalletTransfer,
       paymentDateBankTransfer,
       paymentDateWalletTransfer,
@@ -127,7 +128,7 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
       userToken,
     };
     const paymentObject = createPaymentObject({ paymentType, paymentDetails });
-    createPayment({ createPaymentObject: paymentObject, token: userToken })
+    createPayment({ createPaymentObject: paymentObject,formData:formData, token: userToken })
       .then((response) => {
         console.log(response);
       })

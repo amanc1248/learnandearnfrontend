@@ -3,7 +3,7 @@ import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
 
 // create payment using bank transfer
-export const createPayment = ({ createPaymentObject, token }) => {
+export const createPayment = ({ createPaymentObject, token,formData }) => {
   return new Promise((resolve, reject) => {
     try {
       const config = {
@@ -15,7 +15,7 @@ export const createPayment = ({ createPaymentObject, token }) => {
 
       const data = createPaymentObject;
       axiosInstance
-        .post(CREATE_PAYMENT_ROUTE_CONSTANT, data, config)
+        .post(CREATE_PAYMENT_ROUTE_CONSTANT,formData, data, config)
         .then((response) => {
           resolve(response);
         })
