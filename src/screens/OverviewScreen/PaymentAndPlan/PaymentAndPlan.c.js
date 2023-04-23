@@ -4,7 +4,7 @@ import { PaymentAndPlanP } from "./PaymentAndPlan.p";
 export const PaymentAndPlanC = () => {
   // data
   const tabsList = [
-    { name: "Purchase Details", id: 0 },
+    { name: "Subscription Details", id: 0 },
     { name: "Billing History", id: 1 },
   ];
 

@@ -1,21 +1,19 @@
-import { CREATE_PAYMENT_ROUTE_CONSTANT } from "../constants/routes/paymentRoutes.constants";
+import { CREATE_PAYMENT_ROUTE_CONSTANT, GET_ALL_PAYMENTS_CONSTANT, GET_INREVIEW_PAYMENT_CONSTANT } from "../constants/routes/paymentRoutes.constants";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
 
 // create payment using bank transfer
-export const createPayment = ({ createPaymentObject, token,formData }) => {
+export const createPayment = ({ createPaymentObject, token }) => {
   return new Promise((resolve, reject) => {
     try {
       const config = {
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
       };
 
-      const data = createPaymentObject;
       axiosInstance
-        .post(CREATE_PAYMENT_ROUTE_CONSTANT,formData, data, config)
+        .post(CREATE_PAYMENT_ROUTE_CONSTANT, createPaymentObject, config)
         .then((response) => {
           resolve(response);
         })
@@ -27,3 +25,44 @@ export const createPayment = ({ createPaymentObject, token,formData }) => {
     }
   });
 };
+
+// fetch payment of user in review status
+export const fetchUserPaymentInReviewStatus = ({ token }) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      axiosInstance.get(GET_INREVIEW_PAYMENT_CONSTANT, config).then((response)=>{
+        console.log("FetchUserPaymentInReviewStatus: ", response);
+        resolve(response.data)
+      }).catch((error)=>{
+        console.log(error)
+      })
+    } catch (e) {}
+  });
+};
+
+// fetch all payments of the user
+export const fetchAllPayments = ({token})=>{
+  return new Promise((resolve, reject)=>{
+    try{
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      axiosInstance.get(GET_ALL_PAYMENTS_CONSTANT,config).then((response)=>{
+        console.log(response);
+        resolve(response.data)
+      })
+    }catch(e){
+      console.error(e)
+      reject(e);
+    }
+  })
+}

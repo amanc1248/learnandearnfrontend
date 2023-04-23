@@ -1,0 +1,9 @@
+.button__loader__div{
+    background: linear-gradient(45deg, #e6e0e0, #eeede9, #dddfdd, #e1e1e2, #ebe8e8);
+    animation: gradient-background 2s ease infinite;
+    background-size: 400% 400%;
+    height: 25px;
+    width: 20%;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}

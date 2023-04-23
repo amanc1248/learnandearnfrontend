@@ -64,6 +64,7 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
   const [paymentType, setPaymentType] = useState("bankTransfer");
   const [proPaymentPlan, setProPaymentPlan] = useState(paymentPlans[0]);
   const [paymentAmount, setPaymentAmount] = useState(paymentPlans[0].amount);
+  const [paymentProcessing, setPaymentProcessing] = useState(false);
 
   // bank transfer states
   const [bankName, setBankName] = useState("Sanima Bank");
@@ -104,8 +105,6 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
 
   const handleOnSubmitPayment = (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append('file', paymentType==="bankTransfer"?paymentImageOfBankAccount: paymentImageOfWalletTransfer);
     const userToken = getFromLocalStorage(USER_TOKEN_CONSTANT);
     if (!userToken) {
       console.log("No user token");
@@ -119,7 +118,7 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
       billingAddressBankTransfer,
       walletName,
       fullNameOnWallet,
-      paymentImage:formData,
+      paymentImage:paymentType==="bankTransfer"?paymentImageOfBankAccount: paymentImageOfWalletTransfer,
       billingAddressWalletTransfer,
       paymentDateBankTransfer,
       paymentDateWalletTransfer,
@@ -127,16 +126,21 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
       proPaymentPlan,
       userToken,
     };
+    setPaymentProcessing(true);
     const paymentObject = createPaymentObject({ paymentType, paymentDetails });
-    createPayment({ createPaymentObject: paymentObject,formData:formData, token: userToken })
+    createPayment({ createPaymentObject: paymentObject, token: userToken })
       .then((response) => {
         console.log(response);
+        setPaymentProcessing(false);
+        setShowPaymentModal(false)
       })
       .catch((error) => {
+        setPaymentProcessing(false)
         console.error(error);
       });
     console.log(paymentObject);
   };
+
   // use context
   const paymentContextData = {
     paymentType,
@@ -167,6 +171,7 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     proPaymentPlan,
     setProPaymentPlan,
   };
+
   return (
     <PaymentContext.Provider value={paymentContextData}>
       <PaymentComponentP
@@ -182,6 +187,8 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
         setProPaymentPlan={setProPaymentPlan}
         onChangeProPaymentPlan={onChangeProPaymentPlan}
         handleOnSubmitPayment={handleOnSubmitPayment}
+        paymentProcessing={paymentProcessing}
+        setPaymentProcessing = {setPaymentProcessing}
       ></PaymentComponentP>
     </PaymentContext.Provider>
   );

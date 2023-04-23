@@ -1,0 +1,1 @@
+export const FETCH_ALL_ACTIVE_SUSBCRIPTIONS_USER_ROUTE_CONSTANT = "/subscription/user"

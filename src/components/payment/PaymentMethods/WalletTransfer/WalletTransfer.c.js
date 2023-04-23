@@ -11,6 +11,7 @@ export const WalletTransferC = () => {
     { label: "FonePay", value: "FonePay", id: 4 },
   ];
 
+
   // use context
   const paymentContextData = useContext(PaymentContext);
   const {
@@ -25,6 +26,12 @@ export const WalletTransferC = () => {
     paymentDateWalletTransfer,
     setPaymentDateWalletTransfer,
   } = paymentContextData;
+
+    // functions
+    const handleOnChangePaymentImage = (value) => {
+      setPaymentImageOfWalletTransfer(value);
+    };
+  
   return (
     <WalletTransferP
       walletName={walletName}
@@ -38,6 +45,7 @@ export const WalletTransferC = () => {
       walletTypes={walletTypes}
       paymentDateWalletTransfer={paymentDateWalletTransfer}
       setPaymentDateWalletTransfer={setPaymentDateWalletTransfer}
+      handleOnChangePaymentImage={handleOnChangePaymentImage}
     ></WalletTransferP>
   );
 };

@@ -1,0 +1,21 @@
+.payment__loader__div {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    font-weight: 100%;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.payment__loader__inner__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

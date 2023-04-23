@@ -15,28 +15,28 @@ export const createPaymentObject = ({ paymentType, paymentDetails }) => {
   } = paymentDetails;
 
   // new payment object
-  let paymentObject = {};
-  paymentObject.item = proPaymentPlan.id;
-  paymentObject.amount = proPaymentPlan.amount;
-  paymentObject.method = paymentType;
-  paymentObject.additionalInformation = "additionalInformation";
-  paymentObject.token = userToken;
-  paymentObject.paymentImage = paymentImage;
+  const formData = new FormData();
+  formData.append('item',proPaymentPlan.id);
+  formData.append('amount',proPaymentPlan.amount);
+  formData.append('method',paymentType);
+  formData.append('additionalInformation',"additionalInformation");
+  formData.append('token',userToken);
+  formData.append('paymentImage',paymentImage);
   
   if (paymentType === "bankTransfer") {
-    paymentObject.fullName = fullNameOnBankAccount;
-    paymentObject.billingAddress = billingAddressBankTransfer;
-    paymentObject.bankName = bankName;
-    paymentObject.bankAccountNumber = bankAccountNumber;
-    paymentObject.paymentDate = paymentDateBankTransfer;
-    return paymentObject;
+    formData.append("fullName", fullNameOnBankAccount);
+    formData.append("billingAddress", billingAddressBankTransfer);
+    formData.append("bankName", bankName);
+    formData.append("bankAccountNumber", bankAccountNumber);
+    formData.append("paymentDate", paymentDateBankTransfer);
+    return formData;
   }
 
   if (paymentType === "walletTransfer") {
-    paymentObject.fullName = fullNameOnWallet;
-    paymentObject.billingAddress = billingAddressWalletTransfer;
-    paymentObject.walletName = walletName;
-    paymentObject.paymentDate = paymentDateWalletTransfer;
-    return paymentObject;
+    formData.append("fullName" , fullNameOnWallet);
+    formData.append("billingAddress" , billingAddressWalletTransfer);
+    formData.append("walletName" , walletName);
+    formData.append("paymentDate" , paymentDateWalletTransfer);
+    return formData;
   }
 };

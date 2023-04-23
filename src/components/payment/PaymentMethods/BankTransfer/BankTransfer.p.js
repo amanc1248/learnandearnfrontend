@@ -95,14 +95,6 @@ export const BankTransferP = ({
             Payment Image (Upload screenshot of the transaction or photo of
             payment voucher)*
           </label>
-          {/* <label
-            htmlFor="paymentImage"
-            className="payment__input__div__label__image custom__file__upload"
-          >
-            {paymentImageOfBankAccount.name
-              ? paymentImageOfBankAccount.name
-              : "No Image Selected"}
-          </label> */}
           <br />
           {!paymentImageOfBankAccount &&<input
             type="file"
