@@ -17,14 +17,14 @@ export const LoginStep1C = ({
     email: "",
     password: "",
   });
-  const [logginIn, setLogginIn] = useState(false);
+  const [loggingIn, setLoggingIn] = useState(false);
 
   // use navigate
   const navigate = useNavigate();
   // functions
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    setLogginIn(true);
+    setLoggingIn(true);
     login(loginFormDetails)
       .then((response) => {
         saveToLocalStorage({ key: USER_TOKEN_CONSTANT, value: response.data });
@@ -32,10 +32,11 @@ export const LoginStep1C = ({
           error: false,
           text: "Logged in successfully"
         })
-        setLogginIn(false);
+        setLoggingIn(false);
         navigate("/overview")
       })
       .catch((error) => {
+        setLoggingIn(false);
         handleLoginStatus({
           error: true,
           text: error.response.data
@@ -57,7 +58,7 @@ export const LoginStep1C = ({
   return (
     <LoginStep1P
       loginFormDetails={loginFormDetails}
-      logginIn={logginIn}
+      loggingIn={loggingIn}
       onHandleSubmit={onHandleSubmit}
       handleEmailChange={handleEmailChange}
       handlePasswordChange={handlePasswordChange}

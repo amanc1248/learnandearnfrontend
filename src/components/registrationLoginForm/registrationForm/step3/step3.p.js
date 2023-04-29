@@ -3,6 +3,7 @@ export const Step3P = ({
   password,
   handlePasswordChange,
   handleConfirmPasswordChange,
+  registering,
 }) => {
   return (
     <form onSubmit={onHandleSubmit}>
@@ -19,6 +20,7 @@ export const Step3P = ({
             onChange={(e) => {
               handlePasswordChange(e.target.value);
             }}
+            disabled={registering}
           />
         </div>
         <div className="user__details__input__div user__details__fullName">
@@ -32,6 +34,7 @@ export const Step3P = ({
             onChange={(e) => {
               handleConfirmPasswordChange(e.target.value);
             }}
+            disabled={registering}
           />
         </div>
       </div>
@@ -45,9 +48,10 @@ export const Step3P = ({
         <div className="col-lg-6 col-12 cancel__submit__buttons">
           <div className="cancel__button__div"></div>
           <input
-            className="submit__button__div"
+            className={`submit__button__div ${registering &&"sending__otp__class" }`}
             type="submit"
-            value="Register"
+            value={`${registering ? "Registering" : "Register"}`}
+            disabled={registering}
           />
         </div>
       </div>

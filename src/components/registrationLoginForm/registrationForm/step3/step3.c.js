@@ -11,31 +11,44 @@ export const Step3C = ({
 
   // data
   let confirmPassword;
+
 // use states
 const [password, setPassword] = useState();
+const [registering, setRegistering] = useState(null); 
 
 // functions
   const onHandleSubmit = (e) => {
+    setRegistering(true);
     e.preventDefault();
     if(password===confirmPassword){
       const validatePasswordResult = validatePassword(password);
       if(validatePasswordResult===true){
         const {fullName: name, email} = registrationFormDetails;
         createUser({name, email, password}).then((response)=>{
+          setRegistering(false);
+          setPassword('');
+          confirmPassword='';
           showHideRegistrationModal(false);
+          changeRegistrationStatus({
+            error: true,
+            text: "Account Registered Successfully.",
+          });
         }).catch((error)=>{
+          setRegistering(false);
           changeRegistrationStatus({
             error: true,
             text: error.response.data,
           });
         })
       }else{
+        setRegistering(false);
         changeRegistrationStatus({
           error: true,
           text: validatePasswordResult,
         });
       }
     }else{
+      setRegistering(false);
       changeRegistrationStatus({
         error: true,
         text: "Password did not match",
@@ -57,6 +70,7 @@ const [password, setPassword] = useState();
       password={password}
       handlePasswordChange={handlePasswordChange}
       handleConfirmPasswordChange={handleConfirmPasswordChange}
+      registering = {registering}
     ></Step3P>
   );
 };

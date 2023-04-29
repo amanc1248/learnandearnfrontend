@@ -10,6 +10,7 @@ export const Step1C = ({
   setRegistrationFormDetails,
   showHideRegistrationLoginModal,
 }) => {
+  
   // use states
   const [sendingOTP, setSendingOTP] = useState(false);
 

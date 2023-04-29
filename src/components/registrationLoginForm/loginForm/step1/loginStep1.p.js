@@ -24,6 +24,7 @@ export const LoginStep1P = ({
             onChange={(e) => {
               handleEmailChange(e.target.value);
             }}
+            disabled={loggingIn}
           />
         </div>
         <div className="user__details__input__div user__details__email">
@@ -38,6 +39,7 @@ export const LoginStep1P = ({
             onChange={(e) => {
               handlePasswordChange(e.target.value);
             }}
+            disabled={loggingIn}
           />
         </div>
       </div>
