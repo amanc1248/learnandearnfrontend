@@ -5,6 +5,8 @@ export const LabelInputTextNormalC = ({
   labelHtmlForInputId,
   inputPlaceholder,
   inputRequired,
+  onChangeFunction,
+  disabled,
 }) => {
   return (
     <LabelInputTextNormalP
@@ -12,6 +14,8 @@ export const LabelInputTextNormalC = ({
       labelHtmlForInputId={labelHtmlForInputId}
       inputPlaceholder={inputPlaceholder}
       inputRequired={inputRequired}
+      onChangeFunction={onChangeFunction}
+      disabled={disabled}
     ></LabelInputTextNormalP>
   );
 };

@@ -5,6 +5,8 @@ export const LabelInputPasswordNormalC = ({
   labelhtmlForInputId,
   labelPlaceholder,
   inputRequired,
+  onChangeFunction,
+  disabled,
 }) => {
   return (
     <LabelInputPasswordNormalP
@@ -12,6 +14,8 @@ export const LabelInputPasswordNormalC = ({
       labelhtmlForInputId={labelhtmlForInputId}
       labelPlaceholder={labelPlaceholder}
       inputRequired={inputRequired}
+      onChangeFunction={onChangeFunction}
+      disabled={disabled}
     ></LabelInputPasswordNormalP>
   );
 };
