@@ -1,7 +1,7 @@
 .normal_label_input_div{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 5px;
     margin-bottom: 10px;
 }
