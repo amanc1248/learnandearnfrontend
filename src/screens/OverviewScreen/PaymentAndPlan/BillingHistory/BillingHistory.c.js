@@ -6,9 +6,11 @@ import { getFromLocalStorage } from "../../../../utils/localStorage.utils";
 import { USER_TOKEN_CONSTANT } from "../../../../constants/localstorage.constants";
 
 export const BillingHistoryC = () => {
+  
   // use states
   const [billingHistoryList, setBillingHistoryList] = useState();
   const [loading, setLoading] = useState();
+
   // use effects
   useEffect(() => {
     setLoading(true);

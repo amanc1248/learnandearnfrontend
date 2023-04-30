@@ -1,0 +1,13 @@
+.normal_label_input_div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.normal__label{
+
+}
+.normal__input{
+    height: 50px;
+}
