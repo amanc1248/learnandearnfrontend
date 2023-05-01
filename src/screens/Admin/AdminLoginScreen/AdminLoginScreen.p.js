@@ -1,7 +1,7 @@
-import { LabelInputPasswordNormalC } from "../../components/input/labelInputPasswordNormal/labelInputPasswordNormal.c";
-import { LabelInputTextNormalC } from "../../components/input/labelInputTextNormal/labelInputTextNormal.c";
-import { StatusTextComponentC } from "../../components/statusText/StatusTextComponent.c";
-import "../../styles/adminLoginScreen.css";
+import { LabelInputPasswordNormalC } from "../../../components/input/labelInputPasswordNormal/labelInputPasswordNormal.c";
+import { LabelInputTextNormalC } from "../../../components/input/labelInputTextNormal/labelInputTextNormal.c";
+import { StatusTextComponentC } from "../../../components/statusText/StatusTextComponent.c";
+import "../../../styles/adminLoginScreen.css";
 export const AdminLoginScreenP = ({
   handleOnSubmit,
   onEmailChange,

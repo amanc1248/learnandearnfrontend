@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomeScreen } from "./screens/HomeScreen";
 import { CourseContentScreen } from "./screens/CourseContentScreen/index";
 import { OverViewScreen } from "./screens/OverviewScreen/OverviewScreen";
-import { AdminLoginScreenC } from "./screens/AdminLoginScreen/AdminLoginScreen.c";
+import { AdminLoginScreenC } from "./screens/Admin/AdminLoginScreen/AdminLoginScreen.c";
+import { AdminDashboardScreen } from "./screens/Admin/AdminDashboard/AdminDashboard";
 function App() {
   return (
     <Router>
@@ -22,7 +23,10 @@ function App() {
           path="/admin/login"
           element={<AdminLoginScreenC></AdminLoginScreenC>}
         ></Route>
-        <Route path="/admin/dashboard"></Route>
+        <Route
+          path="/admin/dashboard"
+          element={<AdminDashboardScreen></AdminDashboardScreen>}
+        ></Route>
       </Routes>
     </Router>
   );

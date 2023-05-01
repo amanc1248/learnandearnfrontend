@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { AdminLoginScreenP } from "./AdminLoginScreen.p";
-import { adminLogin } from "../../actions/admin.actions";
-import { saveToLocalStorage } from "../../utils/localStorage.utils";
-import { ADMIN_TOKEN_CONSTANT } from "../../constants/localstorage.constants";
+import { adminLogin } from "../../../actions/admin.actions";
+import { saveToLocalStorage } from "../../../utils/localStorage.utils";
+import { ADMIN_TOKEN_CONSTANT } from "../../../constants/localstorage.constants";
 
 export const AdminLoginScreenC = () => {
   // usestates
