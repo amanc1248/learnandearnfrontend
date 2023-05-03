@@ -5,8 +5,8 @@ export const BillingHistoryP = ({ billingHistoryList, loading }) => {
     <div className="billing__historyP__div">
       {loading && <SingleItemLoaderC></SingleItemLoaderC>}
       {loading === false && billingHistoryList && (
-        <div className="billing__history__list__div">
-          <table className="billing__history__table">
+        <div className="billing__history__list__div table-responsive">
+          <table className="billing__history__table table table-hover">
             <thead>
               <tr>
                 <th>Date</th>

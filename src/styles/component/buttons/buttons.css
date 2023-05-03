@@ -1,0 +1,8 @@
+.blue__small__bgColor__button{
+    width: max-content;
+    height: min-content;
+    font-size: 11px;
+    border-radius: 4px;
+    padding: 0px 2px;
+    cursor: pointer;
+  }

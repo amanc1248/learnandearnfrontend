@@ -1,0 +1,15 @@
+.single__user{
+    cursor: pointer;
+}
+.subscription__type__div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subscription__start__date__title{
+    font-weight: 500;
+    font-size: 15px;
+}
+.subscription__start__date__value{
+    font-size: 14px;
+}

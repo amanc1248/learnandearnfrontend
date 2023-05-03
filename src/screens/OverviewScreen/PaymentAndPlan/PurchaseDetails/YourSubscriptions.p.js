@@ -7,9 +7,9 @@ export const YourSubscriptionP = ({ subscription, loading }) => {
     <div className="yourSubscriptionP__div">
       {loading && <SingleItemLoaderC></SingleItemLoaderC>}
       {!loading && subscription && (
-        <div className="your__subscription__list">
+        <div className="your__subscription__list table-responsive">
           Your Subscription Detail
-          <table className="billing__history__table">
+          <table className="billing__history__table table table-hover">
             <thead>
               <tr>
                 <th>Start Date</th>
