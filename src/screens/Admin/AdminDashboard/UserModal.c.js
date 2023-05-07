@@ -81,6 +81,7 @@ export const UserModalC = ({ user, showModal, changeShowModal }) => {
   return (
     <UserModalP
       showModal={showModal}
+      loading={loading}
       changeShowModal={changeShowModal}
       userDetails={userDetails}
     ></UserModalP>

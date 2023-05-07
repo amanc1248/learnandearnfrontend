@@ -1,8 +1,5 @@
 import { Modal } from "react-bootstrap";
 import "../../../styles/userModal.css";
-import { convertUTCToMonthDateYearFormat } from "../../../utils/date.utils";
-import { PaymentModalC } from "./PaymentModal.c";
-import { SubscriptionModalC } from "./SubscriptionModal.c";
 import { SingleSubscriptionC } from "./users/SingleSubscription.c";
 import { SinglePaymentC } from "./users/SinglePayment.c";
 export const UserModalP = ({
