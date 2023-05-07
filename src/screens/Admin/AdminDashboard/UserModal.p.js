@@ -1,14 +1,19 @@
 import { Modal } from "react-bootstrap";
-import "../../../../styles/userModal.css";
-import { convertUTCToMonthDateYearFormat } from "../../../../utils/date.utils";
+import "../../../styles/userModal.css";
+import { convertUTCToMonthDateYearFormat } from "../../../utils/date.utils";
+import { PaymentModalC } from "./PaymentModal.c";
+import { SubscriptionModalC } from "./SubscriptionModal.c";
+import { SingleSubscriptionC } from "./users/SingleSubscription.c";
+import { SinglePaymentC } from "./users/SinglePayment.c";
 export const UserModalP = ({
-  user,
   userDetails,
   showModal,
   changeShowModal,
+  showPaymentModal,
+  changeShowPaymentModal,
+  showSubscriptionModal,
+  changeShowSubscriptionModal,
 }) => {
-  console.log("user: ", user);
-
   return (
     <Modal
       show={showModal}
@@ -84,80 +89,21 @@ export const UserModalP = ({
               <ol class="list-group list-group-numbered">
                 {userDetails?.subscriptions.length
                   ? userDetails?.subscriptions.map((subscription) => (
-                      <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold">
-                            {subscription?.subscriptionType}
-                          </div>
-                          <div className="subscription__start__date">
-                            Start Date:{" "}
-                            {convertUTCToMonthDateYearFormat({
-                              utcDateString:
-                                subscription?.subscriptionStartDate,
-                            })}
-                          </div>
-                          <div className="subscription__end__date">
-                            End Date:{" "}
-                            {convertUTCToMonthDateYearFormat({
-                              utcDateString: subscription?.subscriptionEndDate,
-                            })}
-                          </div>
-                        </div>
-                        <span class="badge bg-primary rounded-pill">
-                          Rs. {subscription?.subscriptionAmount}
-                        </span>
-                      </li>
+                      <SingleSubscriptionC
+                        subscription={subscription}
+                      ></SingleSubscriptionC>
                     ))
                   : "No subscription, which is not possible"}
               </ol>
             </div>
+
             {/* payment details div */}
             <div className="user__payment__details__div col-lg-6 col-md-6 col-12">
               <h5>Payment Details</h5>
               <ol class="list-group list-group-numbered">
                 {userDetails?.payments.length
                   ? userDetails?.payments.map((payment) => (
-                      <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold">{payment?.method}</div>
-                          <div className="payment__date">
-                            Payment Date:{" "}
-                            {convertUTCToMonthDateYearFormat({
-                              utcDateString: payment?.paymentDate,
-                            })}
-                          </div>
-
-                          {payment?.method === "bankTransfer" && (
-                            <div>
-                              <div className="bank__name">
-                                Bank Name: {payment?.bankName}
-                              </div>
-                              <div className="bank__account__number">
-                                Account Number: {payment?.bankAccountNumber}
-                              </div>
-                            </div>
-                          )}
-                          {payment?.method === "walletTransfer" && <div></div>}
-
-                          <div className="payment__image">
-                            <img
-                              src={payment?.paymentImage}
-                              alt="payment"
-                              srcset=""
-                              height={200}
-                            />
-                          </div>
-                        </div>
-                        <div>
-                          <div class="badge bg-primary rounded-pill">
-                            Rs. {payment?.amount}
-                          </div>
-                          <br />
-                          <div className="badge bg-badge text-bg-info rounded-pill">
-                            {payment?.reviewStatus}
-                          </div>
-                        </div>
-                      </li>
+                      <SinglePaymentC payment={payment}></SinglePaymentC>
                     ))
                   : "No payments"}
               </ol>

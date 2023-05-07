@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { UserModalP } from "./UserModal.p";
-import { userFullDetails } from "../../../../actions/admin.actions";
-import { getFromLocalStorage } from "../../../../utils/localStorage.utils";
-import { ADMIN_TOKEN_CONSTANT } from "../../../../constants/localstorage.constants";
+import { userFullDetails } from "../../../actions/admin.actions";
+import { getFromLocalStorage } from "../../../utils/localStorage.utils";
+import { ADMIN_TOKEN_CONSTANT } from "../../../constants/localstorage.constants";
 
 export const UserModalC = ({ user, showModal, changeShowModal }) => {
-  console.log("the user...", user)
+  console.log("the user...", user);
   // data
   const paymentList = [
     {
@@ -58,6 +58,7 @@ export const UserModalC = ({ user, showModal, changeShowModal }) => {
   // use states
   const [userDetails, setUserDetails] = useState();
   const [loading, setLoading] = useState(false);
+
   // use effects
   useEffect(() => {
     const adminToken = getFromLocalStorage(ADMIN_TOKEN_CONSTANT);
@@ -67,7 +68,7 @@ export const UserModalC = ({ user, showModal, changeShowModal }) => {
       .then((response) => {
         response.payments = paymentList;
         setUserDetails(response);
-        console.log("the pseaksdfkasfd;",response);
+        console.log("the pseaksdfkasfd;", response);
         setLoading(false);
       })
       .catch((error) => {
@@ -75,6 +76,8 @@ export const UserModalC = ({ user, showModal, changeShowModal }) => {
         setLoading(false);
       });
   }, []);
+
+
   return (
     <UserModalP
       showModal={showModal}

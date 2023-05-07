@@ -1,4 +1,4 @@
-import { UserModalC } from "./UserModal.c";
+import { UserModalC } from "../UserModal.c";
 
 export const SingleUserP = ({
   user,
