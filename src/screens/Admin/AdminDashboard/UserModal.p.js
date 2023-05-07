@@ -1,7 +1,7 @@
 import { Modal } from "react-bootstrap";
 import "../../../styles/userModal.css";
 import { SingleSubscriptionC } from "./users/SingleSubscription.c";
-import { SinglePaymentC } from "./users/SinglePayment.c";
+import { SinglePaymentCUser } from "./users/SinglePayment.c";
 export const UserModalP = ({
   userDetails,
   showModal,
@@ -100,7 +100,7 @@ export const UserModalP = ({
               <ol class="list-group list-group-numbered">
                 {userDetails?.payments.length
                   ? userDetails?.payments.map((payment) => (
-                      <SinglePaymentC payment={payment}></SinglePaymentC>
+                      <SinglePaymentCUser payment={payment}></SinglePaymentCUser>
                     ))
                   : "No payments"}
               </ol>

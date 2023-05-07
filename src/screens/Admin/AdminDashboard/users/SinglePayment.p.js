@@ -1,7 +1,7 @@
 import { convertUTCToMonthDateYearFormat } from "../../../../utils/date.utils";
 import { PaymentModalC } from "../PaymentModal.c";
 
-export const SinglePaymentP = ({ payment,showPaymentModal, changeShowPaymentModal }) => {
+export const SinglePaymentPUser = ({ payment,showPaymentModal, changeShowPaymentModal }) => {
   return (
     <li class="list-group-item d-flex justify-content-between align-items-start">
         {showPaymentModal && (

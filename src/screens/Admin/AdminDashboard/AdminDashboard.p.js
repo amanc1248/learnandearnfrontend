@@ -1,8 +1,9 @@
 import "../../../styles/overviewScreen.css";
 import "../../../styles/adminDashboardScreen.css";
 import { AdminUsersC } from "./users/AdminUsers.c";
+import { AdminPaymentsC } from "./payments/AdminPayments.c";
 export const AdminDashboardP = ({
-    dashboardActiveTab,
+  dashboardActiveTab,
   handleDashboardActiveTab,
   dashboardList,
 }) => {
@@ -16,9 +17,12 @@ export const AdminDashboardP = ({
               return (
                 <li
                   key={ol.id}
-                  className={`sidebar__individual ${ol.id+1===dashboardActiveTab && "sidebar__individual__active"} `}
+                  className={`sidebar__individual ${
+                    ol.id + 1 === dashboardActiveTab &&
+                    "sidebar__individual__active"
+                  } `}
                   onClick={() => {
-                    handleDashboardActiveTab(ol.id+1);
+                    handleDashboardActiveTab(ol.id + 1);
                   }}
                 >
                   {ol.text}
@@ -29,7 +33,11 @@ export const AdminDashboardP = ({
         </div>
         <div className="overview__screen__sidebar__content col-lg-10 col-md-9 col-12">
           {dashboardActiveTab === 1 && <AdminUsersC></AdminUsersC>}
-          {dashboardActiveTab === 2 && <div>2</div>}
+          {dashboardActiveTab === 2 && (
+            <div>
+              <AdminPaymentsC></AdminPaymentsC>{" "}
+            </div>
+          )}
           {dashboardActiveTab === 3 && <div>3</div>}
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { SinglePaymentPUser } from "./SinglePayment.p";
+import { SinglePaymentP } from "./SinglePayment.p";
 
-export const SinglePaymentCUser = ({ payment }) => {
+export const SinglePaymentC = ({ payment }) => {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
 
   // functions
@@ -9,10 +9,10 @@ export const SinglePaymentCUser = ({ payment }) => {
     setShowPaymentModal(value);
   };
   return (
-    <SinglePaymentPUser
-    payment={payment}
+    <SinglePaymentP
+      payment={payment}
       showPaymentModal={showPaymentModal}
       changeShowPaymentModal={changeShowPaymentModal}
-    ></SinglePaymentPUser>
+    ></SinglePaymentP>
   );
 };

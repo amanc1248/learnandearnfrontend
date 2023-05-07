@@ -1,4 +1,4 @@
-import { ADMIN_LOGIN_CONSTANT, ADMIN__PAYMENT__BYID_CONSTANT, ADMIN__SUBSCRIPTION__BYID_CONSTANT, ADMIN__USER__FULL__DETAILS_CONSTANT } from "../constants/routes/adminRoutes.constant";
+import { ADMIN_LOGIN_CONSTANT, ADMIN__PAYMENT__ALL_CONSTANT, ADMIN__PAYMENT__BYID_CONSTANT, ADMIN__SUBSCRIPTION__BYID_CONSTANT, ADMIN__USER__FULL__DETAILS_CONSTANT } from "../constants/routes/adminRoutes.constant";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
 
@@ -99,6 +99,30 @@ export const paymentByIdAdmin = ({ adminToken, _id }) => {
       };
       axiosInstance
         .get(ADMIN__PAYMENT__BYID_CONSTANT, config)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error.response.data);
+        });
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
+
+// paymenet by id
+export const paymentAllAdmin = ({ adminToken }) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${adminToken}`
+        },
+      };
+      axiosInstance
+        .get(ADMIN__PAYMENT__ALL_CONSTANT, config)
         .then((response) => {
           resolve(response.data);
         })
