@@ -1,7 +1,9 @@
+import { convertUTCToMonthDateYearFormat } from "../../../../utils/date.utils";
 import { UserModalC } from "../UserModal.c";
 
 export const SingleUserP = ({
   user,
+  subscription,
   showUserDetails,
   changeShowUserDetails,
 }) => {
@@ -26,7 +28,7 @@ export const SingleUserP = ({
         <td>{user?.userType}</td>
         <td>
           <div className="subscription__type__div">
-            <span>{user?.subscriptionType}</span>
+            <span>{subscription?.subscriptionType}</span>
           </div>
         </td>
         <td>
@@ -36,7 +38,7 @@ export const SingleUserP = ({
                 Start Date:{" "}
               </span>{" "}
               <span className="subscription__start__date__value">
-                {user?.subscriptionStartDate}
+              {convertUTCToMonthDateYearFormat({utcDateString:subscription?.subscriptionStartDate})}
               </span>
             </div>
             <div>
@@ -44,12 +46,12 @@ export const SingleUserP = ({
                 End Date:{" "}
               </span>{" "}
               <span className="subscription__start__date__value">
-                {user?.subscriptionEndDate}
+                {convertUTCToMonthDateYearFormat({utcDateString:subscription?.subscriptionEndDate})}
               </span>
             </div>
           </div>
         </td>
-        <td>{user?.subscriptionAmount}</td>
+        <td>{subscription?.subscriptionAmount}</td>
         <td>Payment</td>
       </tr>
     </>

@@ -1,7 +1,7 @@
 import "../../../../styles/buttons.css";
 import "../../../../styles/adminUsers.css";
 import { SingleUserC } from "./SingleUser.c";
-export const AdminUsersP = ({ users }) => {
+export const AdminUsersP = ({ users, loading }) => {
   return (
     <div className="admin__users__div table-responsive">
       {users && users.length > 0 && (
