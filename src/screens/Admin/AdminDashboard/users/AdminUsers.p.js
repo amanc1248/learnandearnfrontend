@@ -1,6 +1,5 @@
 import "../../../../styles/buttons.css";
 import "../../../../styles/adminUsers.css";
-import { SmallSeeDetailsButton } from "../../../../components/buttons/smallSeeDetailsButtons";
 import { SingleUserC } from "./SingleUser.c";
 export const AdminUsersP = ({ users }) => {
   return (
