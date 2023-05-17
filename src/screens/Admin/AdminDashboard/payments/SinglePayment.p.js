@@ -34,19 +34,20 @@ export const SinglePaymentP = ({
             : payment?.walletName}
         </td>
         <td>
+          <img src={payment?.paymentImage} alt="payment" height={50} />
+        </td>
+        <td>
           {payment?.reviewStatus === "inReview" && (
             <span class="badge text-bg-primary">{payment?.reviewStatus}</span>
           )}
-          {payment?.reviewStatus === "accepted" && (
+          {payment?.reviewStatus === "verified" && (
             <span class="badge text-bg-success">{payment?.reviewStatus}</span>
           )}
           {payment?.reviewStatus === "rejected" && (
             <span class="badge text-bg-danger">{payment?.reviewStatus}</span>
           )}
         </td>
-        <td>
-          <img src={payment?.paymentImage} alt="payment" height={50} />
-        </td>
+
         <td>{payment?.additionalInformation}</td>
       </tr>
     </>

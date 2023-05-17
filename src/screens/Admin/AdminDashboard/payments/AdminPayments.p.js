@@ -22,7 +22,6 @@ export const AdminPaymentsP = ({ payments, loading, error }) => {
               <th scope="col">Payment Image</th>
               <th scope="col">Payment Status</th>
               <th scope="col">Additional Information</th>
-              <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
