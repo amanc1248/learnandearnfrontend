@@ -6,7 +6,7 @@ export const PaymentDetailsP = ({
   setShowPaymentModal,
   handleOnClickPaymentButton,
   loading,
-  inReviewPayment,
+  inReviewPayment
 }) => {
   return (
     <>

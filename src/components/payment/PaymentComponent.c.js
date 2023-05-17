@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import {
   faRoadBarrier,
   faChartLine,
@@ -10,6 +10,7 @@ import { getFromLocalStorage } from "../../utils/localStorage.utils";
 import { USER_TOKEN_CONSTANT } from "../../constants/localstorage.constants";
 import { createPaymentObject } from "../../utils/object.utils";
 import { createPayment } from "../../actions/payment.actions";
+import { PaymentDetailsContext } from "../../screens/OverviewScreen/PaymentAndPlan/PurchaseDetails/PaymentDetails.c";
 
 export const PaymentContext = createContext();
 export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
@@ -59,6 +60,10 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     },
   ];
 
+  // use context
+  const paymentDetailsContext = useContext(PaymentDetailsContext);
+  const {handleOnRefresh} = paymentDetailsContext;
+
   // use states
   const [showPaymentModal, setShowPaymentModal] = useState(showComponent);
   const [paymentType, setPaymentType] = useState("bankTransfer");
@@ -68,7 +73,6 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
 
   // bank transfer states
   const [bankName, setBankName] = useState("Sanima Bank");
-  const [bankAccountNumber, setBankAccountNumber] = useState("");
   const [fullNameOnBankAccount, setFullNameOnBankAccount] = useState("");
   const [paymentImageOfBankAccount, setPaymentImagOfBankAccount] = useState("");
   const [billingAddressBankTransfer, setBillingAddressBankTransfer] =
@@ -113,7 +117,6 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     const paymentDetails = {
       paymentType,
       bankName,
-      bankAccountNumber,
       fullNameOnBankAccount,
       billingAddressBankTransfer,
       walletName,
@@ -132,7 +135,8 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
       .then((response) => {
         console.log(response);
         setPaymentProcessing(false);
-        setShowPaymentModal(false)
+        setShowPaymentModal(false);
+        handleOnRefresh(true)
       })
       .catch((error) => {
         setPaymentProcessing(false)
@@ -146,8 +150,6 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     paymentType,
     bankName,
     setBankName,
-    bankAccountNumber,
-    setBankAccountNumber,
     fullNameOnBankAccount,
     setFullNameOnBankAccount,
     paymentImageOfBankAccount,
@@ -171,7 +173,6 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     proPaymentPlan,
     setProPaymentPlan,
   };
-
   return (
     <PaymentContext.Provider value={paymentContextData}>
       <PaymentComponentP

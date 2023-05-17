@@ -57,7 +57,6 @@ export const fetchAllPayments = ({token})=>{
         },
       };
       axiosInstance.get(GET_ALL_PAYMENTS_CONSTANT,config).then((response)=>{
-        console.log(response);
         resolve(response.data)
       })
     }catch(e){

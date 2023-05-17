@@ -24,8 +24,8 @@ export const SingleUserP = ({
       >
         <td>{user?.name}</td>
         <td>{user?.email}</td>
-        <td>{user?.joinedDate}</td>
-        <td>{user?.userType}</td>
+        <td>{convertUTCToMonthDateYearFormat({utcDateString: user?.joinedDate})}</td>
+        <td>{user?.type}</td>
         <td>
           <div className="subscription__type__div">
             <span>{subscription?.subscriptionType}</span>

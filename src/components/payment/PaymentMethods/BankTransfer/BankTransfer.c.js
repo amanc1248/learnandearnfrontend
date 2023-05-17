@@ -23,8 +23,6 @@ export const BankTransferC = () => {
   const {
     bankName,
     setBankName,
-    bankAccountNumber,
-    setBankAccountNumber,
     fullNameOnBankAccount,
     setFullNameOnBankAccount,
     paymentImageOfBankAccount,
@@ -51,8 +49,6 @@ export const BankTransferC = () => {
       setFullNameOnBankAccount={setFullNameOnBankAccount}
       bankName={bankName}
       setBankName={setBankName}
-      bankAccountNumber={bankAccountNumber}
-      setBankAccountNumber={setBankAccountNumber}
       billingAddressBankTransfer={billingAddressBankTransfer}
       setBillingAddressBankTransfer={setBillingAddressBankTransfer}
       paymentImageOfBankAccount={paymentImageOfBankAccount}

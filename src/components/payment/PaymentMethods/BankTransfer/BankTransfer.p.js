@@ -6,8 +6,6 @@ export const BankTransferP = ({
   setFullNameOnBankAccount,
   bankName,
   setBankName,
-  bankAccountNumber,
-  setBankAccountNumber,
   billingAddressBankTransfer,
   setBillingAddressBankTransfer,
   paymentDateBankTransfer,
@@ -38,22 +36,6 @@ export const BankTransferP = ({
               );
             })}
           </select>
-        </div>
-        <div className="payment__input__div">
-          <label htmlFor="accountNumber" className="payment__input__div__label">
-            Account Number *
-          </label>
-          <br />
-          <input
-            type="text"
-            id="accountNumber"
-            className="payment__input"
-            required
-            value={bankAccountNumber}
-            onChange={(e) => {
-              setBankAccountNumber(e.target.value);
-            }}
-          />
         </div>
         <div className="firstName__lastName__div">
           <div className="payment__input__div">

@@ -1,8 +1,15 @@
+import { StatusTextComponentC } from "../../../../components/statusText/StatusTextComponent.c";
 import { SinglePaymentC } from "./SinglePayment.c";
 
-export const AdminPaymentsP = ({ payments, loading }) => {
+export const AdminPaymentsP = ({ payments, loading, error }) => {
   return (
     <div className="admin__users__div table-responsive">
+      {error && (
+        <StatusTextComponentC
+          isError={true}
+          statusText={error}
+        ></StatusTextComponentC>
+      )}
       {payments && payments.length > 0 && (
         <table className="table table-hover table-bordered ">
           <thead>

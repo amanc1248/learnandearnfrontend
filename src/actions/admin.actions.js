@@ -1,4 +1,4 @@
-import { ADMIN_LOGIN_CONSTANT, ADMIN__ALL__USERS__CONSTANT, ADMIN__PAYMENT__ALL_CONSTANT, ADMIN__PAYMENT__BYID_CONSTANT, ADMIN__SUBSCRIPTION__BYID_CONSTANT, ADMIN__USER__FULL__DETAILS_CONSTANT } from "../constants/routes/adminRoutes.constant";
+import { ADMIN_LOGIN_CONSTANT, ADMIN__ALL__USERS__CONSTANT, ADMIN__PAYMENT__ALL_CONSTANT, ADMIN__PAYMENT__BYID_CONSTANT, ADMIN__SUBSCRIPTION__BYID_CONSTANT, ADMIN__UPDATE__PAYMENTBYID__CONSTANT, ADMIN__USER__FULL__DETAILS_CONSTANT } from "../constants/routes/adminRoutes.constant";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
 
@@ -147,6 +147,35 @@ export const allUsersAdmin = ({ adminToken }) => {
       };
       axiosInstance
         .get(ADMIN__ALL__USERS__CONSTANT, config)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error.response.data);
+        });
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
+
+// update payment by id
+export const updatePaymentByIdAdmin = ({ adminToken, reviewStatus, id }) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${adminToken}`
+        },
+        
+      };
+      const data ={
+        reviewStatus,
+        _id:id
+      }
+      axiosInstance
+        .put(ADMIN__UPDATE__PAYMENTBYID__CONSTANT,data, config)
         .then((response) => {
           resolve(response.data);
         })

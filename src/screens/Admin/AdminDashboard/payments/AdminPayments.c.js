@@ -8,6 +8,7 @@ export const AdminPaymentsC = () => {
   // use states
   const [payments, setPayments] = useState();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   // use effects
   useEffect(() => {
@@ -18,11 +19,17 @@ export const AdminPaymentsC = () => {
         setLoading(false);
       })
       .catch((error) => {
+        console.log(error);
+        setError(error);
         setLoading(false);
       });
   }, []);
 
   return (
-    <AdminPaymentsP payments={payments} loading={loading}></AdminPaymentsP>
+    <AdminPaymentsP
+      payments={payments}
+      loading={loading}
+      error={error}
+    ></AdminPaymentsP>
   );
 };

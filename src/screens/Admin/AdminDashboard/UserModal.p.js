@@ -2,15 +2,13 @@ import { Modal } from "react-bootstrap";
 import "../../../styles/userModal.css";
 import { SingleSubscriptionC } from "./users/SingleSubscription.c";
 import { SinglePaymentCUser } from "./users/SinglePayment.c";
+import { convertUTCToMonthDateYearFormat } from "../../../utils/date.utils";
 export const UserModalP = ({
   userDetails,
   showModal,
   changeShowModal,
-  showPaymentModal,
-  changeShowPaymentModal,
-  showSubscriptionModal,
-  changeShowSubscriptionModal,
 }) => {
+  console.log("User details: ", userDetails)
   return (
     <Modal
       show={showModal}
@@ -33,9 +31,6 @@ export const UserModalP = ({
                   <th scope="col">Email</th>
                   <th scope="col">Joined Date</th>
                   <th scope="col">User Type</th>
-                  <th scope="col">Subscription Type</th>
-                  <th scope="col">Subscription Date</th>
-                  <th scope="col">Subscription Amount (Rs.)</th>
                   <th scope="col">Payment Details</th>
                   <th scope="col">Actions</th>
                 </tr>
@@ -44,33 +39,8 @@ export const UserModalP = ({
                 <tr className="single__user">
                   <td>{userDetails?.name}</td>
                   <td>{userDetails?.email}</td>
-                  <td>{userDetails?.joinedDate}</td>
-                  <td>{userDetails?.userType}</td>
-                  <td>
-                    <div className="subscription__type__div">
-                      <span>{userDetails?.subscriptionType}</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <div>
-                        <span className="subscription__start__date__title">
-                          Start Date:{" "}
-                        </span>{" "}
-                        <span className="subscription__start__date__value">
-                          {userDetails?.subscriptionStartDate}
-                        </span>
-                      </div>
-                      <div>
-                        <span className="subscription__start__date__title">
-                          End Date:{" "}
-                        </span>{" "}
-                        <span className="subscription__start__date__value">
-                          {userDetails?.subscriptionEndDate}
-                        </span>
-                      </div>
-                    </div>
-                  </td>
+                  <td>{convertUTCToMonthDateYearFormat({utcDateString: userDetails?.joinedDate})}</td>
+                  <td>{userDetails?.type}</td>
                   <td>{userDetails?.subscriptionAmount}</td>
                   <td>Payment</td>
                 </tr>
