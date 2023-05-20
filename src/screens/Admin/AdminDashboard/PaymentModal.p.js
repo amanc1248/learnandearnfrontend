@@ -120,6 +120,7 @@ export const PaymentModalP = ({
                     >
                       <option value="verified">Verified</option>
                       <option value="rejected">Rejected</option>
+                      <option value="inReview">In Review</option>
                     </select>
                     <input type="submit" value="Save"/>
                   </div>

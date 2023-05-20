@@ -1,13 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 import { PaymentDetailsP } from "./PaymentDetails.p";
-import { fetchUserPaymentInReviewStatus } from "../../../../actions/payment.actions";
+import { getPaymentStatus } from "../../../../actions/payment.actions";
 import { getFromLocalStorage } from "../../../../utils/localStorage.utils";
 import { USER_TOKEN_CONSTANT } from "../../../../constants/localstorage.constants";
 
 export const PaymentDetailsContext = createContext();
 export const PaymentDetailsC = () => {
   const [showPaymentModal, setShowPaymentModal] = useState();
-  const [inReviewPayment, setInReviewPayment] = useState();
+  const [paymentStatus, setPaymentStatus] = useState();
   const [loading, setLoading] = useState(true);
   const [refresh, setRefresh] = useState(false);
 
@@ -15,11 +15,9 @@ export const PaymentDetailsC = () => {
   useEffect(() => {
     setLoading(true);
     const token = getFromLocalStorage(USER_TOKEN_CONSTANT);
-    fetchUserPaymentInReviewStatus({ token })
+    getPaymentStatus({ token })
       .then((response) => {
-        if (response) {
-          setInReviewPayment(response);
-        }
+        setPaymentStatus(response);
         setLoading(false);
       })
       .catch((error) => {
@@ -44,7 +42,7 @@ export const PaymentDetailsC = () => {
         handleOnClickPaymentButton={handleOnClickPaymentButton}
         showPaymentModal={showPaymentModal}
         setShowPaymentModal={setShowPaymentModal}
-        inReviewPayment={inReviewPayment}
+        paymentStatus={paymentStatus}
         loading={loading}
         paymentDetailsContextData={paymentDetailsContextData}
         PaymentDetailsContext={PaymentDetailsContext}

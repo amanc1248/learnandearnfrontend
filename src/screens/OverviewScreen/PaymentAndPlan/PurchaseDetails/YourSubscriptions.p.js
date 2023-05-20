@@ -39,10 +39,8 @@ export const YourSubscriptionP = ({ subscription, loading }) => {
         </div>
       )}
       {!loading &&
-        subscription &&
-        subscription?.subscriptionType === "Free" && (
           <PaymentDetailsC></PaymentDetailsC>
-        )}
+      }
     </div>
   );
 };

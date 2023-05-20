@@ -27,7 +27,7 @@ export const createPayment = ({ createPaymentObject, token }) => {
 };
 
 // fetch payment of user in review status
-export const fetchUserPaymentInReviewStatus = ({ token }) => {
+export const getPaymentStatus = ({ token }) => {
   return new Promise((resolve, reject) => {
     try {
       const config = {
@@ -37,12 +37,15 @@ export const fetchUserPaymentInReviewStatus = ({ token }) => {
         },
       };
       axiosInstance.get(GET_INREVIEW_PAYMENT_CONSTANT, config).then((response)=>{
-        console.log("FetchUserPaymentInReviewStatus: ", response);
+        console.log("getPaymentStatus: ", response);
         resolve(response.data)
       }).catch((error)=>{
         console.log(error)
+        reject(error)
       })
-    } catch (e) {}
+    } catch (e) {
+      reject(e)
+    }
   });
 };
 

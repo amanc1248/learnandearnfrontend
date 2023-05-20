@@ -6,20 +6,20 @@ export const PaymentDetailsP = ({
   setShowPaymentModal,
   handleOnClickPaymentButton,
   loading,
-  inReviewPayment
+  paymentStatus,
 }) => {
+  // console.log(user)
   return (
     <>
       {loading && <ButtonLoaderC></ButtonLoaderC>}
-      {loading === false && inReviewPayment && (
+      {loading === false && !paymentStatus?.show && (
         <div>
           <div>
-            Your payment is in review. You will be notified in your email about
-            the status of your payment
+            {paymentStatus?.paymentStatusInformation}
           </div>
         </div>
       )}
-      {loading === false && !inReviewPayment && (
+      {loading === false && paymentStatus?.show && (
         <div>
           <button
             className="open__payment__button"

@@ -1,4 +1,5 @@
 import { SingleItemLoaderC } from "../../../../components/loader/singleItemLoader/SingleItemLoader.c";
+import { convertUTCToMonthDateYearFormat } from "../../../../utils/date.utils";
 
 export const BillingHistoryP = ({ billingHistoryList, loading }) => {
   return (
@@ -12,6 +13,7 @@ export const BillingHistoryP = ({ billingHistoryList, loading }) => {
                 <th>Date</th>
                 <th>Item</th>
                 <th>Status</th>
+                <th>Payment</th>
                 <th>Total</th>
                 <th>Details</th>
               </tr>
@@ -21,9 +23,33 @@ export const BillingHistoryP = ({ billingHistoryList, loading }) => {
                 billingHistoryList.map((bill) => {
                   return (
                     <tr className="single__bill__div" key={bill.id}>
-                      <td>{bill?.date}</td>
+                      <td>
+                        {convertUTCToMonthDateYearFormat({
+                          utcDateString: bill.date,
+                        })}
+                      </td>
                       <td>{bill?.item}</td>
-                      <td>{bill?.paid && "Paid"}</td>
+                      <td>
+                        <span
+                          class={`badge ${
+                            bill?.reviewStatus === "inReview" &&
+                            "text-bg-warning"
+                          }
+                          ${
+                            bill?.reviewStatus === "approved" &&
+                            "text-bg-success"
+                          }
+
+                          ${
+                            bill?.reviewStatus === "rejected" &&
+                            "text-bg-warning"
+                          }
+                          `}
+                        >
+                          {bill?.reviewStatus}
+                        </span>
+                      </td>
+                      <td>{bill?.paid ? "Paid" : "Not Paid"}</td>
                       <td>{bill?.amount}</td>
                       <td>
                         <div className="bill__details__view__button">View</div>

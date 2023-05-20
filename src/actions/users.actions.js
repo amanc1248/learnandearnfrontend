@@ -1,6 +1,7 @@
 import {
   CHANGE_USER_EMAIL_ROUTE,
   CHANGE_USER_PASSWORD_ROUTE,
+  GET_USER_DATA,
 } from "../constants/routes/userRoutes.constants";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
@@ -78,3 +79,26 @@ export const changeUserPassword = ({
       });
   });
 };
+
+// get user data
+export const getUserData = ({token})=>{
+  return new Promise((resolve, reject)=>{
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      axiosInstance.get(GET_USER_DATA, config).then((response)=>{
+        console.log(response);
+        resolve(response.data)
+      }).catch((error)=>{
+        console.error(error)
+        reject(error);
+      })
+    } catch (error) {
+      reject(error)
+    }
+  })
+}
