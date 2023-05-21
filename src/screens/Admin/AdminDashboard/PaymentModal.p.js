@@ -96,7 +96,7 @@ export const PaymentModalP = ({
                 </ul>
               </div>
             </div>
-            <div>
+            {payment?.reviewStatus === "inReview" && <div>
               <button
                 onClick={() => {
                   handleChangePaymentStatus(!changePaymentStatus);
@@ -107,7 +107,15 @@ export const PaymentModalP = ({
                   : "Close change payment status"}
               </button>
               {changePaymentStatus && (
-                <form action="" onSubmit={(e)=>{handleOnSavePaymentStatus(paymentStatus,e)}}>
+                <form
+                  action=""
+                  onSubmit={(e) => {
+                    handleOnSavePaymentStatus(
+                      { paymentStatus, },
+                      e
+                    );
+                  }}
+                >
                   <div className="change__payment__status__div">
                     Change to
                     <select
@@ -122,11 +130,11 @@ export const PaymentModalP = ({
                       <option value="rejected">Rejected</option>
                       <option value="inReview">In Review</option>
                     </select>
-                    <input type="submit" value="Save"/>
+                    <input type="submit" value="Save" />
                   </div>
                 </form>
               )}
-            </div>
+            </div>}
           </>
         )}
       </Modal.Body>

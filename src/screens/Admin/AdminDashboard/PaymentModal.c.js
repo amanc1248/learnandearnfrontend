@@ -45,7 +45,8 @@ export const PaymentModalC = ({ paymentId, showModal, changeShowModal }) => {
     setUpdatingPayment(true);
     updatePaymentByIdAdmin({
       adminToken,
-      reviewStatus: value,
+      reviewStatus: value.paymentStatus,
+      userId: user._id,
       id: paymentId,
     })
       .then((response) => {

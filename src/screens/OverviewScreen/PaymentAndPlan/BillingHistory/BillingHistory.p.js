@@ -50,7 +50,7 @@ export const BillingHistoryP = ({ billingHistoryList, loading }) => {
                         </span>
                       </td>
                       <td>{bill?.paid ? "Paid" : "Not Paid"}</td>
-                      <td>{bill?.amount}</td>
+                      <td>Rs. {bill?.amount}</td>
                       <td>
                         <div className="bill__details__view__button">View</div>
                       </td>

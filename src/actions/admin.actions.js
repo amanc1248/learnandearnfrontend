@@ -160,7 +160,7 @@ export const allUsersAdmin = ({ adminToken }) => {
 };
 
 // update payment by id
-export const updatePaymentByIdAdmin = ({ adminToken, reviewStatus, id }) => {
+export const updatePaymentByIdAdmin = ({ adminToken, reviewStatus, id, userId, }) => {
   return new Promise((resolve, reject) => {
     try {
       const config = {
@@ -172,7 +172,8 @@ export const updatePaymentByIdAdmin = ({ adminToken, reviewStatus, id }) => {
       };
       const data ={
         reviewStatus,
-        _id:id
+        _id:id,
+        userId,
       }
       axiosInstance
         .put(ADMIN__UPDATE__PAYMENTBYID__CONSTANT,data, config)
