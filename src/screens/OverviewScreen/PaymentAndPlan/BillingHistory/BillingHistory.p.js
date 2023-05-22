@@ -36,7 +36,7 @@ export const BillingHistoryP = ({ billingHistoryList, loading }) => {
                             "text-bg-warning"
                           }
                           ${
-                            bill?.reviewStatus === "approved" &&
+                            bill?.reviewStatus === "verified" &&
                             "text-bg-success"
                           }
 
