@@ -1,15 +1,28 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import { CourseContentP } from "./CourseContent.p";
-
+export const CourseContentContext = createContext();
 export const CourseContentC = () => {
   // use states
-  const [videoURL, setVideoURL] = useState();
-
+  const [content, setContent] = useState({});
+  const [entireContent, setEntireContent] = useState();
   //functions
-  const changeVideoURL = (value) => {
-    setVideoURL(value);
+  const changeContent = (value) => {
+    setContent(value);
   };
+
+  const changeEntireContent = (value)=>{
+    setEntireContent(value)
+  }
+
+  // use context
+  const courseContextData = {changeContent,content, entireContent, changeEntireContent};
+
   return (
-    <CourseContentP changeVideoURL={changeVideoURL} videoURL={videoURL}></CourseContentP>
+    <CourseContentP
+      content={content}
+      CourseContentContext={CourseContentContext}
+      courseContextData={courseContextData}
+      // entireContent={}
+    ></CourseContentP>
   );
 };

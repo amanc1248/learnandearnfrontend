@@ -41,6 +41,7 @@
     align-items: center;
 }
 
+
 .course__content__div {
     position: fixed; 
 }
@@ -48,6 +49,7 @@
 .course__content__title {
     font-size: 16px;
     font-weight: 600;
+    width: 100%;
 }
 
 .course__content__list__div {
@@ -64,4 +66,16 @@
     gap: 5px;
     font-size: 12px;
     color: rgba(0, 0, 0, 0.56);
+}
+.previous__next__button__div{
+    padding: 0px 20px 0 20px;
+    background-color: black;
+    display: flex;
+    gap:50px;
+}
+
+.previous__next__button{
+    color: white;
+    text-align: center;
+    font-size: smaller;
 }
