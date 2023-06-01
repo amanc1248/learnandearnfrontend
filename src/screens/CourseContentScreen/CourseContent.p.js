@@ -7,12 +7,13 @@ export const CourseContentP = ({
   content,
   courseContextData,
 }) => {
+  console.log("Content: ",content)
   return (
     <CourseContentContext.Provider value={courseContextData}>
       <div>
         <CourseContentHeaderC></CourseContentHeaderC>
         <div className="row g-0">
-          <VideoPartC singleContent={content}></VideoPartC>
+          {content && <VideoPartC singleContent={content}></VideoPartC>}
           <ContentPartC></ContentPartC>
         </div>
       </div>

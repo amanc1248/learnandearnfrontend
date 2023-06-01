@@ -1,56 +1,49 @@
-import { useState } from "react";
 import "../../../styles/CourseContent.css";
 import { VideoDescriptionC } from "./VideoDescription.c";
 import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBackward, faForward } from "@fortawesome/free-solid-svg-icons";
+import { UpgradeToProC } from "./UpgradeToPro.c";
 
-export const VideoPartP = ({ videoUrl, handlePrevious, handleNext }) => {
-  // const handlePrevious = () => {
-  //   setCurrentVideoIndex(prevIndex => (prevIndex - 1 >= 0 ? prevIndex - 1 : videoUrls.length - 1));
-  // };
-
-  // const handleNext = () => {
-  //   setCurrentVideoIndex(prevIndex => (prevIndex + 1 < videoUrls.length ? prevIndex + 1 : 0));
-  // };
-  const playerConfig = {
-    file: {
-      attributes: {
-        controlsList: "nodownload",
-      },
-    },
-  };
+export const VideoPartP = ({
+  videoUrl,
+  handlePrevious,
+  handleNext,
+  playerConfig,
+  videoAccessible,
+}) => {
   return (
     <div className="col-lg-9">
-      <ReactPlayer
-        url={videoUrl}
-        controls
-        config={playerConfig}
-        width={"100%"}
-      />
-      <div className="previous__next__button__div">
-        {/* <button>Previous</button>
-        <button>Next</button> */}
-        <div className="previous__next__button">
-          <FontAwesomeIcon
-            icon={faBackward}
-            onClick={() => {
-              handlePrevious();
-            }}
-          />
-          <div>Previous</div>
+      {videoAccessible==="access" && <div>
+        <ReactPlayer
+          url={videoUrl}
+          controls
+          config={playerConfig}
+          width={"100%"}
+        />
+        <div className="previous__next__button__div">
+          <div className="previous__next__button">
+            <FontAwesomeIcon
+              icon={faBackward}
+              onClick={() => {
+                handlePrevious();
+              }}
+            />
+            <div>Previous</div>
+          </div>
+          <div className="previous__next__button">
+            <FontAwesomeIcon
+              icon={faForward}
+              onClick={() => {
+                handleNext();
+              }}
+            />
+            <div>Next</div>
+          </div>
         </div>
-        <div className="previous__next__button">
-          <FontAwesomeIcon
-            icon={faForward}
-            onClick={() => {
-              handleNext();
-            }}
-          />
-          <div>Next</div>
-        </div>
-      </div>
-      <VideoDescriptionC></VideoDescriptionC>
+        <VideoDescriptionC></VideoDescriptionC>
+      </div>}
+      {videoAccessible==="denied" && <UpgradeToProC></UpgradeToProC>   }
     </div>
   );
 };

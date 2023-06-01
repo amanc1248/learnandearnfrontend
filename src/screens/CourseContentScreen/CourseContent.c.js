@@ -3,7 +3,7 @@ import { CourseContentP } from "./CourseContent.p";
 export const CourseContentContext = createContext();
 export const CourseContentC = () => {
   // use states
-  const [content, setContent] = useState({});
+  const [content, setContent] = useState();
   const [entireContent, setEntireContent] = useState();
   //functions
   const changeContent = (value) => {
