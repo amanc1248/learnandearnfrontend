@@ -18,8 +18,7 @@ export const VideoPartC = ({ singleContent }) => {
   const { entireContent, changeContent } = courseContentContext;
   console.log("Single content: ", singleContent);
 
-  // USE STATES
-  const [videoAccessible, setVideoAccessible] = useState();
+
 
   // FUNCTIONS
   // 1. handle when clicked on previous
@@ -76,15 +75,7 @@ export const VideoPartC = ({ singleContent }) => {
     changeContent(response);
   };
 
-  // USE EFFECT
-  useEffect(() => {
-    if (singleContent) {
-      console.log("ghjklhjk: ", singleContent)
-      const value =
-        module?.access === "Free" && content?.access === "Free" ? "access" : "denied";
-      setVideoAccessible(value);
-    }
-  });
+
   return (
     <VideoPartP
       videoUrl={content?.videoUrl}
@@ -92,7 +83,6 @@ export const VideoPartC = ({ singleContent }) => {
       handleNext={handleNext}
       entireContent={entireContent}
       playerConfig={playerConfig}
-      videoAccessible={videoAccessible}
     ></VideoPartP>
   );
 };

@@ -1,42 +1,12 @@
 import "../../../styles/videoPart.css"
-export const VideoDescriptionP = () => {
+export const VideoDescriptionP = ({content}) => {
+  const {module, content: courseContent} = content;
+  console.log("Desciption: ", courseContent)
   return (
     <div className="video__description__div">
       <div className="video__description__types__div">
-        <div className="video__overview__div video__description__type">Overview</div>
-        <div className="video__announcements__div video__description__type">Announcements</div>
+        <div className="video__overview__div video__description__type">{courseContent.description}</div>
       </div>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
-      <h1>askdfjkasfd</h1>
     </div>
   );
 };

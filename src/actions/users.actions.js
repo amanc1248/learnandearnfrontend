@@ -2,6 +2,7 @@ import {
   CHANGE_USER_EMAIL_ROUTE,
   CHANGE_USER_PASSWORD_ROUTE,
   GET_USER_DATA,
+  IS_USER_PRO,
 } from "../constants/routes/userRoutes.constants";
 import { createAxiosInstance } from "../utils/axiosInstance.utils";
 const axiosInstance = createAxiosInstance();
@@ -102,3 +103,26 @@ export const getUserData = ({token})=>{
     }
   })
 }
+
+// check if user is pro
+export const checkIsUserPro = ({
+  email,
+  token,
+}) => {
+  return new Promise((resolve, reject) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    axiosInstance
+      .get(IS_USER_PRO, config)
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        reject(error.response.data);
+      });
+  });
+};
