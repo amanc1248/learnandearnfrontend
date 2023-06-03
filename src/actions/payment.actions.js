@@ -37,7 +37,6 @@ export const getPaymentStatus = ({ token }) => {
         },
       };
       axiosInstance.get(GET_INREVIEW_PAYMENT_CONSTANT, config).then((response)=>{
-        console.log("getPaymentStatus: ", response);
         resolve(response.data)
       }).catch((error)=>{
         console.log(error)

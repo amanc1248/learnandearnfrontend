@@ -1,7 +1,6 @@
 import "../../../styles/videoPart.css"
 export const VideoDescriptionP = ({content}) => {
   const {module, content: courseContent} = content;
-  console.log("Desciption: ", courseContent)
   return (
     <div className="video__description__div">
       <div className="video__description__types__div">

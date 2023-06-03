@@ -8,7 +8,6 @@ export const CourseContentP = ({
   content,
   courseContextData,
 }) => {
-  console.log("Content: ",content)
   return (
     <CourseContentContext.Provider value={courseContextData}>
       <div>

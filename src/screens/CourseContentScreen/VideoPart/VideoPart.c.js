@@ -16,7 +16,6 @@ export const VideoPartC = ({ singleContent }) => {
   const { module, content } = singleContent;
   const courseContentContext = useContext(CourseContentContext);
   const { entireContent, changeContent } = courseContentContext;
-  console.log("Single content: ", singleContent);
 
 
 

@@ -23,12 +23,10 @@ const {content:courseSingleVideo} = courseContentContext;
     const token = getFromLocalStorage(USER_TOKEN_CONSTANT);
     checkIsUserPro({ token })
       .then((response) => {
-        console.log(response);
         setIsUserPro(response);
         setCheckingUser(false)
       })
       .catch((error) => {
-        console.log(error);
         setCheckingUser(false)
       });
   }, [courseSingleVideo]);

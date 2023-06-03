@@ -16,7 +16,6 @@ export const SingleSectionC = ({ sectionData }) => {
 
   //functions
   const scrollToTop = (ref) => {
-    console.log("upper div ref: ", ref);
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 

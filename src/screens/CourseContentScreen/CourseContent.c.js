@@ -22,7 +22,6 @@ export const CourseContentC = () => {
       content={content}
       CourseContentContext={CourseContentContext}
       courseContextData={courseContextData}
-      // entireContent={}
     ></CourseContentP>
   );
 };

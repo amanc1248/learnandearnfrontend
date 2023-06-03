@@ -119,7 +119,7 @@ export const checkIsUserPro = ({
     axiosInstance
       .get(IS_USER_PRO, config)
       .then((response) => {
-        resolve(response);
+        resolve(response.data);
       })
       .catch((error) => {
         reject(error.response.data);
