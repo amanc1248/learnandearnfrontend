@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { SingleSectionP } from "./SingleSection.p";
 import { CourseContentContext } from "../../CourseContent.c";
 
-export const SingleSectionC = ({ sectionData }) => {
+export const SingleSectionC = ({ sectionData, sectionIndex }) => {
   // use context
   const courseContentContext = useContext(CourseContentContext);
   const { changeContent, content } = courseContentContext;
@@ -28,6 +28,7 @@ export const SingleSectionC = ({ sectionData }) => {
   }, [moduleIdMatch]);
   return (
     <SingleSectionP
+      sectionIndex={sectionIndex}
       sectionData={sectionData}
       showSectionTopics={showSectionTopics}
       toggleShowSectionTopics={toggleShowSectionTopics}

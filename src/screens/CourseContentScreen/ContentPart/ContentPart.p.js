@@ -34,10 +34,11 @@ export const ContentPartP = ({
         </div>
         <div className="course__content__list__div">
           {courseData &&
-            courseData.map((module) => {
+            courseData.map((module,index) => {
               return (
                 <div key={module.modules._id}>
                   <SingleSectionC
+                    sectionIndex = {index}
                     sectionData={module.modules}
                     changeVideoURL={changeVideoURL}
                     videoURL={videoURL}

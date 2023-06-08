@@ -9,7 +9,8 @@ export const SingleSectionP = ({
   showSectionTopics,
   toggleShowSectionTopics,
   scrollToTop,
-  upperDivRef
+  upperDivRef,
+  sectionIndex,
 }) => {
   const {
     access,
@@ -43,7 +44,7 @@ export const SingleSectionP = ({
       >
         <div>
           {/* Section {sectionData.sectionNumber}: <span> </span> */}
-          Section 1: <span> </span>
+          Section {sectionIndex+1}: <span> </span>
           {sectionData.title}
         </div>
         {showSectionTopics ? (
