@@ -10,18 +10,17 @@ export const HomeScreenP = ({
         <div className="home__screen__firstPart__text">
           Be a professional, job ready{" "}
           <span className="full__stack__developer__text">
-            Full Stack Developer.
+            Full Stack Engineer.
           </span>
         </div>
         <div className="homeScreen__courseOverview__list">
           <ul>
             <li>
-              1-on-1 coding classes tailored to your kid's skill-level and
-              interests.
+            Coding classes which prepares for the demands of the industry by learning the latest technologies and adhering to industry best practices.
             </li>
-            <li>Expert teachers that kids love.</li>
+            <li>Get hands-on experience by working on real-world projects that simulate industry challenges. </li>
             <li>
-              Learn to code real-world projects like games, apps and animations.
+            Our course equips students with an extensive skillset covering both front-end and back-end technologies. From crafting engaging user interfaces using HTML, CSS, and JavaScript, to building robust server-side applications with databases and frameworks, students will master the entire spectrum of tools needed to thrive as a professional full-stack web developer.
             </li>
           </ul>
         </div>
