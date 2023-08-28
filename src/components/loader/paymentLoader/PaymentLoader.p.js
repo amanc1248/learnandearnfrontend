@@ -5,7 +5,7 @@ export const PaymentLoaderP = () => {
     <div className="payment__loader__div">
       <div className="payment__loader__inner__div">
         <SpinnerLoaderC></SpinnerLoaderC>
-        Processing your payment...
+        Processing your payment details...
       </div>
     </div>
   );

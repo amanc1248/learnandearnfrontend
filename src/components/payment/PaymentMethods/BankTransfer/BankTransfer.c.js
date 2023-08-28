@@ -16,6 +16,12 @@ export const BankTransferC = () => {
     { label: "Nabil Bank Ltd", value: "Nabil Bank Ltd", id: 5 },
     { label: "Sunrise Bank", value: "Sunrise Bank", id: 6 },
     { label: "Rastra Banijya Bank", value: "Rastra Banijya Bank", id: 7 },
+    { label: "Global IME Bank", value: "Global IME Bank", id: 8 },
+    { label: "Himalayan Bank", value: "Himalayan Bank", id: 9 },
+    { label: "Kumari Bank", value: "Kumari Bank", id: 10 },
+    { label: "Laxmi Sunrise Bank", value: "Laxmi Sunrise Bank", id: 11 },
+    { label: "Prabhu Bank", value: "Prabhu Bank", id: 12 },
+    { label: "Siddharth Bank", value: "Siddharth Bank", id: 13 },
   ];
 
   // use context

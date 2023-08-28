@@ -46,17 +46,17 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     { id: "walletTransfer", value: "walletTransfer", label: "Wallet Transfer" },
   ];
   const paymentPlans = [
-    {
-      id: "yearlyPlan",
-      label: "Pro Plan, Rs. 10,000 per year",
-      value: "Yearly Plan",
-      amount: 10000,
-    },
+    // {
+    //   id: "yearlyPlan",
+    //   label: "Pro Plan, Rs. 10,000 per year",
+    //   value: "Yearly Plan",
+    //   amount: 10000,
+    // },
     {
       id: "sixMonthPlan",
-      label: "Pro Plan, Rs. 5,000, six Months",
+      label: "Pro Plan, Rs. 10,000, six Months",
       value: "Six Month Plan",
-      amount: 5000,
+      amount: 10000,
     },
   ];
 
