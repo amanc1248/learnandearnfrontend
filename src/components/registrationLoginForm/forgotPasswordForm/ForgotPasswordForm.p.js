@@ -43,15 +43,13 @@ export const ForgotPasswordFormP = ({
         <div className="homeScreen__courseOverview__list">
           <ul>
             <li className="courseOverview__single__list">
-              ✅1-on-1 coding classes tailored to your kid's skill-level and
-              interests.
+              ✅Coding classes which prepares for the demands of the industry by learning the latest technologies and adhering to industry best practices.
             </li>
             <li className="courseOverview__single__list">
-              ✅Expert teachers that kids love.
+              ✅Project-Centric Learning.
             </li>
             <li className="courseOverview__single__list">
-              ✅Learn to code real-world projects like games, apps and
-              animations.
+              ✅Industry Integration and Best Practices.
             </li>
           </ul>
         </div>
