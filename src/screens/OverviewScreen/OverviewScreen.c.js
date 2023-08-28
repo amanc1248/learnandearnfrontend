@@ -6,7 +6,7 @@ import { OverviewScreenP } from "./OverviewScreen.p";
 export const OverviewScreepC = () => {
   // data
   const overviewList = [
-    // { text: "Learnings", id: 0 },
+    { text: "Learnings", id: 0 },
     { text: "Account", id: 1 },
     { text: "Payment And Plan", id: 2 },
   ];

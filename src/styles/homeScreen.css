@@ -34,3 +34,10 @@
     color: #878ab9;
     font-family: 'Jost', sans-serif;
 }
+.job_guranteed_course_span{
+    background: linear-gradient(45deg,#ffa41c,#ff4f84,#7058ff,#2c81ed,#b0eb33);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+}

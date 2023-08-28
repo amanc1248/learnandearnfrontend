@@ -12,6 +12,7 @@ export const HomeScreenP = ({
           <span className="full__stack__developer__text">
             Full Stack Engineer.
           </span>
+          <div className="100%_job_text">100% <span className="job_guranteed_course_span">Job/internship money back guranteed course</span></div>
         </div>
         <div className="homeScreen__courseOverview__list">
           <ul>
@@ -24,9 +25,7 @@ export const HomeScreenP = ({
               Get hands-on experience by working on real-world projects that
               simulate industry challenges.{" "}
             </li>
-            <li>
-              Our course equips students with an extensive skillset covering
-              both front-end and back-end technologies. From crafting engaging
+            <li>From crafting engaging
               user interfaces using HTML, CSS, and JavaScript, to building
               robust server-side applications with databases and frameworks,
               students will master the entire spectrum of tools needed to thrive

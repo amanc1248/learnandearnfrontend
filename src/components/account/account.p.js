@@ -9,14 +9,14 @@ import {Link} from "react-router-dom";
 export const AccountP = () => {
   return (
     <div className="account__p__div">
-      {/* <Link className="account__p__individual" to="/overview/1" style={{textDecoration:"none"}}>
+      <Link className="account__p__individual" to="/overview/1" style={{textDecoration:"none"}}>
         <FontAwesomeIcon
           className="account__login__icon"
           icon={faBook}
           style={{ fontSize: "20px"}}
         />
         <div>Learnings</div>
-      </Link> */}
+      </Link>
       <Link className="account__p__individual" to="/overview/2" style={{textDecoration:"none"}}>
         <FontAwesomeIcon
           className="account__login__icon"
