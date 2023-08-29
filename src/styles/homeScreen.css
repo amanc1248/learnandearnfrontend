@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 .home_screen_firstPart {
     /* background: yellow; */
     padding: 0px 25px;
@@ -24,7 +24,7 @@
     -webkit-text-fill-color: transparent;
 }
 .coding__kid__image{
-    width: 80%;
+    width: 100%;
 }
 .homeScreen__courseOverview__list{
     text-align: left;
@@ -40,4 +40,74 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 30px;
+}
+.topic__text{
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+    /* height: 80%; */
+    height: 100px;
+}
+.topic__text__number{
+    /* height: 205; */
+    font-size: 40px;
+
+}
+.single__topic__div{
+    text-align: center;
+    border-radius: 30px;
+    border: black 2px solid;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: rgb(241, 237, 237);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 50px;
+}
+.top__border__single__topic{
+    height: 60px;
+    width: 100%;
+    border-radius: 27px 27px 0 0; 
+    border-bottom:black 3px solid ;
+    background-color: rebeccapurple;
+}
+.topic__and__number__div{
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* justify-items: end; */
+    /* align-items: end; */
+    /* justify-content: flex-end; */
+    /* justify-content: end; */
+    /* align-items: flex-end; */
+    justify-items: flex-end;
+    flex-direction: column;
+}
+.course__content__single__topic{
+    padding: 50px;
+}
+.lets__chat__div{
+    z-index: 2;
+    /* height: 50px; */
+    width: 180px;
+    background-color: rgba(1, 118, 211, 1);
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 8px ;
+    font-weight: bold;
+    /* gap: 10px; */
+    cursor: pointer;
+}
+.lets__chat__image{
+    /* height: 50px; */
+    border-radius: 50%;
+    padding-right: 10px;
 }

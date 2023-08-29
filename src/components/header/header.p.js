@@ -17,7 +17,7 @@ export const HeaderP = ({
     <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
       <Container fluid className="p-0 header__container__div">
         <Navbar.Brand href="#home" className="brand__name">
-          CODE VALLEY
+          CODE PRO NEPAL
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

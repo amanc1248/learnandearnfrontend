@@ -9,7 +9,7 @@ export const OverviewScreenP = ({
 }) => {
   return (
     <div className="overviewScreen__div">
-      <h4>Code Valley</h4>
+      <h4>Code Pro Nepal</h4>
       <div className="overview__screen__content__div row ">
         <div className="overview__screen__sidebar col-lg-3 col-md-4 col-12">
           <ul className="overview__screen__sidebar__list">
