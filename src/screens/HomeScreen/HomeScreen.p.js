@@ -1,5 +1,8 @@
 import "../../styles/homeScreen.css";
 import "../../styles/buttons.css";
+import {
+  
+} from "@fortawesome/free-solid-svg-icons";
 export const HomeScreenP = ({
   showRegistrationModal,
   showHideRegistrationModal,
@@ -104,6 +107,20 @@ export const HomeScreenP = ({
         <img className="lets__chat__image" src="https://ca.slack-edge.com/T01FR3059H9-U03SF8DAALQ-728e06104ac4-512" height={50}></img>
         Let's chat...
       </div>
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <img height={70} src="https://res.cloudinary.com/proudposhak-com/image/upload/v1693410639/CODE_PRO_NEPAL_gzuri4.png"></img>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted"> Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/profile.php?id=61550555022404">FACEBOOK</a></li>
+      <li class="ms-3"><a class="text-muted" href="#">amanc1248@gmail.com</a></li>
+      <li class="ms-3"><a class="text-muted" href="#">Whatsapp: 9804355969</a></li>
+    </ul>
+  </footer>
     </div>
   );
 };
