@@ -21,6 +21,9 @@ export const PaymentDetailsP = ({
       )}
       {loading === false && paymentStatus?.show && (
         <div>
+          <div>
+            Make payment by contacting the course owner and submit the details of the payment by clicking the upgrade to pro button.
+          </div>
           <button
             className="open__payment__button"
             onClick={() => {

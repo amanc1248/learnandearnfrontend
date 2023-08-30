@@ -26,7 +26,7 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
       icon: faChartLine,
       title: "Better knowledge retention",
       description:
-        "Practice packs and quizzes help you remember what you’ve learned.",
+        "Meet with software engineers and developers once a month and get to learn from them.",
     },
     {
       icon: faFlask,
@@ -36,9 +36,9 @@ export const PaymentComponentC = ({ showComponent, setShowComponent }) => {
     },
     {
       icon: faCertificate,
-      title: "Tangible proof of progress",
+      title: "Share your learning with the world.",
       description:
-        "Get a certificate of completion for every course you finish.",
+        "Share the projects you finish with the world.",
     },
   ];
   const paymentMethods = [

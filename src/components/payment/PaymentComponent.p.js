@@ -52,7 +52,7 @@ export const PaymentComponentP = ({
             </div>
 
             <div className="payment__steps__guide__title">
-              Get full access for 50% less with Pro Student
+              100% money back guarantee if you dont land a job/internship after completing the course.
             </div>
 
             <div className="payment__steps__guide__list">
@@ -81,9 +81,7 @@ export const PaymentComponentP = ({
             </div>
 
             <p className="payment__steps__eligible__forStudents">
-              To be eligible for a Pro Student membership you must be a student
-              at a higher education institution. Eligibility will be verified in
-              the next steps. Your subscription will then renew annually.
+              This full stack web development course will be taught by the mid level full stack engineer. And he is not responsible if any students drops the course in the middle or does not follow the course contents. 
             </p>
           </div>
 
